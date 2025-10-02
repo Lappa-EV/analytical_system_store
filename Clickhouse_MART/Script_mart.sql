@@ -1,5 +1,5 @@
 -----------------------------------------------Создание таблиц DWH и их MV --------------------------------------------
----------------------------------------------------------1. Справочник адресов---------------------------------------------------------------
+-------------------------------------------------1. Справочник адресов---------------------------------------------------------------
 -- Таблица addresses (без изменений)
 CREATE TABLE clickhouse.addresses (
     address_id UInt64,
@@ -71,7 +71,7 @@ FROM stores s
 WHERE s.location_country IS NOT NULL;
 
 
----------------------------------------------------------2. Справочник категорий товаров ----------------------------------------------------------------------
+-------------------------------------------------------2. Справочник категорий товаров ----------------------------------------------------------------------
 -- Дедупликация данных по category_name
 CREATE TABLE clickhouse.categories (
     category_id UInt64,
@@ -95,7 +95,7 @@ FROM clickhouse.products p
 WHERE nullIf(trim(lowerUTF8(p.group)), '') IS NOT NULL;
 
 
---------------------------------------------------------------3. Справочник производителей-----------------------------------------------------------------------
+-----------------------------------------------------------3. Справочник производителей-----------------------------------------------------------------------
 -- Дедупликация данных по inn
 CREATE TABLE clickhouse.manufacturers (
     inn String,
@@ -122,7 +122,7 @@ WHERE
     AND nullIf(trim(coalesce(p.manufacturer_name, '')), '') IS NOT NULL;
 
 
------------------------------------------------------4. Справочник торговых сетей--------------------------------------------------------------------------
+---------------------------------------------------------4. Справочник торговых сетей--------------------------------------------------------------------------
 -- Таблица store_networks
 CREATE TABLE clickhouse.store_networks (
     store_network_id UInt64,
@@ -150,7 +150,7 @@ FROM (
 WHERE rn = 1 AND normalized_name IS NOT NULL;
 
 
------------------------------------------------------5. Справочник менеджеров магазинов---------------------------------------------------------------
+--------------------------------------------------------5. Справочник менеджеров магазинов----------------------------------------------------------------------
 -- Дедупликация данных по manager_name и manager_phone
 CREATE TABLE clickhouse.store_managers (
     manager_id UInt64,
@@ -187,7 +187,7 @@ FROM (
 WHERE normalized_manager_name IS NOT NULL OR normalized_manager_phone IS NOT NULL;
 
 
---------------------------------------------------------6. Таблица измерений покупателей------------------------------------------------------------------
+---------------------------------------------------------6. Таблица измерений покупателей--------------------------------------------------------------------
 -- Дедупликация данных по customer_id и loyalty_card_number
 CREATE TABLE clickhouse.dim_customers (
     customer_id String,
@@ -248,7 +248,7 @@ LEFT JOIN clickhouse.addresses daddr ON
 WHERE trim(c.customer_id) != '' AND trim(c.loyalty_card_number) != '';
 
 
--------------------------------------------------------------------7. Таблица измерений товаров-----------------------------------------------------------------------
+------------------------------------------------------------------7. Таблица измерений товаров-----------------------------------------------------------------------
 -- Дедупликация данных по product_id
 CREATE TABLE clickhouse.dim_products (
     product_id String,
@@ -304,7 +304,7 @@ ON trim(lowerUTF8(normalizeUTF8NFC(replaceRegexpAll(replaceRegexpAll(p.group, CA
 WHERE nullIf(lowerUTF8(trim(p.id)), '') IS NOT NULL;
 
 
----------------------------------------------------------------8. Таблица измерений магазинов dim_stores--------------------------------------------------------------
+---------------------------------------------------------------8. Таблица измерений магазинов dim_stores-----------------------------------------------------------------
 -- Дедупликация данных по store_id
 CREATE TABLE clickhouse.dim_stores (
     store_id String,
@@ -459,7 +459,7 @@ WHERE
     parseDateTimeBestEffortOrNull(nullIf(trim(p.purchase_datetime), '')) IS NOT NULL; -- Отбрасываем строки с невалидной датой
 
 
------------------------------------------------------11. Таблица фактов деталей покупок fact_purchase_items ----------------------------------------------------
+----------------------------------------------------11. Таблица фактов деталей покупок fact_purchase_items ----------------------------------------------------
 -- Дедупликация данных по purchase_id и product_id
 CREATE TABLE clickhouse.fact_purchase_items (
     purchase_id String,
@@ -527,38 +527,4 @@ SELECT
      FROM clickhouse.purchases
 	 WHERE toDate(event_time) = today()
 	) AS duplicate_purchases;
-
---=================================================================================================================================================
-
-
-
-TRUNCATE TABLE addresses;
-TRUNCATE TABLE categories;
-
-TRUNCATE TABLE duplicate_analysis_results;
-TRUNCATE TABLE fact_purchase_items;
-TRUNCATE TABLE fact_purchases;
-TRUNCATE TABLE manufacturers;
-
-
-TRUNCATE TABLE store_categories;
-TRUNCATE TABLE store_managers;
-TRUNCATE TABLE store_networks;
-
-TRUNCATE TABLE dim_customers;
-TRUNCATE TABLE dim_stores;
-TRUNCATE TABLE dim_products;
-
-TRUNCATE TABLE stores;
-TRUNCATE TABLE customers;
-TRUNCATE TABLE products;
-TRUNCATE TABLE purchases;
-
-OPTIMIZE TABLE clickhouse.store_categories FINAL;
-OPTIMIZE TABLE clickhouse.dim_stores FINAL;
-
-
-
-
-
 
