@@ -336,6 +336,42 @@
 
 ## Структура проекта
 
+```
+├── data
+│   ├── customers
+│   │   ├── customer_001.json
+│   │   ├── ...
+│   │   └── customer_045.json
+│   ├── products
+│   │   ├── product_001.json
+│   │   ├── ...
+│   │   └── product_020.json
+│   ├── purchases
+│   │   ├── purchase_001.json
+│   │   ├── ...
+│   │   └── purchase_200.json
+│   └── stores
+│       ├── store_001.json
+│       ├── ...
+│       └── store_045.json
+├── load_data_mongodb
+│   ├── .env
+│   ├── check_mongo_data.py
+│   └── load_data_mongo.py
+├── mongodb_kafka_clickhouse
+│   ├── .env
+│   ├── consumer.py
+│   └── producer.py
+├── Clickhouse_MART
+│   └── Script_mart.sql
+├── Photo
+│   └── screenshots...
+├── docker-compose.yml
+├── Dockerfile
+├── generate_synthetic_data.py
+└── users.xml
+```
+Структура проекта включает:
 - **data** - папка с тестовыми данные заказчика
   - **customers** - 45 JSON-файлов таблицы customers
   - **products** - 20 JSON-файлов таблицы products
