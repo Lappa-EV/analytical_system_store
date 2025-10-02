@@ -392,3 +392,8 @@
 - **Dockerfile**
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
 - **users.xml** - настройки подключения ClickHouse к Grafana
+
+
+### Автор:
+
+Катерина Лаппа
