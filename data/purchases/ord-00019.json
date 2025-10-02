@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00019",
+  "customer": {
+    "customer_id": "cus-1040",
+    "first_name": "Варвара",
+    "last_name": "Воронцова",
+    "email": "lebedevguri@example.com",
+    "phone": "8 174 859 2769",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-FA44354480"
+  },
+  "store": {
+    "store_id": "store-025",
+    "store_name": "Большая Пикча — Магазин на пер. Панфилова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Томпа",
+      "street": "ул. Восточная",
+      "house": "93",
+      "postal_code": "903241",
+      "coordinates": {
+        "latitude": -36.8832215,
+        "longitude": -13.547199
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 468.2,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 366.82,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 835.02,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Инта",
+    "street": "наб. Коллективная",
+    "house": "2",
+    "apartment": "3",
+    "postal_code": "963264"
+  },
+  "purchase_datetime": "2025-09-04T12:48:34.401845"
+}

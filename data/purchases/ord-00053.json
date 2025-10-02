@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00053",
+  "customer": {
+    "customer_id": "cus-1022",
+    "first_name": "Лев",
+    "last_name": "Фокин",
+    "email": "sharovustin@example.com",
+    "phone": "+75989431382",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-08CAEFD6EE"
+  },
+  "store": {
+    "store_id": "store-016",
+    "store_name": "Большая Пикча — Магазин на пер. Короленко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Старая Русса",
+      "street": "ш. Станционное",
+      "house": "5/3",
+      "postal_code": "045362",
+      "coordinates": {
+        "latitude": 0.4915825,
+        "longitude": 87.783503
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 868.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 419.19,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 151.16,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 1438.85,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "бул. Кузнецкий",
+    "house": "8/6",
+    "apartment": "53",
+    "postal_code": "833968"
+  },
+  "purchase_datetime": "2025-09-04T14:07:51.383846"
+}

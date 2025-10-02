@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1014",
+  "first_name": "Елизавета",
+  "last_name": "Быкова",
+  "email": "rodion2013@example.com",
+  "phone": "8 503 167 89 70",
+  "birth_date": "1993-02-22",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.374845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-83C3014FF9",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Калач-на-Дону",
+    "street": "алл. Волгоградская",
+    "house": "1",
+    "postal_code": "674677",
+    "coordinates": {
+      "latitude": -37.3112295,
+      "longitude": 72.383959
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Калач-на-Дону",
+    "street": "пер. Тенистый",
+    "house": "1/7",
+    "apartment": "65",
+    "postal_code": "186318"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

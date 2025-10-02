@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1043",
+  "first_name": "Антонина",
+  "last_name": "Аксенова",
+  "email": "feoktist2010@example.net",
+  "phone": "8 (093) 870-1354",
+  "birth_date": "1970-12-09",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.405865",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-3F0D3EFB10",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "ст. Пушкин",
+    "street": "наб. Рябиновая",
+    "house": "1",
+    "postal_code": "563408",
+    "coordinates": {
+      "latitude": -11.278927,
+      "longitude": -32.532948
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Пушкин",
+    "street": "наб. Ягодная",
+    "house": "213",
+    "apartment": "94",
+    "postal_code": "913158"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

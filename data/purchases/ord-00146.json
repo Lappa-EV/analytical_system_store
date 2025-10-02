@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00146",
+  "customer": {
+    "customer_id": "cus-1041",
+    "first_name": "Будимир",
+    "last_name": "Лобанов",
+    "email": "feofan_1978@example.org",
+    "phone": "8 797 335 2091",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-3882A46FBF"
+  },
+  "store": {
+    "store_id": "store-019",
+    "store_name": "Большая Пикча — Магазин на ул. Хуторская",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Вязьма",
+      "street": "наб. Транспортная",
+      "house": "94",
+      "postal_code": "932888",
+      "coordinates": {
+        "latitude": -34.0234355,
+        "longitude": 69.567097
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 224.24,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 224.24,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Усть-Калманка",
+    "street": "алл. Орловская",
+    "house": "6/6",
+    "apartment": "92",
+    "postal_code": "679796"
+  },
+  "purchase_datetime": "2025-09-04T13:00:03.403844"
+}

@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00033",
+  "customer": {
+    "customer_id": "cus-1015",
+    "first_name": "Олимпиада",
+    "last_name": "Фокина",
+    "email": "vkrasilnikova@example.net",
+    "phone": "+71468345890",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-8498F650CE"
+  },
+  "store": {
+    "store_id": "store-004",
+    "store_name": "Большая Пикча — Магазин на пр. Каштановый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Двинской",
+      "street": "пер. Осипенко",
+      "house": "52",
+      "postal_code": "915882",
+      "coordinates": {
+        "latitude": 57.829415,
+        "longitude": 59.082201
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 220.98,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 245.72,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 83.14,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    }
+  ],
+  "total_amount": 549.84,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Старая Русса",
+    "street": "наб. Терешковой",
+    "house": "6",
+    "apartment": "80",
+    "postal_code": "516098"
+  },
+  "purchase_datetime": "2025-09-04T13:28:03.375844"
+}

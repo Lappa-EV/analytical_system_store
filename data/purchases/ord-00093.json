@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00093",
+  "customer": {
+    "customer_id": "cus-1039",
+    "first_name": "Евсей",
+    "last_name": "Третьяков",
+    "email": "kuprijan56@example.com",
+    "phone": "+7 (160) 086-5799",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-33E6A7A16F"
+  },
+  "store": {
+    "store_id": "store-040",
+    "store_name": "Маленькая Пикча — Магазин на ул. Больничная",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Аршан (Бурят.)",
+      "street": "пр. Абрикосовый",
+      "house": "79",
+      "postal_code": "367619",
+      "coordinates": {
+        "latitude": 63.425144,
+        "longitude": -113.24923
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 733.64,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 312.38,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 264.08,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 1310.1,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Аршан (Бурят.)",
+    "street": "бул. Привокзальный",
+    "house": "3",
+    "apartment": "60",
+    "postal_code": "427309"
+  },
+  "purchase_datetime": "2025-09-04T14:22:57.400846"
+}

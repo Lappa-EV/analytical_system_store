@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00195",
+  "customer": {
+    "customer_id": "cus-1001",
+    "first_name": "Спартак",
+    "last_name": "Медведев",
+    "email": "arseni71@example.net",
+    "phone": "+78810401818",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-39938E0272"
+  },
+  "store": {
+    "store_id": "store-036",
+    "store_name": "Маленькая Пикча — Магазин на пер. Песочный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Белореченск",
+      "street": "пр. Химиков",
+      "house": "661",
+      "postal_code": "026539",
+      "coordinates": {
+        "latitude": 57.2373665,
+        "longitude": -57.013401
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 1121.2,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 1121.2,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Хасан",
+    "street": "наб. Ярославская",
+    "house": "39",
+    "apartment": "22",
+    "postal_code": "765806"
+  },
+  "purchase_datetime": "2025-09-04T13:07:55.361844"
+}

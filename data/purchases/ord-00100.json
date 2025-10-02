@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00100",
+  "customer": {
+    "customer_id": "cus-1010",
+    "first_name": "Катерина",
+    "last_name": "Лаппа",
+    "email": "foragro@list.ru",
+    "phone": "8 (908) 202-4065",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-13797A92D8"
+  },
+  "store": {
+    "store_id": "store-021",
+    "store_name": "Большая Пикча — Магазин на бул. Восьмого Марта",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Териберка",
+      "street": "алл. Большая",
+      "house": "3",
+      "postal_code": "332213",
+      "coordinates": {
+        "latitude": 52.320875,
+        "longitude": -134.163561
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 727.96,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    }
+  ],
+  "total_amount": 727.96,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Ревда (Сверд.)",
+    "street": "пр. 1 Мая",
+    "house": "7",
+    "apartment": "14",
+    "postal_code": "340926"
+  },
+  "purchase_datetime": "2025-09-04T13:54:07.370845"
+}

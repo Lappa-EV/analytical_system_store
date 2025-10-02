@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00138",
+  "customer": {
+    "customer_id": "cus-1008",
+    "first_name": "Герасим",
+    "last_name": "Дмитриев",
+    "email": "venedikt1971@example.net",
+    "phone": "+7 161 903 9330",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5C0BFD33F4"
+  },
+  "store": {
+    "store_id": "store-033",
+    "store_name": "Маленькая Пикча — Магазин на ш. Дорожное",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Александровск",
+      "street": "бул. Республиканский",
+      "house": "49",
+      "postal_code": "050678",
+      "coordinates": {
+        "latitude": 28.393002,
+        "longitude": -135.470708
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 372.42,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    },
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 212.12,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 289.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 874.04,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пер. Гайдара",
+    "house": "78",
+    "apartment": "56",
+    "postal_code": "526198"
+  },
+  "purchase_datetime": "2025-09-04T13:59:40.368847"
+}

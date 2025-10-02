@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00018",
+  "customer": {
+    "customer_id": "cus-1017",
+    "first_name": "Евфросиния",
+    "last_name": "Лихачева",
+    "email": "juvenali2017@example.com",
+    "phone": "8 929 968 1793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E2262F0914"
+  },
+  "store": {
+    "store_id": "store-043",
+    "store_name": "Маленькая Пикча — Магазин на бул. Красный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Внуково (метеост.)",
+      "street": "наб. Базарная",
+      "house": "3",
+      "postal_code": "817268",
+      "coordinates": {
+        "latitude": 42.3622285,
+        "longitude": -153.329248
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 441.96,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 720.32,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 1162.28,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Калач",
+    "street": "наб. Ветеранов",
+    "house": "658",
+    "apartment": "74",
+    "postal_code": "000139"
+  },
+  "purchase_datetime": "2025-09-04T13:40:15.378844"
+}

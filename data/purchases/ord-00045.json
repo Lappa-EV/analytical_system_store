@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00045",
+  "customer": {
+    "customer_id": "cus-1021",
+    "first_name": "Элеонора",
+    "last_name": "Михеева",
+    "email": "polikarp65@example.net",
+    "phone": "8 (593) 738-7571",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E5AEB175B0"
+  },
+  "store": {
+    "store_id": "store-001",
+    "store_name": "Большая Пикча — Магазин на алл. Локомотивная",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Витим",
+      "street": "пер. Вольный",
+      "house": "7",
+      "postal_code": "624553",
+      "coordinates": {
+        "latitude": -52.3336815,
+        "longitude": -51.631912
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 267.44,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 720.32,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 331.47,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    }
+  ],
+  "total_amount": 1319.23,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Плес",
+    "street": "ш. Клубное",
+    "house": "7",
+    "apartment": "87",
+    "postal_code": "074281"
+  },
+  "purchase_datetime": "2025-09-04T14:04:07.382845"
+}

@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1040",
+  "first_name": "Варвара",
+  "last_name": "Воронцова",
+  "email": "lebedevguri@example.com",
+  "phone": "8 174 859 2769",
+  "birth_date": "1986-11-23",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.401845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-FA44354480",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Инта",
+    "street": "ул. Краснодарская",
+    "house": "9",
+    "postal_code": "639018",
+    "coordinates": {
+      "latitude": 83.27252,
+      "longitude": -85.424271
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Инта",
+    "street": "наб. Коллективная",
+    "house": "2",
+    "apartment": "3",
+    "postal_code": "963264"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

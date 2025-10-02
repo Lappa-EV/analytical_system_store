@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00167",
+  "customer": {
+    "customer_id": "cus-1032",
+    "first_name": "Марина",
+    "last_name": "Семенова",
+    "email": "kostiniosif@example.com",
+    "phone": "85659754362",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-37CE9E20AD"
+  },
+  "store": {
+    "store_id": "store-027",
+    "store_name": "Большая Пикча — Магазин на бул. Безымянный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Сузун",
+      "street": "алл. Баумана",
+      "house": "9",
+      "postal_code": "363519",
+      "coordinates": {
+        "latitude": -23.953326,
+        "longitude": 175.677275
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 931.05,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    }
+  ],
+  "total_amount": 931.05,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Александровск",
+    "street": "пер. Терешковой",
+    "house": "4/6",
+    "apartment": "19",
+    "postal_code": "221240"
+  },
+  "purchase_datetime": "2025-09-04T14:20:38.393864"
+}

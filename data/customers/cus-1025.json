@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1025",
+  "first_name": "Вацлав",
+  "last_name": "Гордеев",
+  "email": "dementi_27@example.com",
+  "phone": "+7 281 999 8431",
+  "birth_date": "1963-11-30",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.386846",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-DBADA7234A",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Енисейск",
+    "street": "бул. Байкальский",
+    "house": "78",
+    "postal_code": "367274",
+    "coordinates": {
+      "latitude": 46.7958005,
+      "longitude": -16.12984
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Енисейск",
+    "street": "пр. Коммунальный",
+    "house": "4",
+    "apartment": "29",
+    "postal_code": "451714"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

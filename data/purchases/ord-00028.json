@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00028",
+  "customer": {
+    "customer_id": "cus-1026",
+    "first_name": "Марианна",
+    "last_name": "Абрамова",
+    "email": "ljubim_1973@example.com",
+    "phone": "82255945331",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9F4A650FDD"
+  },
+  "store": {
+    "store_id": "store-029",
+    "store_name": "Большая Пикча — Магазин на наб. Вахитова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Чехов",
+      "street": "пр. Мостовой",
+      "house": "78",
+      "postal_code": "348570",
+      "coordinates": {
+        "latitude": 48.9410125,
+        "longitude": -112.616793
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 896.96,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 453.48,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 1350.44,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Сузун",
+    "street": "ул. 9 мая",
+    "house": "9",
+    "apartment": "55",
+    "postal_code": "508296"
+  },
+  "purchase_datetime": "2025-09-04T12:42:46.387846"
+}

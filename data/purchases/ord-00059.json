@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00059",
+  "customer": {
+    "customer_id": "cus-1032",
+    "first_name": "Марина",
+    "last_name": "Семенова",
+    "email": "kostiniosif@example.com",
+    "phone": "85659754362",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-37CE9E20AD"
+  },
+  "store": {
+    "store_id": "store-019",
+    "store_name": "Большая Пикча — Магазин на ул. Хуторская",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Вязьма",
+      "street": "наб. Транспортная",
+      "house": "94",
+      "postal_code": "932888",
+      "coordinates": {
+        "latitude": -34.0234355,
+        "longitude": 69.567097
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 180.08,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 307.15,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 660.2,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 1147.43,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Александровск",
+    "street": "пер. Терешковой",
+    "house": "4/6",
+    "apartment": "19",
+    "postal_code": "221240"
+  },
+  "purchase_datetime": "2025-09-04T14:16:41.393864"
+}

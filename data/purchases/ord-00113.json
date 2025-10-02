@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00113",
+  "customer": {
+    "customer_id": "cus-1008",
+    "first_name": "Герасим",
+    "last_name": "Дмитриев",
+    "email": "venedikt1971@example.net",
+    "phone": "+7 161 903 9330",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5C0BFD33F4"
+  },
+  "store": {
+    "store_id": "store-018",
+    "store_name": "Большая Пикча — Магазин на пер. Мелиораторов",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Калач",
+      "street": "ш. Большевистское",
+      "house": "705",
+      "postal_code": "811639",
+      "coordinates": {
+        "latitude": -30.7223715,
+        "longitude": -149.341654
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 1121.2,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 1121.2,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пер. Гайдара",
+    "house": "78",
+    "apartment": "56",
+    "postal_code": "526198"
+  },
+  "purchase_datetime": "2025-09-04T14:52:01.368847"
+}

@@ -1,0 +1,58 @@
+{
+  "purchase_id": "ord-00062",
+  "customer": {
+    "customer_id": "cus-1042",
+    "first_name": "Соломон",
+    "last_name": "Быков",
+    "email": "gennadi_1986@example.org",
+    "phone": "+7 (764) 718-0747",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-17267E2DE9"
+  },
+  "store": {
+    "store_id": "store-034",
+    "store_name": "Маленькая Пикча — Магазин на наб. Ульянова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Дмитров",
+      "street": "пер. Энергетиков",
+      "house": "9/1",
+      "postal_code": "784589",
+      "coordinates": {
+        "latitude": 56.750145,
+        "longitude": -151.802671
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 179.31,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 179.31,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "бул. Баумана",
+    "house": "862",
+    "apartment": "70",
+    "postal_code": "666307"
+  },
+  "purchase_datetime": "2025-09-04T12:47:36.404845"
+}

@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1020",
+  "first_name": "Поликарп",
+  "last_name": "Баранов",
+  "email": "suvorovaskold@example.com",
+  "phone": "+7 (028) 479-29-87",
+  "birth_date": "1987-09-11",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.381845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-9940A6CB27",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "п. Териберка",
+    "street": "алл. Большая",
+    "house": "3",
+    "postal_code": "332213",
+    "coordinates": {
+      "latitude": 52.320875,
+      "longitude": -134.163561
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Териберка",
+    "street": "ш. Дорожников",
+    "house": "24",
+    "apartment": "84",
+    "postal_code": "986850"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

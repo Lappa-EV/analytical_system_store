@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00181",
+  "customer": {
+    "customer_id": "cus-1014",
+    "first_name": "Елизавета",
+    "last_name": "Быкова",
+    "email": "rodion2013@example.com",
+    "phone": "8 503 167 89 70",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-83C3014FF9"
+  },
+  "store": {
+    "store_id": "store-013",
+    "store_name": "Большая Пикча — Магазин на пр. Макаренко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Мирный",
+      "street": "алл. Запрудная",
+      "house": "93",
+      "postal_code": "933306",
+      "coordinates": {
+        "latitude": 64.960641,
+        "longitude": -106.755617
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 166.28,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 183.41,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 419.19,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    }
+  ],
+  "total_amount": 768.88,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Калач-на-Дону",
+    "street": "пер. Тенистый",
+    "house": "1/7",
+    "apartment": "65",
+    "postal_code": "186318"
+  },
+  "purchase_datetime": "2025-09-04T12:59:39.374845"
+}

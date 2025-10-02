@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00131",
+  "customer": {
+    "customer_id": "cus-1020",
+    "first_name": "Поликарп",
+    "last_name": "Баранов",
+    "email": "suvorovaskold@example.com",
+    "phone": "+7 (028) 479-29-87",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9940A6CB27"
+  },
+  "store": {
+    "store_id": "store-012",
+    "store_name": "Большая Пикча — Магазин на пер. Литейный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "с. Ейск",
+      "street": "пр. Ветеранов",
+      "house": "9/7",
+      "postal_code": "994909",
+      "coordinates": {
+        "latitude": 63.9265075,
+        "longitude": -30.747798
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1158.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 283.61,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 528.16,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 1969.77,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Териберка",
+    "street": "ш. Дорожников",
+    "house": "24",
+    "apartment": "84",
+    "postal_code": "986850"
+  },
+  "purchase_datetime": "2025-09-04T13:56:10.381845"
+}

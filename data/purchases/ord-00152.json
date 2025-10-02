@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00152",
+  "customer": {
+    "customer_id": "cus-1035",
+    "first_name": "Кузьма",
+    "last_name": "Лихачев",
+    "email": "gurimelnikov@example.net",
+    "phone": "8 845 384 1792",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-2EBC6731C6"
+  },
+  "store": {
+    "store_id": "store-028",
+    "store_name": "Большая Пикча — Магазин на алл. Энергетическая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Объячево",
+      "street": "бул. Студенческий",
+      "house": "5/1",
+      "postal_code": "527289",
+      "coordinates": {
+        "latitude": -57.384581,
+        "longitude": -43.623814
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 453.48,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 224.24,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 677.72,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Белореченск",
+    "street": "пр. Герцена",
+    "house": "9",
+    "apartment": "49",
+    "postal_code": "494416"
+  },
+  "purchase_datetime": "2025-09-04T13:05:17.396846"
+}

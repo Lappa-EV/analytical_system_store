@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00094",
+  "customer": {
+    "customer_id": "cus-1014",
+    "first_name": "Елизавета",
+    "last_name": "Быкова",
+    "email": "rodion2013@example.com",
+    "phone": "8 503 167 89 70",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-83C3014FF9"
+  },
+  "store": {
+    "store_id": "store-032",
+    "store_name": "Маленькая Пикча — Магазин на пр. Жукова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Череповец",
+      "street": "пер. 8 Марта",
+      "house": "1",
+      "postal_code": "207262",
+      "coordinates": {
+        "latitude": 13.119439,
+        "longitude": 140.956005
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 909.95,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    },
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 110.49,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    }
+  ],
+  "total_amount": 1020.44,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Калач-на-Дону",
+    "street": "пер. Тенистый",
+    "house": "1/7",
+    "apartment": "65",
+    "postal_code": "186318"
+  },
+  "purchase_datetime": "2025-09-04T14:29:12.374845"
+}

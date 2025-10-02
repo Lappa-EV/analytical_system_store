@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1018",
+  "first_name": "Денис",
+  "last_name": "Петров",
+  "email": "ermakovklavdi@example.com",
+  "phone": "87730056008",
+  "birth_date": "1987-10-01",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.379845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-63466EFB5E",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "наб. Транспортная",
+    "house": "94",
+    "postal_code": "932888",
+    "coordinates": {
+      "latitude": -34.0234355,
+      "longitude": 69.567097
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "ш. Демьяна Бедного",
+    "house": "123",
+    "apartment": "41",
+    "postal_code": "111003"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

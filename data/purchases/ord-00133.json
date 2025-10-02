@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00133",
+  "customer": {
+    "customer_id": "cus-1023",
+    "first_name": "Вышеслав",
+    "last_name": "Борисов",
+    "email": "shubinsavvati@example.net",
+    "phone": "8 425 830 59 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-26A063C420"
+  },
+  "store": {
+    "store_id": "store-030",
+    "store_name": "Большая Пикча — Магазин на бул. Иванова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Хоста",
+      "street": "бул. Серафимовича",
+      "house": "69",
+      "postal_code": "527356",
+      "coordinates": {
+        "latitude": 37.3793025,
+        "longitude": 11.169034
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 186.21,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 179.31,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 365.52,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "purchase_datetime": "2025-09-04T12:59:39.384865"
+}

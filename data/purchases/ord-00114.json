@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00114",
+  "customer": {
+    "customer_id": "cus-1010",
+    "first_name": "Катерина",
+    "last_name": "Лаппа",
+    "email": "foragro@list.ru",
+    "phone": "8 (908) 202-4065",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-13797A92D8"
+  },
+  "store": {
+    "store_id": "store-005",
+    "store_name": "Большая Пикча — Магазин на бул. Тепличный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Нальчик",
+      "street": "наб. Боровая",
+      "house": "52",
+      "postal_code": "956067",
+      "coordinates": {
+        "latitude": 14.178195,
+        "longitude": 54.328407
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 702.3,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 702.3,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Ревда (Сверд.)",
+    "street": "пр. 1 Мая",
+    "house": "7",
+    "apartment": "14",
+    "postal_code": "340926"
+  },
+  "purchase_datetime": "2025-09-04T14:40:53.370845"
+}

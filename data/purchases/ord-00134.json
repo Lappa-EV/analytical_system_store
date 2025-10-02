@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00134",
+  "customer": {
+    "customer_id": "cus-1026",
+    "first_name": "Марианна",
+    "last_name": "Абрамова",
+    "email": "ljubim_1973@example.com",
+    "phone": "82255945331",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9F4A650FDD"
+  },
+  "store": {
+    "store_id": "store-041",
+    "store_name": "Маленькая Пикча — Магазин на ш. Карбышева",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Инта",
+      "street": "ул. Краснодарская",
+      "house": "9",
+      "postal_code": "639018",
+      "coordinates": {
+        "latitude": 83.27252,
+        "longitude": -85.424271
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 900.4,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 1296.52,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Сузун",
+    "street": "ул. 9 мая",
+    "house": "9",
+    "apartment": "55",
+    "postal_code": "508296"
+  },
+  "purchase_datetime": "2025-09-04T14:47:46.387846"
+}

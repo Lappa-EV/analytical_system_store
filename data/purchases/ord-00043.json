@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00043",
+  "customer": {
+    "customer_id": "cus-1034",
+    "first_name": "Анна",
+    "last_name": "Соколова",
+    "email": "gorshkovkir@example.net",
+    "phone": "8 (564) 558-52-88",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DD358B553F"
+  },
+  "store": {
+    "store_id": "store-014",
+    "store_name": "Большая Пикча — Магазин на ш. Среднее",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Арзамас",
+      "street": "алл. Зои Космодемьянской",
+      "house": "1",
+      "postal_code": "929619",
+      "coordinates": {
+        "latitude": 36.0108945,
+        "longitude": -178.955462
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 212.12,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    },
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 124.71,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    }
+  ],
+  "total_amount": 336.83,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Камышлов",
+    "street": "алл. Микрорайон",
+    "house": "622",
+    "apartment": "1",
+    "postal_code": "376273"
+  },
+  "purchase_datetime": "2025-09-04T14:50:59.395848"
+}

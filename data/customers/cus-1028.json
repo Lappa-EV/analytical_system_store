@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1028",
+  "first_name": "Василий",
+  "last_name": "Молчанов",
+  "email": "ljubomir_2008@example.org",
+  "phone": "+7 613 486 00 00",
+  "birth_date": "1985-11-03",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.389847",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-D3267CAF20",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Чехов",
+    "street": "пр. Мостовой",
+    "house": "78",
+    "postal_code": "348570",
+    "coordinates": {
+      "latitude": 48.9410125,
+      "longitude": -112.616793
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Чехов",
+    "street": "ул. Аэродромная",
+    "house": "7",
+    "apartment": "94",
+    "postal_code": "632662"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00031",
+  "customer": {
+    "customer_id": "cus-1016",
+    "first_name": "Платон",
+    "last_name": "Щукин",
+    "email": "evgrafdenisov@example.net",
+    "phone": "+7 (068) 951-5562",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-B983D17AE6"
+  },
+  "store": {
+    "store_id": "store-025",
+    "store_name": "Большая Пикча — Магазин на пер. Панфилова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Томпа",
+      "street": "ул. Восточная",
+      "house": "93",
+      "postal_code": "903241",
+      "coordinates": {
+        "latitude": -36.8832215,
+        "longitude": -13.547199
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 668.6,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1158.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 1826.6,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Юрьев-Польский",
+    "street": "пр. Победы",
+    "house": "8/6",
+    "apartment": "84",
+    "postal_code": "851796"
+  },
+  "purchase_datetime": "2025-09-04T13:42:34.376847"
+}

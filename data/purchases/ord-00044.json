@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00044",
+  "customer": {
+    "customer_id": "cus-1044",
+    "first_name": "Изот",
+    "last_name": "Брагин",
+    "email": "komissarovantonin@example.org",
+    "phone": "+7 (683) 356-68-80",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-8C9F04C189"
+  },
+  "store": {
+    "store_id": "store-044",
+    "store_name": "Маленькая Пикча — Магазин на ул. Учительская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Пушкин",
+      "street": "наб. Рябиновая",
+      "house": "1",
+      "postal_code": "563408",
+      "coordinates": {
+        "latitude": -11.278927,
+        "longitude": -32.532948
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 868.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 868.5,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Палана",
+    "street": "пр. Комсомольский",
+    "house": "2",
+    "apartment": "47",
+    "postal_code": "942112"
+  },
+  "purchase_datetime": "2025-09-04T13:41:30.406848"
+}

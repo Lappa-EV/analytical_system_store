@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00102",
+  "customer": {
+    "customer_id": "cus-1016",
+    "first_name": "Платон",
+    "last_name": "Щукин",
+    "email": "evgrafdenisov@example.net",
+    "phone": "+7 (068) 951-5562",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-B983D17AE6"
+  },
+  "store": {
+    "store_id": "store-026",
+    "store_name": "Большая Пикча — Магазин на наб. Белинского",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Енисейск",
+      "street": "бул. Байкальский",
+      "house": "78",
+      "postal_code": "367274",
+      "coordinates": {
+        "latitude": 46.7958005,
+        "longitude": -16.12984
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 1134.44,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    },
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 668.6,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 780.95,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    }
+  ],
+  "total_amount": 2583.99,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Юрьев-Польский",
+    "street": "пр. Победы",
+    "house": "8/6",
+    "apartment": "84",
+    "postal_code": "851796"
+  },
+  "purchase_datetime": "2025-09-04T14:30:15.376847"
+}

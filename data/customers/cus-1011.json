@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1011",
+  "first_name": "Устин",
+  "last_name": "Шаров",
+  "email": "panfil13@example.com",
+  "phone": "+7 894 546 9487",
+  "birth_date": "1978-09-05",
+  "gender": "male",
+  "registration_date": "2021-09-04T12:41:38.371846",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-BB4AF3832B",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "с. Ейск",
+    "street": "пр. Ветеранов",
+    "house": "9/7",
+    "postal_code": "994909",
+    "coordinates": {
+      "latitude": 63.9265075,
+      "longitude": -30.747798
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Ейск",
+    "street": "пер. Никитина",
+    "house": "9/6",
+    "apartment": "85",
+    "postal_code": "157286"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

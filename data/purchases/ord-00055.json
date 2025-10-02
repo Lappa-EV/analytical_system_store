@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00055",
+  "customer": {
+    "customer_id": "cus-1006",
+    "first_name": "Трифон",
+    "last_name": "Герасимов",
+    "email": "xfomina@example.net",
+    "phone": "+75884365521",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DA374A26C4"
+  },
+  "store": {
+    "store_id": "store-035",
+    "store_name": "Маленькая Пикча — Магазин на алл. Депутатская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Камышлов",
+      "street": "пер. Ермака",
+      "house": "18",
+      "postal_code": "182965",
+      "coordinates": {
+        "latitude": -16.52565,
+        "longitude": 132.196223
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 900.4,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 83.14,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    }
+  ],
+  "total_amount": 983.54,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "purchase_datetime": "2025-09-04T14:08:02.366847"
+}

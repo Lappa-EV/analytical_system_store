@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00192",
+  "customer": {
+    "customer_id": "cus-1003",
+    "first_name": "Лавр",
+    "last_name": "Гусева",
+    "email": "maksim28@example.org",
+    "phone": "8 015 780 18 91",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F53C834631"
+  },
+  "store": {
+    "store_id": "store-045",
+    "store_name": "Маленькая Пикча — Магазин на бул. 70 лет Октября",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Палана",
+      "street": "бул. Заовражный",
+      "house": "99",
+      "postal_code": "934420",
+      "coordinates": {
+        "latitude": -25.7193895,
+        "longitude": 31.214079
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 1121.2,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1158.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 2279.2,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Двинской",
+    "street": "бул. Элеваторный",
+    "house": "3/1",
+    "apartment": "40",
+    "postal_code": "234634"
+  },
+  "purchase_datetime": "2025-09-04T14:02:43.363846"
+}

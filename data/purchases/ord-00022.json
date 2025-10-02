@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00022",
+  "customer": {
+    "customer_id": "cus-1042",
+    "first_name": "Соломон",
+    "last_name": "Быков",
+    "email": "gennadi_1986@example.org",
+    "phone": "+7 (764) 718-0747",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-17267E2DE9"
+  },
+  "store": {
+    "store_id": "store-044",
+    "store_name": "Маленькая Пикча — Магазин на ул. Учительская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Пушкин",
+      "street": "наб. Рябиновая",
+      "house": "1",
+      "postal_code": "563408",
+      "coordinates": {
+        "latitude": -11.278927,
+        "longitude": -32.532948
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 396.12,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "бул. Баумана",
+    "house": "862",
+    "apartment": "70",
+    "postal_code": "666307"
+  },
+  "purchase_datetime": "2025-09-04T14:47:04.404845"
+}

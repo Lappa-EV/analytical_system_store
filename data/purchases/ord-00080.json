@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00080",
+  "customer": {
+    "customer_id": "cus-1019",
+    "first_name": "Егор",
+    "last_name": "Баранов",
+    "email": "ernst1975@example.net",
+    "phone": "+7 (877) 199-03-39",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-18C30CC717"
+  },
+  "store": {
+    "store_id": "store-030",
+    "store_name": "Большая Пикча — Магазин на бул. Иванова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Хоста",
+      "street": "бул. Серафимовича",
+      "house": "69",
+      "postal_code": "527356",
+      "coordinates": {
+        "latitude": 37.3793025,
+        "longitude": 11.169034
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 3,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 485.46,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 755.8,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 1637.38,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Воткинск",
+    "street": "наб. Фрунзе",
+    "house": "565",
+    "apartment": "83",
+    "postal_code": "588003"
+  },
+  "purchase_datetime": "2025-09-04T14:00:13.380844"
+}

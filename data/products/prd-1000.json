@@ -1,0 +1,24 @@
+{
+  "id": "prd-1000",
+  "name": "Бананы",
+  "group": "🍏 Фрукты и ягоды",
+  "description": "Бананы «Эквадор»",
+  "kbju": {
+    "calories": 198.8,
+    "protein": 10.3,
+    "fat": 1.4,
+    "carbohydrates": 41.7
+  },
+  "price": 151.16,
+  "unit": "кг",
+  "origin_country": "Эквадор",
+  "expiry_days": 28,
+  "is_organic": false,
+  "barcode": "1384777087204",
+  "manufacturer": {
+    "name": "ОАО «Карпова»",
+    "country": "Россия",
+    "website": "https://megafon.com",
+    "inn": "7975469759"
+  }
+}

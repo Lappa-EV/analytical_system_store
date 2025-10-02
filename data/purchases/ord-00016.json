@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00016",
+  "customer": {
+    "customer_id": "cus-1038",
+    "first_name": "Юлиан",
+    "last_name": "Владимиров",
+    "email": "fedosiovchinnikov@example.org",
+    "phone": "+7 110 070 01 34",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-14909482FB"
+  },
+  "store": {
+    "store_id": "store-021",
+    "store_name": "Большая Пикча — Магазин на бул. Восьмого Марта",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Териберка",
+      "street": "алл. Большая",
+      "house": "3",
+      "postal_code": "332213",
+      "coordinates": {
+        "latitude": 52.320875,
+        "longitude": -134.163561
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 528.16,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 528.16,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Яхрома",
+    "street": "бул. Мира",
+    "house": "6",
+    "apartment": "55",
+    "postal_code": "960427"
+  },
+  "purchase_datetime": "2025-09-04T14:05:57.399845"
+}

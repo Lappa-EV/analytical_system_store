@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00185",
+  "customer": {
+    "customer_id": "cus-1018",
+    "first_name": "Денис",
+    "last_name": "Петров",
+    "email": "ermakovklavdi@example.com",
+    "phone": "87730056008",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-63466EFB5E"
+  },
+  "store": {
+    "store_id": "store-018",
+    "store_name": "Большая Пикча — Магазин на пер. Мелиораторов",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Калач",
+      "street": "ш. Большевистское",
+      "house": "705",
+      "postal_code": "811639",
+      "coordinates": {
+        "latitude": -30.7223715,
+        "longitude": -149.341654
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 180.08,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 307.15,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 487.23,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "ш. Демьяна Бедного",
+    "house": "123",
+    "apartment": "41",
+    "postal_code": "111003"
+  },
+  "purchase_datetime": "2025-09-04T12:42:32.379845"
+}

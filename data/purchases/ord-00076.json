@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00076",
+  "customer": {
+    "customer_id": "cus-1009",
+    "first_name": "Куприян",
+    "last_name": "Тетерин",
+    "email": "tit_2005@example.net",
+    "phone": "8 (858) 147-27-93",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-3FF0C3F7B6"
+  },
+  "store": {
+    "store_id": "store-036",
+    "store_name": "Маленькая Пикча — Магазин на пер. Песочный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Белореченск",
+      "street": "пр. Химиков",
+      "house": "661",
+      "postal_code": "026539",
+      "coordinates": {
+        "latitude": 57.2373665,
+        "longitude": -57.013401
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 110.49,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 530.3,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 1036.91,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Токма",
+    "street": "наб. Димитрова",
+    "house": "445",
+    "apartment": "88",
+    "postal_code": "611551"
+  },
+  "purchase_datetime": "2025-09-04T13:10:16.370845"
+}

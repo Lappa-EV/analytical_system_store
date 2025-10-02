@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1044",
+  "first_name": "Изот",
+  "last_name": "Брагин",
+  "email": "komissarovantonin@example.org",
+  "phone": "+7 (683) 356-68-80",
+  "birth_date": "1979-11-29",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.406848",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-8C9F04C189",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "п. Палана",
+    "street": "бул. Заовражный",
+    "house": "99",
+    "postal_code": "934420",
+    "coordinates": {
+      "latitude": -25.7193895,
+      "longitude": 31.214079
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Палана",
+    "street": "пр. Комсомольский",
+    "house": "2",
+    "apartment": "47",
+    "postal_code": "942112"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

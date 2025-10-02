@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00020",
+  "customer": {
+    "customer_id": "cus-1003",
+    "first_name": "Лавр",
+    "last_name": "Гусева",
+    "email": "maksim28@example.org",
+    "phone": "8 015 780 18 91",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F53C834631"
+  },
+  "store": {
+    "store_id": "store-002",
+    "store_name": "Большая Пикча — Магазин на ул. Ульянова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "с. Хасан",
+      "street": "бул. Подлесный",
+      "house": "87",
+      "postal_code": "964324",
+      "coordinates": {
+        "latitude": 53.0341855,
+        "longitude": 45.543272
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 604.64,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 179.31,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 783.95,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Двинской",
+    "street": "бул. Элеваторный",
+    "house": "3/1",
+    "apartment": "40",
+    "postal_code": "234634"
+  },
+  "purchase_datetime": "2025-09-04T13:50:38.363846"
+}

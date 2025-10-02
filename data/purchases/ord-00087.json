@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00087",
+  "customer": {
+    "customer_id": "cus-1040",
+    "first_name": "Варвара",
+    "last_name": "Воронцова",
+    "email": "lebedevguri@example.com",
+    "phone": "8 174 859 2769",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-FA44354480"
+  },
+  "store": {
+    "store_id": "store-045",
+    "store_name": "Маленькая Пикча — Магазин на бул. 70 лет Октября",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Палана",
+      "street": "бул. Заовражный",
+      "house": "99",
+      "postal_code": "934420",
+      "coordinates": {
+        "latitude": -25.7193895,
+        "longitude": 31.214079
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 900.4,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 110.49,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 468.2,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 1479.09,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Инта",
+    "street": "наб. Коллективная",
+    "house": "2",
+    "apartment": "3",
+    "postal_code": "963264"
+  },
+  "purchase_datetime": "2025-09-04T14:26:37.401845"
+}

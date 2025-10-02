@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1016",
+  "first_name": "Платон",
+  "last_name": "Щукин",
+  "email": "evgrafdenisov@example.net",
+  "phone": "+7 (068) 951-5562",
+  "birth_date": "1984-02-28",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.376847",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-B983D17AE6",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "п. Юрьев-Польский",
+    "street": "пр. Литейный",
+    "house": "4",
+    "postal_code": "693781",
+    "coordinates": {
+      "latitude": 37.1973915,
+      "longitude": -145.2158
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Юрьев-Польский",
+    "street": "пр. Победы",
+    "house": "8/6",
+    "apartment": "84",
+    "postal_code": "851796"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

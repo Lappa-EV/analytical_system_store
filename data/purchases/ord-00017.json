@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00017",
+  "customer": {
+    "customer_id": "cus-1031",
+    "first_name": "Давыд",
+    "last_name": "Архипов",
+    "email": "tatjana_79@example.net",
+    "phone": "8 (435) 275-15-11",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-398579785D"
+  },
+  "store": {
+    "store_id": "store-006",
+    "store_name": "Большая Пикча — Магазин на ш. Семашко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Джейрах",
+      "street": "ул. Шевченко",
+      "house": "673",
+      "postal_code": "604441",
+      "coordinates": {
+        "latitude": -17.0906805,
+        "longitude": -35.155928
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 312.38,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 660.2,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 181.99,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    }
+  ],
+  "total_amount": 1154.57,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Череповец",
+    "street": "бул. Вахитова",
+    "house": "93",
+    "apartment": "80",
+    "postal_code": "426149"
+  },
+  "purchase_datetime": "2025-09-04T12:48:03.392845"
+}

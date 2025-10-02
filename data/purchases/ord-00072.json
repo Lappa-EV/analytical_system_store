@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00072",
+  "customer": {
+    "customer_id": "cus-1020",
+    "first_name": "Поликарп",
+    "last_name": "Баранов",
+    "email": "suvorovaskold@example.com",
+    "phone": "+7 (028) 479-29-87",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9940A6CB27"
+  },
+  "store": {
+    "store_id": "store-033",
+    "store_name": "Маленькая Пикча — Магазин на ш. Дорожное",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Александровск",
+      "street": "бул. Республиканский",
+      "house": "49",
+      "postal_code": "050678",
+      "coordinates": {
+        "latitude": 28.393002,
+        "longitude": -135.470708
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 396.12,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Териберка",
+    "street": "ш. Дорожников",
+    "house": "24",
+    "apartment": "84",
+    "postal_code": "986850"
+  },
+  "purchase_datetime": "2025-09-04T14:52:03.381845"
+}

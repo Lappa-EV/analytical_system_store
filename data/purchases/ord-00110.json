@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00110",
+  "customer": {
+    "customer_id": "cus-1025",
+    "first_name": "Вацлав",
+    "last_name": "Гордеев",
+    "email": "dementi_27@example.com",
+    "phone": "+7 281 999 8431",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DBADA7234A"
+  },
+  "store": {
+    "store_id": "store-045",
+    "store_name": "Маленькая Пикча — Магазин на бул. 70 лет Октября",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Палана",
+      "street": "бул. Заовражный",
+      "house": "99",
+      "postal_code": "934420",
+      "coordinates": {
+        "latitude": -25.7193895,
+        "longitude": 31.214079
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 122.86,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 363.98,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    }
+  ],
+  "total_amount": 486.84,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Енисейск",
+    "street": "пр. Коммунальный",
+    "house": "4",
+    "apartment": "29",
+    "postal_code": "451714"
+  },
+  "purchase_datetime": "2025-09-04T14:14:47.386846"
+}

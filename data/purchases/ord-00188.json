@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00188",
+  "customer": {
+    "customer_id": "cus-1039",
+    "first_name": "Евсей",
+    "last_name": "Третьяков",
+    "email": "kuprijan56@example.com",
+    "phone": "+7 (160) 086-5799",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-33E6A7A16F"
+  },
+  "store": {
+    "store_id": "store-019",
+    "store_name": "Большая Пикча — Магазин на ул. Хуторская",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Вязьма",
+      "street": "наб. Транспортная",
+      "house": "94",
+      "postal_code": "932888",
+      "coordinates": {
+        "latitude": -34.0234355,
+        "longitude": 69.567097
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 567.22,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    }
+  ],
+  "total_amount": 567.22,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Аршан (Бурят.)",
+    "street": "бул. Привокзальный",
+    "house": "3",
+    "apartment": "60",
+    "postal_code": "427309"
+  },
+  "purchase_datetime": "2025-09-04T13:44:39.400846"
+}

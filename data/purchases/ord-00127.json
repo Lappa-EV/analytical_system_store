@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00127",
+  "customer": {
+    "customer_id": "cus-1044",
+    "first_name": "Изот",
+    "last_name": "Брагин",
+    "email": "komissarovantonin@example.org",
+    "phone": "+7 (683) 356-68-80",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-8C9F04C189"
+  },
+  "store": {
+    "store_id": "store-031",
+    "store_name": "Маленькая Пикча — Магазин на ул. Щорса",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Неплюевка",
+      "street": "ул. Гвардейская",
+      "house": "8",
+      "postal_code": "961448",
+      "coordinates": {
+        "latitude": 65.8489145,
+        "longitude": 12.19185
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 312.38,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 110.49,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 289.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 712.37,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Палана",
+    "street": "пр. Комсомольский",
+    "house": "2",
+    "apartment": "47",
+    "postal_code": "942112"
+  },
+  "purchase_datetime": "2025-09-04T13:34:06.406848"
+}

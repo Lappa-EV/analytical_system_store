@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1024",
+  "first_name": "Потап",
+  "last_name": "Соловьев",
+  "email": "kalashnikovamaja@example.com",
+  "phone": "+7 465 743 2765",
+  "birth_date": "2000-02-15",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.385848",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-6C05423B15",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "ст. Томпа",
+    "street": "ул. Восточная",
+    "house": "93",
+    "postal_code": "903241",
+    "coordinates": {
+      "latitude": -36.8832215,
+      "longitude": -13.547199
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Томпа",
+    "street": "алл. Ангарская",
+    "house": "72",
+    "apartment": "92",
+    "postal_code": "842230"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

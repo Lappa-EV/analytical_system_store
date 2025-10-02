@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00008",
+  "customer": {
+    "customer_id": "cus-1044",
+    "first_name": "Изот",
+    "last_name": "Брагин",
+    "email": "komissarovantonin@example.org",
+    "phone": "+7 (683) 356-68-80",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-8C9F04C189"
+  },
+  "store": {
+    "store_id": "store-038",
+    "store_name": "Маленькая Пикча — Магазин на ул. Ветеранов",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Воскресенск",
+      "street": "ш. Свердлова",
+      "house": "61",
+      "postal_code": "183828",
+      "coordinates": {
+        "latitude": -21.2230995,
+        "longitude": -73.616871
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 936.4,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 312.38,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    }
+  ],
+  "total_amount": 1644.9,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Палана",
+    "street": "пр. Комсомольский",
+    "house": "2",
+    "apartment": "47",
+    "postal_code": "942112"
+  },
+  "purchase_datetime": "2025-09-04T13:19:56.406848"
+}

@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00175",
+  "customer": {
+    "customer_id": "cus-1005",
+    "first_name": "Василий",
+    "last_name": "Григорьева",
+    "email": "lavrenti_1995@example.com",
+    "phone": "8 600 867 6094",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-0527F2AA18"
+  },
+  "store": {
+    "store_id": "store-032",
+    "store_name": "Маленькая Пикча — Магазин на пр. Жукова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Череповец",
+      "street": "пер. 8 Марта",
+      "house": "1",
+      "postal_code": "207262",
+      "coordinates": {
+        "latitude": 13.119439,
+        "longitude": 140.956005
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 83.14,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    }
+  ],
+  "total_amount": 83.14,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Джейрах",
+    "street": "пер. Советской Армии",
+    "house": "4",
+    "apartment": "95",
+    "postal_code": "803798"
+  },
+  "purchase_datetime": "2025-09-04T13:35:37.365862"
+}

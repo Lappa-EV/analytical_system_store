@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1042",
+  "first_name": "Соломон",
+  "last_name": "Быков",
+  "email": "gennadi_1986@example.org",
+  "phone": "+7 (764) 718-0747",
+  "birth_date": "2003-08-24",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.404845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-17267E2DE9",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "наб. Базарная",
+    "house": "3",
+    "postal_code": "817268",
+    "coordinates": {
+      "latitude": 42.3622285,
+      "longitude": -153.329248
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "бул. Баумана",
+    "house": "862",
+    "apartment": "70",
+    "postal_code": "666307"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": false
+  }
+}

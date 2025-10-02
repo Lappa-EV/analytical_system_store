@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00122",
+  "customer": {
+    "customer_id": "cus-1011",
+    "first_name": "Устин",
+    "last_name": "Шаров",
+    "email": "panfil13@example.com",
+    "phone": "+7 894 546 9487",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-BB4AF3832B"
+  },
+  "store": {
+    "store_id": "store-005",
+    "store_name": "Большая Пикча — Магазин на бул. Тепличный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Нальчик",
+      "street": "наб. Боровая",
+      "house": "52",
+      "postal_code": "956067",
+      "coordinates": {
+        "latitude": 14.178195,
+        "longitude": 54.328407
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 267.44,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 186.21,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    }
+  ],
+  "total_amount": 453.65,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Ейск",
+    "street": "пер. Никитина",
+    "house": "9/6",
+    "apartment": "85",
+    "postal_code": "157286"
+  },
+  "purchase_datetime": "2024-12-15T01:39:49.371846"
+}

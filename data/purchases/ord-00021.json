@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00021",
+  "customer": {
+    "customer_id": "cus-1036",
+    "first_name": "Вячеслава",
+    "last_name": "Устинова",
+    "email": "bazhen_79@example.com",
+    "phone": "+79762113540",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-D2BB45A500"
+  },
+  "store": {
+    "store_id": "store-034",
+    "store_name": "Маленькая Пикча — Магазин на наб. Ульянова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Дмитров",
+      "street": "пер. Энергетиков",
+      "house": "9/1",
+      "postal_code": "784589",
+      "coordinates": {
+        "latitude": 56.750145,
+        "longitude": -151.802671
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 59.77,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 567.22,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 234.1,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 861.09,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Тымовское",
+    "street": "пер. Владимирский",
+    "house": "8",
+    "apartment": "76",
+    "postal_code": "977159"
+  },
+  "purchase_datetime": "2025-09-04T12:58:25.397845"
+}

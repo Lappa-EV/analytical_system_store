@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00061",
+  "customer": {
+    "customer_id": "cus-1018",
+    "first_name": "Денис",
+    "last_name": "Петров",
+    "email": "ermakovklavdi@example.com",
+    "phone": "87730056008",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-63466EFB5E"
+  },
+  "store": {
+    "store_id": "store-042",
+    "store_name": "Маленькая Пикча — Магазин на наб. О.Кошевого",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Усть-Калманка",
+      "street": "пер. Волкова",
+      "house": "526",
+      "postal_code": "493879",
+      "coordinates": {
+        "latitude": 37.984753,
+        "longitude": 110.689625
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 453.48,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 119.54,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 161.82,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 734.84,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "ш. Демьяна Бедного",
+    "house": "123",
+    "apartment": "41",
+    "postal_code": "111003"
+  },
+  "purchase_datetime": "2025-09-04T13:38:29.379845"
+}

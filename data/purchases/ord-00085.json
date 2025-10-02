@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00085",
+  "customer": {
+    "customer_id": "cus-1038",
+    "first_name": "Юлиан",
+    "last_name": "Владимиров",
+    "email": "fedosiovchinnikov@example.org",
+    "phone": "+7 110 070 01 34",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-14909482FB"
+  },
+  "store": {
+    "store_id": "store-028",
+    "store_name": "Большая Пикча — Магазин на алл. Энергетическая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Объячево",
+      "street": "бул. Студенческий",
+      "house": "5/1",
+      "postal_code": "527289",
+      "coordinates": {
+        "latitude": -57.384581,
+        "longitude": -43.623814
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 151.16,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 366.82,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 517.98,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Яхрома",
+    "street": "бул. Мира",
+    "house": "6",
+    "apartment": "55",
+    "postal_code": "960427"
+  },
+  "purchase_datetime": "2025-09-04T14:29:50.399845"
+}

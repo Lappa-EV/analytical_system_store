@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00104",
+  "customer": {
+    "customer_id": "cus-1002",
+    "first_name": "Амвросий",
+    "last_name": "Русаков",
+    "email": "kazimirpestov@example.com",
+    "phone": "8 640 959 3646",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-B8F5DBA8A5"
+  },
+  "store": {
+    "store_id": "store-005",
+    "store_name": "Большая Пикча — Магазин на бул. Тепличный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Нальчик",
+      "street": "наб. Боровая",
+      "house": "52",
+      "postal_code": "956067",
+      "coordinates": {
+        "latitude": 14.178195,
+        "longitude": 54.328407
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 302.32,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 184.29,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    }
+  ],
+  "total_amount": 882.73,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Соль-Илецк",
+    "street": "наб. Гайдара",
+    "house": "1",
+    "apartment": "22",
+    "postal_code": "952349"
+  },
+  "purchase_datetime": "2025-09-04T13:33:32.362848"
+}

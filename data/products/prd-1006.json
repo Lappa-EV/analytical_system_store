@@ -1,0 +1,24 @@
+{
+  "id": "prd-1006",
+  "name": "Горбуша",
+  "group": "🥩 Мясо, рыба, яйца и бобовые",
+  "description": "Горбуша",
+  "kbju": {
+    "calories": 109.1,
+    "protein": 5.5,
+    "fat": 1.3,
+    "carbohydrates": 11.0
+  },
+  "price": 181.99,
+  "unit": "кг",
+  "origin_country": "Россия",
+  "expiry_days": 12,
+  "is_organic": false,
+  "barcode": "3855938452295",
+  "manufacturer": {
+    "name": "РАО «Русакова Исакова»",
+    "country": "Россия",
+    "website": "https://mihalov.com",
+    "inn": "4674032895"
+  }
+}

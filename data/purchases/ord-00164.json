@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00164",
+  "customer": {
+    "customer_id": "cus-1006",
+    "first_name": "Трифон",
+    "last_name": "Герасимов",
+    "email": "xfomina@example.net",
+    "phone": "+75884365521",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DA374A26C4"
+  },
+  "store": {
+    "store_id": "store-026",
+    "store_name": "Большая Пикча — Магазин на наб. Белинского",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Енисейск",
+      "street": "бул. Байкальский",
+      "house": "78",
+      "postal_code": "367274",
+      "coordinates": {
+        "latitude": 46.7958005,
+        "longitude": -16.12984
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 755.8,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 755.8,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "purchase_datetime": "2025-09-04T13:40:18.366847"
+}

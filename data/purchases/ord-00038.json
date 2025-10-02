@@ -1,0 +1,58 @@
+{
+  "purchase_id": "ord-00038",
+  "customer": {
+    "customer_id": "cus-1023",
+    "first_name": "Вышеслав",
+    "last_name": "Борисов",
+    "email": "shubinsavvati@example.net",
+    "phone": "8 425 830 59 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-26A063C420"
+  },
+  "store": {
+    "store_id": "store-032",
+    "store_name": "Маленькая Пикча — Магазин на пр. Жукова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Череповец",
+      "street": "пер. 8 Марта",
+      "house": "1",
+      "postal_code": "207262",
+      "coordinates": {
+        "latitude": 13.119439,
+        "longitude": 140.956005
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 540.24,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 540.24,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "purchase_datetime": "2025-09-04T14:45:35.384865"
+}

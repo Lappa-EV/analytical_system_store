@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00180",
+  "customer": {
+    "customer_id": "cus-1003",
+    "first_name": "Лавр",
+    "last_name": "Гусева",
+    "email": "maksim28@example.org",
+    "phone": "8 015 780 18 91",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F53C834631"
+  },
+  "store": {
+    "store_id": "store-025",
+    "store_name": "Большая Пикча — Магазин на пер. Панфилова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Томпа",
+      "street": "ул. Восточная",
+      "house": "93",
+      "postal_code": "903241",
+      "coordinates": {
+        "latitude": -36.8832215,
+        "longitude": -13.547199
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 530.3,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    }
+  ],
+  "total_amount": 530.3,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Двинской",
+    "street": "бул. Элеваторный",
+    "house": "3/1",
+    "apartment": "40",
+    "postal_code": "234634"
+  },
+  "purchase_datetime": "2025-09-04T13:29:21.363846"
+}

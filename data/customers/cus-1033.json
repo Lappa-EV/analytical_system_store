@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1033",
+  "first_name": "Олег",
+  "last_name": "Миронов",
+  "email": "solovevtrofim@example.org",
+  "phone": "8 542 380 40 54",
+  "birth_date": "1965-11-02",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.394845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-E1D5770A6A",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "ст. Дмитров",
+    "street": "пер. Энергетиков",
+    "house": "9/1",
+    "postal_code": "784589",
+    "coordinates": {
+      "latitude": 56.750145,
+      "longitude": -151.802671
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Дмитров",
+    "street": "ш. Олега Кошевого",
+    "house": "9/1",
+    "apartment": "73",
+    "postal_code": "810363"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

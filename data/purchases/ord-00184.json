@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00184",
+  "customer": {
+    "customer_id": "cus-1028",
+    "first_name": "Василий",
+    "last_name": "Молчанов",
+    "email": "ljubomir_2008@example.org",
+    "phone": "+7 613 486 00 00",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-D3267CAF20"
+  },
+  "store": {
+    "store_id": "store-034",
+    "store_name": "Маленькая Пикча — Магазин на наб. Ульянова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Дмитров",
+      "street": "пер. Энергетиков",
+      "house": "9/1",
+      "postal_code": "784589",
+      "coordinates": {
+        "latitude": 56.750145,
+        "longitude": -151.802671
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 184.29,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 184.29,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Чехов",
+    "street": "ул. Аэродромная",
+    "house": "7",
+    "apartment": "94",
+    "postal_code": "632662"
+  },
+  "purchase_datetime": "2025-09-04T13:02:47.389847"
+}

@@ -1,0 +1,24 @@
+{
+  "id": "prd-1019",
+  "name": "Молоко 3.5%",
+  "group": "🥛 Молочные продукты",
+  "description": "Молоко 3.5%",
+  "kbju": {
+    "calories": 150.3,
+    "protein": 5.1,
+    "fat": 2.1,
+    "carbohydrates": 13.1
+  },
+  "price": 132.04,
+  "unit": "шт",
+  "origin_country": "Россия",
+  "expiry_days": 14,
+  "is_organic": false,
+  "barcode": "2315445928979",
+  "manufacturer": {
+    "name": "АО «Калинин Коновалов»",
+    "country": "Россия",
+    "website": "https://oao.net",
+    "inn": "5276900937"
+  }
+}

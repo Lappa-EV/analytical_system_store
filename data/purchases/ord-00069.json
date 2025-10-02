@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00069",
+  "customer": {
+    "customer_id": "cus-1018",
+    "first_name": "Денис",
+    "last_name": "Петров",
+    "email": "ermakovklavdi@example.com",
+    "phone": "87730056008",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-63466EFB5E"
+  },
+  "store": {
+    "store_id": "store-008",
+    "store_name": "Большая Пикча — Магазин на пер. Северный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Кропоткин (Краснод.)",
+      "street": "ш. Волгоградское",
+      "house": "964",
+      "postal_code": "610146",
+      "coordinates": {
+        "latitude": -50.455477,
+        "longitude": -174.602683
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 207.85,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    }
+  ],
+  "total_amount": 207.85,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "ш. Демьяна Бедного",
+    "house": "123",
+    "apartment": "41",
+    "postal_code": "111003"
+  },
+  "purchase_datetime": "2025-09-04T12:46:21.379845"
+}

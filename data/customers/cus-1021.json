@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1021",
+  "first_name": "Элеонора",
+  "last_name": "Михеева",
+  "email": "polikarp65@example.net",
+  "phone": "8 (593) 738-7571",
+  "birth_date": "2000-03-26",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.382845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-E5AEB175B0",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "к. Плес",
+    "street": "алл. Тимирязева",
+    "house": "607",
+    "postal_code": "519653",
+    "coordinates": {
+      "latitude": -44.6631935,
+      "longitude": -85.520594
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Плес",
+    "street": "ш. Клубное",
+    "house": "7",
+    "apartment": "87",
+    "postal_code": "074281"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

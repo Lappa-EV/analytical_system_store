@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00125",
+  "customer": {
+    "customer_id": "cus-1018",
+    "first_name": "Денис",
+    "last_name": "Петров",
+    "email": "ermakovklavdi@example.com",
+    "phone": "87730056008",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-63466EFB5E"
+  },
+  "store": {
+    "store_id": "store-035",
+    "store_name": "Маленькая Пикча — Магазин на алл. Депутатская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Камышлов",
+      "street": "пер. Ермака",
+      "house": "18",
+      "postal_code": "182965",
+      "coordinates": {
+        "latitude": -16.52565,
+        "longitude": 132.196223
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 647.28,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 931.05,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 868.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 2446.83,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Вязьма",
+    "street": "ш. Демьяна Бедного",
+    "house": "123",
+    "apartment": "41",
+    "postal_code": "111003"
+  },
+  "purchase_datetime": "2025-09-04T13:06:45.379845"
+}

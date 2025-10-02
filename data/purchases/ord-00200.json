@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00200",
+  "customer": {
+    "customer_id": "cus-1039",
+    "first_name": "Евсей",
+    "last_name": "Третьяков",
+    "email": "kuprijan56@example.com",
+    "phone": "+7 (160) 086-5799",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-33E6A7A16F"
+  },
+  "store": {
+    "store_id": "store-044",
+    "store_name": "Маленькая Пикча — Магазин на ул. Учительская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Пушкин",
+      "street": "наб. Рябиновая",
+      "house": "1",
+      "postal_code": "563408",
+      "coordinates": {
+        "latitude": -11.278927,
+        "longitude": -32.532948
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 61.43,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 909.95,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 360.16,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 1331.54,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Аршан (Бурят.)",
+    "street": "бул. Привокзальный",
+    "house": "3",
+    "apartment": "60",
+    "postal_code": "427309"
+  },
+  "purchase_datetime": "2025-09-04T14:30:58.400846"
+}

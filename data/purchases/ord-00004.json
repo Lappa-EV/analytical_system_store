@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00004",
+  "customer": {
+    "customer_id": "cus-1041",
+    "first_name": "Будимир",
+    "last_name": "Лобанов",
+    "email": "feofan_1978@example.org",
+    "phone": "8 797 335 2091",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-3882A46FBF"
+  },
+  "store": {
+    "store_id": "store-040",
+    "store_name": "Маленькая Пикча — Магазин на ул. Больничная",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Аршан (Бурят.)",
+      "street": "пр. Абрикосовый",
+      "house": "79",
+      "postal_code": "367619",
+      "coordinates": {
+        "latitude": 63.425144,
+        "longitude": -113.24923
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 720.32,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 604.64,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 1324.96,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Усть-Калманка",
+    "street": "алл. Орловская",
+    "house": "6/6",
+    "apartment": "92",
+    "postal_code": "679796"
+  },
+  "purchase_datetime": "2025-09-04T14:19:20.403844"
+}

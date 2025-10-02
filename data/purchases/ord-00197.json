@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00197",
+  "customer": {
+    "customer_id": "cus-1006",
+    "first_name": "Трифон",
+    "last_name": "Герасимов",
+    "email": "xfomina@example.net",
+    "phone": "+75884365521",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DA374A26C4"
+  },
+  "store": {
+    "store_id": "store-001",
+    "store_name": "Большая Пикча — Магазин на алл. Локомотивная",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Витим",
+      "street": "пер. Вольный",
+      "house": "7",
+      "postal_code": "624553",
+      "coordinates": {
+        "latitude": -52.3336815,
+        "longitude": -51.631912
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 180.08,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 702.3,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 882.38,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "purchase_datetime": "2025-09-04T12:52:26.366847"
+}

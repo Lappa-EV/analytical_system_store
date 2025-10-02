@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00176",
+  "customer": {
+    "customer_id": "cus-1042",
+    "first_name": "Соломон",
+    "last_name": "Быков",
+    "email": "gennadi_1986@example.org",
+    "phone": "+7 (764) 718-0747",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-17267E2DE9"
+  },
+  "store": {
+    "store_id": "store-029",
+    "store_name": "Большая Пикча — Магазин на наб. Вахитова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Чехов",
+      "street": "пр. Мостовой",
+      "house": "78",
+      "postal_code": "348570",
+      "coordinates": {
+        "latitude": 48.9410125,
+        "longitude": -112.616793
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 1418.05,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    }
+  ],
+  "total_amount": 1418.05,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "бул. Баумана",
+    "house": "862",
+    "apartment": "70",
+    "postal_code": "666307"
+  },
+  "purchase_datetime": "2025-09-04T14:54:46.404845"
+}

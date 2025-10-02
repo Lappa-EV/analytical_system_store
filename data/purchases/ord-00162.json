@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00162",
+  "customer": {
+    "customer_id": "cus-1032",
+    "first_name": "Марина",
+    "last_name": "Семенова",
+    "email": "kostiniosif@example.com",
+    "phone": "85659754362",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-37CE9E20AD"
+  },
+  "store": {
+    "store_id": "store-027",
+    "store_name": "Большая Пикча — Магазин на бул. Безымянный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Сузун",
+      "street": "алл. Баумана",
+      "house": "9",
+      "postal_code": "363519",
+      "coordinates": {
+        "latitude": -23.953326,
+        "longitude": 175.677275
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 660.2,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 234.1,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 894.3,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Александровск",
+    "street": "пер. Терешковой",
+    "house": "4/6",
+    "apartment": "19",
+    "postal_code": "221240"
+  },
+  "purchase_datetime": "2025-09-04T14:10:20.393864"
+}

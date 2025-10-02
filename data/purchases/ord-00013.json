@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00013",
+  "customer": {
+    "customer_id": "cus-1032",
+    "first_name": "Марина",
+    "last_name": "Семенова",
+    "email": "kostiniosif@example.com",
+    "phone": "85659754362",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-37CE9E20AD"
+  },
+  "store": {
+    "store_id": "store-007",
+    "store_name": "Большая Пикча — Магазин на алл. Новая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Саратов",
+      "street": "бул. Микрорайон",
+      "house": "8/6",
+      "postal_code": "315841",
+      "coordinates": {
+        "latitude": -81.2657075,
+        "longitude": 24.90928
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 133.72,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 119.54,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 253.26,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Александровск",
+    "street": "пер. Терешковой",
+    "house": "4/6",
+    "apartment": "19",
+    "postal_code": "221240"
+  },
+  "purchase_datetime": "2025-09-04T13:16:46.393864"
+}

@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00057",
+  "customer": {
+    "customer_id": "cus-1008",
+    "first_name": "Герасим",
+    "last_name": "Дмитриев",
+    "email": "venedikt1971@example.net",
+    "phone": "+7 161 903 9330",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5C0BFD33F4"
+  },
+  "store": {
+    "store_id": "store-027",
+    "store_name": "Большая Пикча — Магазин на бул. Безымянный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Сузун",
+      "street": "алл. Баумана",
+      "house": "9",
+      "postal_code": "363519",
+      "coordinates": {
+        "latitude": -23.953326,
+        "longitude": 175.677275
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 61.43,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 61.43,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пер. Гайдара",
+    "house": "78",
+    "apartment": "56",
+    "postal_code": "526198"
+  },
+  "purchase_datetime": "2025-09-04T13:46:35.368847"
+}

@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1034",
+  "first_name": "Анна",
+  "last_name": "Соколова",
+  "email": "gorshkovkir@example.net",
+  "phone": "8 (564) 558-52-88",
+  "birth_date": "1991-02-20",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.395848",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-DD358B553F",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "д. Камышлов",
+    "street": "пер. Ермака",
+    "house": "18",
+    "postal_code": "182965",
+    "coordinates": {
+      "latitude": -16.52565,
+      "longitude": 132.196223
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "д. Камышлов",
+    "street": "алл. Микрорайон",
+    "house": "622",
+    "apartment": "1",
+    "postal_code": "376273"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

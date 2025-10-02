@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00163",
+  "customer": {
+    "customer_id": "cus-1026",
+    "first_name": "Марианна",
+    "last_name": "Абрамова",
+    "email": "ljubim_1973@example.com",
+    "phone": "82255945331",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9F4A650FDD"
+  },
+  "store": {
+    "store_id": "store-032",
+    "store_name": "Маленькая Пикча — Магазин на пр. Жукова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Череповец",
+      "street": "пер. 8 Марта",
+      "house": "1",
+      "postal_code": "207262",
+      "coordinates": {
+        "latitude": 13.119439,
+        "longitude": 140.956005
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 366.82,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 647.28,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 122.86,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 1136.96,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Сузун",
+    "street": "ул. 9 мая",
+    "house": "9",
+    "apartment": "55",
+    "postal_code": "508296"
+  },
+  "purchase_datetime": "2025-09-04T13:13:44.387846"
+}

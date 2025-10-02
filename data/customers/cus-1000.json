@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1000",
+  "first_name": "Нестор",
+  "last_name": "Фадеев",
+  "email": "vikenti1988@example.com",
+  "phone": "+73258867793",
+  "birth_date": "2000-07-17",
+  "gender": "male",
+  "registration_date": "2025-01-04T12:41:38.359845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-90F7F71182",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пер. Вольный",
+    "house": "7",
+    "postal_code": "624553",
+    "coordinates": {
+      "latitude": -52.3336815,
+      "longitude": -51.631912
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пр. Балтийский",
+    "house": "8",
+    "apartment": "3",
+    "postal_code": "806111"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

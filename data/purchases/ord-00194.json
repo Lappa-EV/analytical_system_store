@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00194",
+  "customer": {
+    "customer_id": "cus-1003",
+    "first_name": "Лавр",
+    "last_name": "Гусева",
+    "email": "maksim28@example.org",
+    "phone": "8 015 780 18 91",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F53C834631"
+  },
+  "store": {
+    "store_id": "store-036",
+    "store_name": "Маленькая Пикча — Магазин на пер. Песочный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Белореченск",
+      "street": "пр. Химиков",
+      "house": "661",
+      "postal_code": "026539",
+      "coordinates": {
+        "latitude": 57.2373665,
+        "longitude": -57.013401
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 917.05,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 267.44,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    }
+  ],
+  "total_amount": 1184.49,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Двинской",
+    "street": "бул. Элеваторный",
+    "house": "3/1",
+    "apartment": "40",
+    "postal_code": "234634"
+  },
+  "purchase_datetime": "2025-09-04T13:24:04.363846"
+}

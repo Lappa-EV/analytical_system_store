@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00048",
+  "customer": {
+    "customer_id": "cus-1024",
+    "first_name": "Потап",
+    "last_name": "Соловьев",
+    "email": "kalashnikovamaja@example.com",
+    "phone": "+7 465 743 2765",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-6C05423B15"
+  },
+  "store": {
+    "store_id": "store-018",
+    "store_name": "Большая Пикча — Магазин на пер. Мелиораторов",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Калач",
+      "street": "ш. Большевистское",
+      "house": "705",
+      "postal_code": "811639",
+      "coordinates": {
+        "latitude": -30.7223715,
+        "longitude": -149.341654
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 307.15,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 604.64,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 911.79,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Томпа",
+    "street": "алл. Ангарская",
+    "house": "72",
+    "apartment": "92",
+    "postal_code": "842230"
+  },
+  "purchase_datetime": "2025-09-04T14:10:05.385848"
+}

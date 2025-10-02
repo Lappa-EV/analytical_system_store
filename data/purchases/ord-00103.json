@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00103",
+  "customer": {
+    "customer_id": "cus-1001",
+    "first_name": "Спартак",
+    "last_name": "Медведев",
+    "email": "arseni71@example.net",
+    "phone": "+78810401818",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-39938E0272"
+  },
+  "store": {
+    "store_id": "store-006",
+    "store_name": "Большая Пикча — Магазин на ш. Семашко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Джейрах",
+      "street": "ул. Шевченко",
+      "house": "673",
+      "postal_code": "604441",
+      "coordinates": {
+        "latitude": -17.0906805,
+        "longitude": -35.155928
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 558.92,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    }
+  ],
+  "total_amount": 558.92,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Хасан",
+    "street": "наб. Ярославская",
+    "house": "39",
+    "apartment": "22",
+    "postal_code": "765806"
+  },
+  "purchase_datetime": "2025-09-04T13:17:26.361844"
+}

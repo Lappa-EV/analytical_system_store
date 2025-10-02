@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00071",
+  "customer": {
+    "customer_id": "cus-1028",
+    "first_name": "Василий",
+    "last_name": "Молчанов",
+    "email": "ljubomir_2008@example.org",
+    "phone": "+7 613 486 00 00",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-D3267CAF20"
+  },
+  "store": {
+    "store_id": "store-015",
+    "store_name": "Большая Пикча — Магазин на бул. Березовый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Калач-на-Дону",
+      "street": "алл. Волгоградская",
+      "house": "1",
+      "postal_code": "674677",
+      "coordinates": {
+        "latitude": -37.3112295,
+        "longitude": 72.383959
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 106.06,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    },
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 744.84,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    }
+  ],
+  "total_amount": 850.9,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Чехов",
+    "street": "ул. Аэродромная",
+    "house": "7",
+    "apartment": "94",
+    "postal_code": "632662"
+  },
+  "purchase_datetime": "2025-09-04T14:39:38.389847"
+}

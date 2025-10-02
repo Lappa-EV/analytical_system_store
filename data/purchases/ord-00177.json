@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00177",
+  "customer": {
+    "customer_id": "cus-1001",
+    "first_name": "Спартак",
+    "last_name": "Медведев",
+    "email": "arseni71@example.net",
+    "phone": "+78810401818",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-39938E0272"
+  },
+  "store": {
+    "store_id": "store-030",
+    "store_name": "Большая Пикча — Магазин на бул. Иванова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Хоста",
+      "street": "бул. Серафимовича",
+      "house": "69",
+      "postal_code": "527356",
+      "coordinates": {
+        "latitude": 37.3793025,
+        "longitude": 11.169034
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 441.96,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1008",
+      "name": "Помидоры",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 283.61,
+      "total_price": 283.61,
+      "kbju": {
+        "calories": 87.9,
+        "protein": 11.7,
+        "fat": 1.8,
+        "carbohydrates": 36.2
+      },
+      "manufacturer": {
+        "name": "ПК Балтика (Carlsbergfondet)",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "8082191267"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1447.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 2173.07,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Хасан",
+    "street": "наб. Ярославская",
+    "house": "39",
+    "apartment": "22",
+    "postal_code": "765806"
+  },
+  "purchase_datetime": "2025-09-04T14:22:49.361844"
+}

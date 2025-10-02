@@ -1,0 +1,24 @@
+{
+  "id": "prd-1014",
+  "name": "Кефир 1%",
+  "group": "🥛 Молочные продукты",
+  "description": "Кефир 1% «Простоквашино»",
+  "kbju": {
+    "calories": 131.8,
+    "protein": 14.8,
+    "fat": 8.9,
+    "carbohydrates": 28.5
+  },
+  "price": 156.19,
+  "unit": "шт",
+  "origin_country": "Россия",
+  "expiry_days": 27,
+  "is_organic": false,
+  "barcode": "3007388610163",
+  "manufacturer": {
+    "name": "ОАО «Юнимилк»",
+    "country": "Россия",
+    "website": "https://npo.edu",
+    "inn": "8394046956"
+  }
+}

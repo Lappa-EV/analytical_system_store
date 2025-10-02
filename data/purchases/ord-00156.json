@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00156",
+  "customer": {
+    "customer_id": "cus-1023",
+    "first_name": "Вышеслав",
+    "last_name": "Борисов",
+    "email": "shubinsavvati@example.net",
+    "phone": "8 425 830 59 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-26A063C420"
+  },
+  "store": {
+    "store_id": "store-027",
+    "store_name": "Большая Пикча — Магазин на бул. Безымянный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Сузун",
+      "street": "алл. Баумана",
+      "house": "9",
+      "postal_code": "363519",
+      "coordinates": {
+        "latitude": -23.953326,
+        "longitude": 175.677275
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 1170.5,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 579.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 1749.5,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "purchase_datetime": "2025-09-04T14:37:15.384865"
+}

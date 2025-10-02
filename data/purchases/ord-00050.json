@@ -1,0 +1,58 @@
+{
+  "purchase_id": "ord-00050",
+  "customer": {
+    "customer_id": "cus-1014",
+    "first_name": "Елизавета",
+    "last_name": "Быкова",
+    "email": "rodion2013@example.com",
+    "phone": "8 503 167 89 70",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-83C3014FF9"
+  },
+  "store": {
+    "store_id": "store-008",
+    "store_name": "Большая Пикча — Магазин на пер. Северный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Кропоткин (Краснод.)",
+      "street": "ш. Волгоградское",
+      "house": "964",
+      "postal_code": "610146",
+      "coordinates": {
+        "latitude": -50.455477,
+        "longitude": -174.602683
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 298.85,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 298.85,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Калач-на-Дону",
+    "street": "пер. Тенистый",
+    "house": "1/7",
+    "apartment": "65",
+    "postal_code": "186318"
+  },
+  "purchase_datetime": "2025-09-04T13:32:55.374845"
+}

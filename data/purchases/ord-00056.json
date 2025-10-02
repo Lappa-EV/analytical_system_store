@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00056",
+  "customer": {
+    "customer_id": "cus-1006",
+    "first_name": "Трифон",
+    "last_name": "Герасимов",
+    "email": "xfomina@example.net",
+    "phone": "+75884365521",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DA374A26C4"
+  },
+  "store": {
+    "store_id": "store-006",
+    "store_name": "Большая Пикча — Магазин на ш. Семашко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Джейрах",
+      "street": "ул. Шевченко",
+      "house": "673",
+      "postal_code": "604441",
+      "coordinates": {
+        "latitude": -17.0906805,
+        "longitude": -35.155928
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 132.04,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 550.23,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 682.27,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "purchase_datetime": "2025-09-04T14:50:17.366847"
+}

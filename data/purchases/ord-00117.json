@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00117",
+  "customer": {
+    "customer_id": "cus-1017",
+    "first_name": "Евфросиния",
+    "last_name": "Лихачева",
+    "email": "juvenali2017@example.com",
+    "phone": "8 929 968 1793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E2262F0914"
+  },
+  "store": {
+    "store_id": "store-035",
+    "store_name": "Маленькая Пикча — Магазин на алл. Депутатская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Камышлов",
+      "street": "пер. Ермака",
+      "house": "18",
+      "postal_code": "182965",
+      "coordinates": {
+        "latitude": -16.52565,
+        "longitude": 132.196223
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 1170.5,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 1121.2,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 2291.7,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Калач",
+    "street": "наб. Ветеранов",
+    "house": "658",
+    "apartment": "74",
+    "postal_code": "000139"
+  },
+  "purchase_datetime": "2025-09-04T14:37:17.378844"
+}

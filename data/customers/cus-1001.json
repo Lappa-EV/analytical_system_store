@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1001",
+  "first_name": "Спартак",
+  "last_name": "Медведев",
+  "email": "arseni71@example.net",
+  "phone": "+78810401818",
+  "birth_date": "1980-09-26",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.361844",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-39938E0272",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "с. Хасан",
+    "street": "бул. Подлесный",
+    "house": "87",
+    "postal_code": "964324",
+    "coordinates": {
+      "latitude": 53.0341855,
+      "longitude": 45.543272
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Хасан",
+    "street": "наб. Ярославская",
+    "house": "39",
+    "apartment": "22",
+    "postal_code": "765806"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

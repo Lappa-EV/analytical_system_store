@@ -1,0 +1,24 @@
+{
+  "id": "prd-1001",
+  "name": "Яблоки",
+  "group": "🍏 Фрукты и ягоды",
+  "description": "Яблоки «Мелба»",
+  "kbju": {
+    "calories": 90.4,
+    "protein": 1.1,
+    "fat": 6.9,
+    "carbohydrates": 20.9
+  },
+  "price": 106.06,
+  "unit": "кг",
+  "origin_country": "Россия",
+  "expiry_days": 11,
+  "is_organic": true,
+  "barcode": "4447095213537",
+  "manufacturer": {
+    "name": "ООО «Горшкова-Дорофеева»",
+    "country": "Россия",
+    "website": "https://ao.edu",
+    "inn": "7559853347"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00142",
+  "customer": {
+    "customer_id": "cus-1016",
+    "first_name": "Платон",
+    "last_name": "Щукин",
+    "email": "evgrafdenisov@example.net",
+    "phone": "+7 (068) 951-5562",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-B983D17AE6"
+  },
+  "store": {
+    "store_id": "store-029",
+    "store_name": "Большая Пикча — Магазин на наб. Вахитова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Чехов",
+      "street": "пр. Мостовой",
+      "house": "78",
+      "postal_code": "348570",
+      "coordinates": {
+        "latitude": 48.9410125,
+        "longitude": -112.616793
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 528.16,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 809.1,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 1337.26,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Юрьев-Польский",
+    "street": "пр. Победы",
+    "house": "8/6",
+    "apartment": "84",
+    "postal_code": "851796"
+  },
+  "purchase_datetime": "2025-09-04T13:37:13.376847"
+}

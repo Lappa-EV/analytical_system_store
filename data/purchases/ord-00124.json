@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00124",
+  "customer": {
+    "customer_id": "cus-1005",
+    "first_name": "Василий",
+    "last_name": "Григорьева",
+    "email": "lavrenti_1995@example.com",
+    "phone": "8 600 867 6094",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-0527F2AA18"
+  },
+  "store": {
+    "store_id": "store-014",
+    "store_name": "Большая Пикча — Магазин на ш. Среднее",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Арзамас",
+      "street": "алл. Зои Космодемьянской",
+      "house": "1",
+      "postal_code": "929619",
+      "coordinates": {
+        "latitude": 36.0108945,
+        "longitude": -178.955462
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 124.71,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    },
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 1121.2,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    },
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 139.73,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    }
+  ],
+  "total_amount": 1385.64,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Джейрах",
+    "street": "пер. Советской Армии",
+    "house": "4",
+    "apartment": "95",
+    "postal_code": "803798"
+  },
+  "purchase_datetime": "2025-09-04T13:44:36.365862"
+}

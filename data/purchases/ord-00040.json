@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00040",
+  "customer": {
+    "customer_id": "cus-1020",
+    "first_name": "Поликарп",
+    "last_name": "Баранов",
+    "email": "suvorovaskold@example.com",
+    "phone": "+7 (028) 479-29-87",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-9940A6CB27"
+  },
+  "store": {
+    "store_id": "store-022",
+    "store_name": "Большая Пикча — Магазин на наб. Ключевая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Плес",
+      "street": "алл. Тимирязева",
+      "house": "607",
+      "postal_code": "519653",
+      "coordinates": {
+        "latitude": -44.6631935,
+        "longitude": -85.520594
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 780.95,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 298.85,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 323.64,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 1403.44,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Териберка",
+    "street": "ш. Дорожников",
+    "house": "24",
+    "apartment": "84",
+    "postal_code": "986850"
+  },
+  "purchase_datetime": "2025-09-04T14:14:51.381845"
+}

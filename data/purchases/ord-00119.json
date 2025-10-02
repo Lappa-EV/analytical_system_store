@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00119",
+  "customer": {
+    "customer_id": "cus-1025",
+    "first_name": "Вацлав",
+    "last_name": "Гордеев",
+    "email": "dementi_27@example.com",
+    "phone": "+7 281 999 8431",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DBADA7234A"
+  },
+  "store": {
+    "store_id": "store-004",
+    "store_name": "Большая Пикча — Магазин на пр. Каштановый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Двинской",
+      "street": "пер. Осипенко",
+      "house": "52",
+      "postal_code": "915882",
+      "coordinates": {
+        "latitude": 57.829415,
+        "longitude": 59.082201
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 401.16,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    }
+  ],
+  "total_amount": 401.16,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Енисейск",
+    "street": "пр. Коммунальный",
+    "house": "4",
+    "apartment": "29",
+    "postal_code": "451714"
+  },
+  "purchase_datetime": "2025-09-04T14:31:21.386846"
+}

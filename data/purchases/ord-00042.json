@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00042",
+  "customer": {
+    "customer_id": "cus-1019",
+    "first_name": "Егор",
+    "last_name": "Баранов",
+    "email": "ernst1975@example.net",
+    "phone": "+7 (877) 199-03-39",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-18C30CC717"
+  },
+  "store": {
+    "store_id": "store-033",
+    "store_name": "Маленькая Пикча — Магазин на ш. Дорожное",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Александровск",
+      "street": "бул. Республиканский",
+      "house": "49",
+      "postal_code": "050678",
+      "coordinates": {
+        "latitude": 28.393002,
+        "longitude": -135.470708
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 733.64,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 733.64,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Воткинск",
+    "street": "наб. Фрунзе",
+    "house": "565",
+    "apartment": "83",
+    "postal_code": "588003"
+  },
+  "purchase_datetime": "2025-09-04T14:19:39.380844"
+}

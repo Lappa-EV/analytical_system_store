@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00108",
+  "customer": {
+    "customer_id": "cus-1017",
+    "first_name": "Евфросиния",
+    "last_name": "Лихачева",
+    "email": "juvenali2017@example.com",
+    "phone": "8 929 968 1793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E2262F0914"
+  },
+  "store": {
+    "store_id": "store-033",
+    "store_name": "Маленькая Пикча — Магазин на ш. Дорожное",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Александровск",
+      "street": "бул. Республиканский",
+      "house": "49",
+      "postal_code": "050678",
+      "coordinates": {
+        "latitude": 28.393002,
+        "longitude": -135.470708
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 909.95,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 647.28,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 1557.23,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Калач",
+    "street": "наб. Ветеранов",
+    "house": "658",
+    "apartment": "74",
+    "postal_code": "000139"
+  },
+  "purchase_datetime": "2025-09-04T13:17:21.378844"
+}

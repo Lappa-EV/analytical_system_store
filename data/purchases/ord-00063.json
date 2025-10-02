@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00063",
+  "customer": {
+    "customer_id": "cus-1019",
+    "first_name": "Егор",
+    "last_name": "Баранов",
+    "email": "ernst1975@example.net",
+    "phone": "+7 (877) 199-03-39",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-18C30CC717"
+  },
+  "store": {
+    "store_id": "store-002",
+    "store_name": "Большая Пикча — Магазин на ул. Ульянова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "с. Хасан",
+      "street": "бул. Подлесный",
+      "house": "87",
+      "postal_code": "964324",
+      "coordinates": {
+        "latitude": 53.0341855,
+        "longitude": 45.543272
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 183.41,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 183.41,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Воткинск",
+    "street": "наб. Фрунзе",
+    "house": "565",
+    "apartment": "83",
+    "postal_code": "588003"
+  },
+  "purchase_datetime": "2025-09-04T14:25:18.380844"
+}

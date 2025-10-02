@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00159",
+  "customer": {
+    "customer_id": "cus-1022",
+    "first_name": "Лев",
+    "last_name": "Фокин",
+    "email": "sharovustin@example.com",
+    "phone": "+75989431382",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-08CAEFD6EE"
+  },
+  "store": {
+    "store_id": "store-011",
+    "store_name": "Большая Пикча — Магазин на алл. Николаева",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Ревда (Сверд.)",
+      "street": "ш. Ягодное",
+      "house": "4/2",
+      "postal_code": "834419",
+      "coordinates": {
+        "latitude": 12.892843,
+        "longitude": 23.619858
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 809.1,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 245.72,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 1054.82,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "бул. Кузнецкий",
+    "house": "8/6",
+    "apartment": "53",
+    "postal_code": "833968"
+  },
+  "purchase_datetime": "2025-09-04T13:51:20.383846"
+}

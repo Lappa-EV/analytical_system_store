@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1008",
+  "first_name": "Герасим",
+  "last_name": "Дмитриев",
+  "email": "venedikt1971@example.net",
+  "phone": "+7 161 903 9330",
+  "birth_date": "1961-12-27",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.368847",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-5C0BFD33F4",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пр. Шахтерский",
+    "house": "9",
+    "postal_code": "652179",
+    "coordinates": {
+      "latitude": -10.0566045,
+      "longitude": -66.605111
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пер. Гайдара",
+    "house": "78",
+    "apartment": "56",
+    "postal_code": "526198"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

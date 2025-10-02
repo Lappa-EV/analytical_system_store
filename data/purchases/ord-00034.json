@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00034",
+  "customer": {
+    "customer_id": "cus-1029",
+    "first_name": "Агрепина",
+    "last_name": "Моисеева",
+    "email": "martinovizmail@example.com",
+    "phone": "+7 943 063 3433",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5AC31847F5"
+  },
+  "store": {
+    "store_id": "store-003",
+    "store_name": "Большая Пикча — Магазин на ул. Кочубея",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Соль-Илецк",
+      "street": "ул. Союзная",
+      "house": "898",
+      "postal_code": "295290",
+      "coordinates": {
+        "latitude": -84.9186845,
+        "longitude": -123.949896
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 220.98,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    }
+  ],
+  "total_amount": 220.98,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Хоста",
+    "street": "бул. Макарова",
+    "house": "2/8",
+    "apartment": "71",
+    "postal_code": "289232"
+  },
+  "purchase_datetime": "2025-09-04T14:40:35.390845"
+}

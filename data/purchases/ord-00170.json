@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00170",
+  "customer": {
+    "customer_id": "cus-1013",
+    "first_name": "Гремислав",
+    "last_name": "Соколов",
+    "email": "haritonovvelimir@example.com",
+    "phone": "8 609 031 8090",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-270C3D1DFF"
+  },
+  "store": {
+    "store_id": "store-030",
+    "store_name": "Большая Пикча — Магазин на бул. Иванова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Хоста",
+      "street": "бул. Серафимовича",
+      "house": "69",
+      "postal_code": "527356",
+      "coordinates": {
+        "latitude": 37.3793025,
+        "longitude": 11.169034
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 183.41,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 110.49,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    },
+    {
+      "product_id": "prd-1010",
+      "name": "Картофель молодой",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "упаковка",
+      "price_per_unit": 224.24,
+      "total_price": 448.48,
+      "kbju": {
+        "calories": 276.2,
+        "protein": 9.9,
+        "fat": 7.5,
+        "carbohydrates": 7.2
+      },
+      "manufacturer": {
+        "name": "АО «Капустин, Алексеев и Сергеева»",
+        "country": "Россия",
+        "website": "https://ip.ru",
+        "inn": "1768142115"
+      }
+    }
+  ],
+  "total_amount": 742.38,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Арзамас",
+    "street": "алл. Баумана",
+    "house": "8",
+    "apartment": "53",
+    "postal_code": "629940"
+  },
+  "purchase_datetime": "2025-09-04T14:01:13.374845"
+}

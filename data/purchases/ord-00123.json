@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00123",
+  "customer": {
+    "customer_id": "cus-1031",
+    "first_name": "Давыд",
+    "last_name": "Архипов",
+    "email": "tatjana_79@example.net",
+    "phone": "8 (435) 275-15-11",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-398579785D"
+  },
+  "store": {
+    "store_id": "store-022",
+    "store_name": "Большая Пикча — Магазин на наб. Ключевая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Плес",
+      "street": "алл. Тимирязева",
+      "house": "607",
+      "postal_code": "519653",
+      "coordinates": {
+        "latitude": -44.6631935,
+        "longitude": -85.520594
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 186.21,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    },
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 106.06,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    }
+  ],
+  "total_amount": 292.27,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Череповец",
+    "street": "бул. Вахитова",
+    "house": "93",
+    "apartment": "80",
+    "postal_code": "426149"
+  },
+  "purchase_datetime": "2025-09-04T14:09:28.392845"
+}

@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00068",
+  "customer": {
+    "customer_id": "cus-1011",
+    "first_name": "Устин",
+    "last_name": "Шаров",
+    "email": "panfil13@example.com",
+    "phone": "+7 894 546 9487",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-BB4AF3832B"
+  },
+  "store": {
+    "store_id": "store-039",
+    "store_name": "Маленькая Пикча — Магазин на пр. Союзный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Яхрома",
+      "street": "алл. Астраханская",
+      "house": "1",
+      "postal_code": "744138",
+      "coordinates": {
+        "latitude": 63.4137485,
+        "longitude": 156.206784
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 119.54,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 558.92,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    }
+  ],
+  "total_amount": 678.46,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Ейск",
+    "street": "пер. Никитина",
+    "house": "9/6",
+    "apartment": "85",
+    "postal_code": "157286"
+  },
+  "purchase_datetime": "2025-07-05T23:19:18.371846"
+}

@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00105",
+  "customer": {
+    "customer_id": "cus-1040",
+    "first_name": "Варвара",
+    "last_name": "Воронцова",
+    "email": "lebedevguri@example.com",
+    "phone": "8 174 859 2769",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-FA44354480"
+  },
+  "store": {
+    "store_id": "store-032",
+    "store_name": "Маленькая Пикча — Магазин на пр. Жукова",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Череповец",
+      "street": "пер. 8 Марта",
+      "house": "1",
+      "postal_code": "207262",
+      "coordinates": {
+        "latitude": 13.119439,
+        "longitude": 140.956005
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1001",
+      "name": "Яблоки",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 106.06,
+      "total_price": 106.06,
+      "kbju": {
+        "calories": 90.4,
+        "protein": 1.1,
+        "fat": 6.9,
+        "carbohydrates": 20.9
+      },
+      "manufacturer": {
+        "name": "ООО «Горшкова-Дорофеева»",
+        "country": "Россия",
+        "website": "https://ao.edu",
+        "inn": "7559853347"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 132.04,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 184.29,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 422.39,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Инта",
+    "street": "наб. Коллективная",
+    "house": "2",
+    "apartment": "3",
+    "postal_code": "963264"
+  },
+  "purchase_datetime": "2025-09-04T12:59:58.401845"
+}

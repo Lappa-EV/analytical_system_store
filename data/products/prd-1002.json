@@ -1,0 +1,24 @@
+{
+  "id": "prd-1002",
+  "name": "Персики",
+  "group": "🍏 Фрукты и ягоды",
+  "description": "Персики «Кубань»",
+  "kbju": {
+    "calories": 236.0,
+    "protein": 16.8,
+    "fat": 7.4,
+    "carbohydrates": 40.1
+  },
+  "price": 110.49,
+  "unit": "кг",
+  "origin_country": "Россия",
+  "expiry_days": 18,
+  "is_organic": false,
+  "barcode": "9987608618862",
+  "manufacturer": {
+    "name": "Газпромбанк",
+    "country": "Россия",
+    "website": "https://ooo.net",
+    "inn": "2160343400"
+  }
+}

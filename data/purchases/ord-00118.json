@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00118",
+  "customer": {
+    "customer_id": "cus-1021",
+    "first_name": "Элеонора",
+    "last_name": "Михеева",
+    "email": "polikarp65@example.net",
+    "phone": "8 (593) 738-7571",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E5AEB175B0"
+  },
+  "store": {
+    "store_id": "store-024",
+    "store_name": "Большая Пикча — Магазин на пер. Орджоникидзе",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Новомосковск",
+      "street": "ш. Горького",
+      "house": "755",
+      "postal_code": "129617",
+      "coordinates": {
+        "latitude": -7.9778015,
+        "longitude": 49.723494
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 161.82,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 579.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 740.82,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Плес",
+    "street": "ш. Клубное",
+    "house": "7",
+    "apartment": "87",
+    "postal_code": "074281"
+  },
+  "purchase_datetime": "2025-09-04T14:06:14.382845"
+}

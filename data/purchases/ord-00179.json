@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00179",
+  "customer": {
+    "customer_id": "cus-1017",
+    "first_name": "Евфросиния",
+    "last_name": "Лихачева",
+    "email": "juvenali2017@example.com",
+    "phone": "8 929 968 1793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E2262F0914"
+  },
+  "store": {
+    "store_id": "store-015",
+    "store_name": "Большая Пикча — Магазин на бул. Березовый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Калач-на-Дону",
+      "street": "алл. Волгоградская",
+      "house": "1",
+      "postal_code": "674677",
+      "coordinates": {
+        "latitude": -37.3112295,
+        "longitude": 72.383959
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1002",
+      "name": "Персики",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 110.49,
+      "total_price": 331.47,
+      "kbju": {
+        "calories": 236.0,
+        "protein": 16.8,
+        "fat": 7.4,
+        "carbohydrates": 40.1
+      },
+      "manufacturer": {
+        "name": "Газпромбанк",
+        "country": "Россия",
+        "website": "https://ooo.net",
+        "inn": "2160343400"
+      }
+    }
+  ],
+  "total_amount": 331.47,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Калач",
+    "street": "наб. Ветеранов",
+    "house": "658",
+    "apartment": "74",
+    "postal_code": "000139"
+  },
+  "purchase_datetime": "2025-09-04T14:07:18.378844"
+}

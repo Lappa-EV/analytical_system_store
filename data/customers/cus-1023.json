@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1023",
+  "first_name": "Вышеслав",
+  "last_name": "Борисов",
+  "email": "shubinsavvati@example.net",
+  "phone": "8 425 830 59 54",
+  "birth_date": "1967-03-08",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.384865",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-26A063C420",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "ш. Горького",
+    "house": "755",
+    "postal_code": "129617",
+    "coordinates": {
+      "latitude": -7.9778015,
+      "longitude": 49.723494
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

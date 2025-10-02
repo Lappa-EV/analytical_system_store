@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1031",
+  "first_name": "Давыд",
+  "last_name": "Архипов",
+  "email": "tatjana_79@example.net",
+  "phone": "8 (435) 275-15-11",
+  "birth_date": "1966-12-15",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.392845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-398579785D",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Череповец",
+    "street": "пер. 8 Марта",
+    "house": "1",
+    "postal_code": "207262",
+    "coordinates": {
+      "latitude": 13.119439,
+      "longitude": 140.956005
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Череповец",
+    "street": "бул. Вахитова",
+    "house": "93",
+    "apartment": "80",
+    "postal_code": "426149"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

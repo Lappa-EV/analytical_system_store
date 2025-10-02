@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00196",
+  "customer": {
+    "customer_id": "cus-1042",
+    "first_name": "Соломон",
+    "last_name": "Быков",
+    "email": "gennadi_1986@example.org",
+    "phone": "+7 (764) 718-0747",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-17267E2DE9"
+  },
+  "store": {
+    "store_id": "store-008",
+    "store_name": "Большая Пикча — Магазин на пер. Северный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Кропоткин (Краснод.)",
+      "street": "ш. Волгоградское",
+      "house": "964",
+      "postal_code": "610146",
+      "coordinates": {
+        "latitude": -50.455477,
+        "longitude": -174.602683
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 579.0,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    }
+  ],
+  "total_amount": 579.0,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Внуково (метеост.)",
+    "street": "бул. Баумана",
+    "house": "862",
+    "apartment": "70",
+    "postal_code": "666307"
+  },
+  "purchase_datetime": "2025-09-04T13:46:39.404845"
+}

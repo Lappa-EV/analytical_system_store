@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00065",
+  "customer": {
+    "customer_id": "cus-1033",
+    "first_name": "Олег",
+    "last_name": "Миронов",
+    "email": "solovevtrofim@example.org",
+    "phone": "8 542 380 40 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E1D5770A6A"
+  },
+  "store": {
+    "store_id": "store-004",
+    "store_name": "Большая Пикча — Магазин на пр. Каштановый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Двинской",
+      "street": "пер. Осипенко",
+      "house": "52",
+      "postal_code": "915882",
+      "coordinates": {
+        "latitude": 57.829415,
+        "longitude": 59.082201
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 122.86,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 540.24,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 663.1,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Дмитров",
+    "street": "ш. Олега Кошевого",
+    "house": "9/1",
+    "apartment": "73",
+    "postal_code": "810363"
+  },
+  "purchase_datetime": "2025-09-04T12:49:22.394845"
+}

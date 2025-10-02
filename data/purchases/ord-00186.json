@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00186",
+  "customer": {
+    "customer_id": "cus-1035",
+    "first_name": "Кузьма",
+    "last_name": "Лихачев",
+    "email": "gurimelnikov@example.net",
+    "phone": "8 845 384 1792",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-2EBC6731C6"
+  },
+  "store": {
+    "store_id": "store-036",
+    "store_name": "Маленькая Пикча — Магазин на пер. Песочный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Белореченск",
+      "street": "пр. Химиков",
+      "house": "661",
+      "postal_code": "026539",
+      "coordinates": {
+        "latitude": 57.2373665,
+        "longitude": -57.013401
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 2,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 372.42,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 61.43,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 433.85,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Белореченск",
+    "street": "пр. Герцена",
+    "house": "9",
+    "apartment": "49",
+    "postal_code": "494416"
+  },
+  "purchase_datetime": "2025-09-04T12:49:59.396846"
+}

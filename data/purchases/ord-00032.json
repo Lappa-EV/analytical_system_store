@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00032",
+  "customer": {
+    "customer_id": "cus-1032",
+    "first_name": "Марина",
+    "last_name": "Семенова",
+    "email": "kostiniosif@example.com",
+    "phone": "85659754362",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-37CE9E20AD"
+  },
+  "store": {
+    "store_id": "store-045",
+    "store_name": "Маленькая Пикча — Магазин на бул. 70 лет Октября",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Палана",
+      "street": "бул. Заовражный",
+      "house": "99",
+      "postal_code": "934420",
+      "coordinates": {
+        "latitude": -25.7193895,
+        "longitude": 31.214079
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1447.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 550.23,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 1997.73,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Александровск",
+    "street": "пер. Терешковой",
+    "house": "4/6",
+    "apartment": "19",
+    "postal_code": "221240"
+  },
+  "purchase_datetime": "2025-09-04T14:48:28.393864"
+}

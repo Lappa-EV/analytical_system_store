@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00128",
+  "customer": {
+    "customer_id": "cus-1019",
+    "first_name": "Егор",
+    "last_name": "Баранов",
+    "email": "ernst1975@example.net",
+    "phone": "+7 (877) 199-03-39",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-18C30CC717"
+  },
+  "store": {
+    "store_id": "store-020",
+    "store_name": "Большая Пикча — Магазин на наб. Некрасова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Воткинск",
+      "street": "бул. Брянский",
+      "house": "318",
+      "postal_code": "564138",
+      "coordinates": {
+        "latitude": -5.6636675,
+        "longitude": 157.872189
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 234.1,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 3,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 396.12,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 931.05,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    }
+  ],
+  "total_amount": 1561.27,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Воткинск",
+    "street": "наб. Фрунзе",
+    "house": "565",
+    "apartment": "83",
+    "postal_code": "588003"
+  },
+  "purchase_datetime": "2025-09-04T14:08:25.380844"
+}

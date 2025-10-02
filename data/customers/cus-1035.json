@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1035",
+  "first_name": "Кузьма",
+  "last_name": "Лихачев",
+  "email": "gurimelnikov@example.net",
+  "phone": "8 845 384 1792",
+  "birth_date": "1983-12-07",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.396846",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-2EBC6731C6",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Белореченск",
+    "street": "пр. Химиков",
+    "house": "661",
+    "postal_code": "026539",
+    "coordinates": {
+      "latitude": 57.2373665,
+      "longitude": -57.013401
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Белореченск",
+    "street": "пр. Герцена",
+    "house": "9",
+    "apartment": "49",
+    "postal_code": "494416"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": false
+  }
+}

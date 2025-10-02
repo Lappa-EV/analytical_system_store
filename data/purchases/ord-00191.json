@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00191",
+  "customer": {
+    "customer_id": "cus-1031",
+    "first_name": "Давыд",
+    "last_name": "Архипов",
+    "email": "tatjana_79@example.net",
+    "phone": "8 (435) 275-15-11",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-398579785D"
+  },
+  "store": {
+    "store_id": "store-043",
+    "store_name": "Маленькая Пикча — Магазин на бул. Красный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Внуково (метеост.)",
+      "street": "наб. Базарная",
+      "house": "3",
+      "postal_code": "817268",
+      "coordinates": {
+        "latitude": 42.3622285,
+        "longitude": -153.329248
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 720.32,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 668.6,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 702.3,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 2091.22,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Череповец",
+    "street": "бул. Вахитова",
+    "house": "93",
+    "apartment": "80",
+    "postal_code": "426149"
+  },
+  "purchase_datetime": "2025-09-04T14:03:32.392845"
+}

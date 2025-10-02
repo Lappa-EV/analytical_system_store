@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00145",
+  "customer": {
+    "customer_id": "cus-1023",
+    "first_name": "Вышеслав",
+    "last_name": "Борисов",
+    "email": "shubinsavvati@example.net",
+    "phone": "8 425 830 59 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-26A063C420"
+  },
+  "store": {
+    "store_id": "store-041",
+    "store_name": "Маленькая Пикча — Магазин на ш. Карбышева",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Инта",
+      "street": "ул. Краснодарская",
+      "house": "9",
+      "postal_code": "639018",
+      "coordinates": {
+        "latitude": 83.27252,
+        "longitude": -85.424271
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 3,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 485.46,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 485.46,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "purchase_datetime": "2025-09-04T14:39:24.384865"
+}

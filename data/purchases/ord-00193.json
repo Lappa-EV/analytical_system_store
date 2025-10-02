@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00193",
+  "customer": {
+    "customer_id": "cus-1011",
+    "first_name": "Устин",
+    "last_name": "Шаров",
+    "email": "panfil13@example.com",
+    "phone": "+7 894 546 9487",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-BB4AF3832B"
+  },
+  "store": {
+    "store_id": "store-038",
+    "store_name": "Маленькая Пикча — Магазин на ул. Ветеранов",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Воскресенск",
+      "street": "ш. Свердлова",
+      "house": "61",
+      "postal_code": "183828",
+      "coordinates": {
+        "latitude": -21.2230995,
+        "longitude": -73.616871
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 133.72,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 647.28,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 298.85,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 1079.85,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "с. Ейск",
+    "street": "пер. Никитина",
+    "house": "9/6",
+    "apartment": "85",
+    "postal_code": "157286"
+  },
+  "purchase_datetime": "2024-02-17T06:53:20.371846"
+}

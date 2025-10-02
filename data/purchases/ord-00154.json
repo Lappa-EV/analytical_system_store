@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00154",
+  "customer": {
+    "customer_id": "cus-1017",
+    "first_name": "Евфросиния",
+    "last_name": "Лихачева",
+    "email": "juvenali2017@example.com",
+    "phone": "8 929 968 1793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-E2262F0914"
+  },
+  "store": {
+    "store_id": "store-044",
+    "store_name": "Маленькая Пикча — Магазин на ул. Учительская",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "ст. Пушкин",
+      "street": "наб. Рябиновая",
+      "house": "1",
+      "postal_code": "563408",
+      "coordinates": {
+        "latitude": -11.278927,
+        "longitude": -32.532948
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 755.8,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 755.8,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Калач",
+    "street": "наб. Ветеранов",
+    "house": "658",
+    "apartment": "74",
+    "postal_code": "000139"
+  },
+  "purchase_datetime": "2025-09-04T14:11:54.378844"
+}

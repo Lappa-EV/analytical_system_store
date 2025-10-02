@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00171",
+  "customer": {
+    "customer_id": "cus-1022",
+    "first_name": "Лев",
+    "last_name": "Фокин",
+    "email": "sharovustin@example.com",
+    "phone": "+75989431382",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-08CAEFD6EE"
+  },
+  "store": {
+    "store_id": "store-033",
+    "store_name": "Маленькая Пикча — Магазин на ш. Дорожное",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Александровск",
+      "street": "бул. Республиканский",
+      "house": "49",
+      "postal_code": "050678",
+      "coordinates": {
+        "latitude": 28.393002,
+        "longitude": -135.470708
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 1170.5,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 1170.5,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "бул. Кузнецкий",
+    "house": "8/6",
+    "apartment": "53",
+    "postal_code": "833968"
+  },
+  "purchase_datetime": "2025-09-04T13:02:11.383846"
+}

@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1007",
+  "first_name": "Анастасия",
+  "last_name": "Зимина",
+  "email": "afanasi_18@example.org",
+  "phone": "8 466 457 9485",
+  "birth_date": "1965-02-04",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.367845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-5E47A045B4",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Кропоткин (Краснод.)",
+    "street": "ш. Волгоградское",
+    "house": "964",
+    "postal_code": "610146",
+    "coordinates": {
+      "latitude": -50.455477,
+      "longitude": -174.602683
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Кропоткин (Краснод.)",
+    "street": "ш. Почтовое",
+    "house": "863",
+    "apartment": "96",
+    "postal_code": "323017"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

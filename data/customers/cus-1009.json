@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1009",
+  "first_name": "Куприян",
+  "last_name": "Тетерин",
+  "email": "tit_2005@example.net",
+  "phone": "8 (858) 147-27-93",
+  "birth_date": "1974-06-28",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.370845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-3FF0C3F7B6",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "п. Токма",
+    "street": "ул. Хуторская",
+    "house": "6/9",
+    "postal_code": "369207",
+    "coordinates": {
+      "latitude": 61.7908005,
+      "longitude": 103.376425
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Токма",
+    "street": "наб. Димитрова",
+    "house": "445",
+    "apartment": "88",
+    "postal_code": "611551"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

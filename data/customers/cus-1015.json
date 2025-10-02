@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1015",
+  "first_name": "Олимпиада",
+  "last_name": "Фокина",
+  "email": "vkrasilnikova@example.net",
+  "phone": "+71468345890",
+  "birth_date": "1955-09-14",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.375844",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-8498F650CE",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "к. Старая Русса",
+    "street": "ш. Станционное",
+    "house": "5/3",
+    "postal_code": "045362",
+    "coordinates": {
+      "latitude": 0.4915825,
+      "longitude": 87.783503
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Старая Русса",
+    "street": "наб. Терешковой",
+    "house": "6",
+    "apartment": "80",
+    "postal_code": "516098"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1038",
+  "first_name": "Юлиан",
+  "last_name": "Владимиров",
+  "email": "fedosiovchinnikov@example.org",
+  "phone": "+7 110 070 01 34",
+  "birth_date": "1962-02-08",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.399845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-14909482FB",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "к. Яхрома",
+    "street": "алл. Астраханская",
+    "house": "1",
+    "postal_code": "744138",
+    "coordinates": {
+      "latitude": 63.4137485,
+      "longitude": 156.206784
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Яхрома",
+    "street": "бул. Мира",
+    "house": "6",
+    "apartment": "55",
+    "postal_code": "960427"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

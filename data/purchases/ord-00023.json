@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00023",
+  "customer": {
+    "customer_id": "cus-1008",
+    "first_name": "Герасим",
+    "last_name": "Дмитриев",
+    "email": "venedikt1971@example.net",
+    "phone": "+7 161 903 9330",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5C0BFD33F4"
+  },
+  "store": {
+    "store_id": "store-005",
+    "store_name": "Большая Пикча — Магазин на бул. Тепличный",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Нальчик",
+      "street": "наб. Боровая",
+      "house": "52",
+      "postal_code": "956067",
+      "coordinates": {
+        "latitude": 14.178195,
+        "longitude": 54.328407
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 727.96,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    },
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 668.6,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    }
+  ],
+  "total_amount": 1396.56,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Обнинск",
+    "street": "пер. Гайдара",
+    "house": "78",
+    "apartment": "56",
+    "postal_code": "526198"
+  },
+  "purchase_datetime": "2025-09-04T12:58:37.368847"
+}

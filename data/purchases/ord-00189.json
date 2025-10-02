@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00189",
+  "customer": {
+    "customer_id": "cus-1006",
+    "first_name": "Трифон",
+    "last_name": "Герасимов",
+    "email": "xfomina@example.net",
+    "phone": "+75884365521",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DA374A26C4"
+  },
+  "store": {
+    "store_id": "store-019",
+    "store_name": "Большая Пикча — Магазин на ул. Хуторская",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "д. Вязьма",
+      "street": "наб. Транспортная",
+      "house": "94",
+      "postal_code": "932888",
+      "coordinates": {
+        "latitude": -34.0234355,
+        "longitude": 69.567097
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 453.48,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 909.95,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    }
+  ],
+  "total_amount": 1363.43,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "purchase_datetime": "2025-09-04T13:34:06.366847"
+}

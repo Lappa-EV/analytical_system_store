@@ -1,0 +1,24 @@
+{
+  "id": "prd-1003",
+  "name": "Говядина",
+  "group": "🥩 Мясо, рыба, яйца и бобовые",
+  "description": "Говядина",
+  "kbju": {
+    "calories": 153.6,
+    "protein": 15.7,
+    "fat": 10.5,
+    "carbohydrates": 20.4
+  },
+  "price": 133.72,
+  "unit": "кг",
+  "origin_country": "Россия",
+  "expiry_days": 8,
+  "is_organic": false,
+  "barcode": "9510747276374",
+  "manufacturer": {
+    "name": "ЗАО «Панфилова-Елисеев»",
+    "country": "Россия",
+    "website": "https://kastorama.net",
+    "inn": "5467417735"
+  }
+}

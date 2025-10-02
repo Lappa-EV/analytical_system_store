@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00077",
+  "customer": {
+    "customer_id": "cus-1037",
+    "first_name": "Симон",
+    "last_name": "Тетерин",
+    "email": "anisimnosov@example.org",
+    "phone": "87547121331",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F38CBB44B7"
+  },
+  "store": {
+    "store_id": "store-006",
+    "store_name": "Большая Пикча — Магазин на ш. Семашко",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Джейрах",
+      "street": "ул. Шевченко",
+      "house": "673",
+      "postal_code": "604441",
+      "coordinates": {
+        "latitude": -17.0906805,
+        "longitude": -35.155928
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 207.85,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    },
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 323.64,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 151.16,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    }
+  ],
+  "total_amount": 682.65,
+  "payment_method": "card",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Воскресенск",
+    "street": "пер. Тамбовский",
+    "house": "90",
+    "apartment": "62",
+    "postal_code": "350010"
+  },
+  "purchase_datetime": "2025-09-04T13:18:36.398872"
+}

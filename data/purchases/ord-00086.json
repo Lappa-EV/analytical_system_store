@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00086",
+  "customer": {
+    "customer_id": "cus-1000",
+    "first_name": "Нестор",
+    "last_name": "Фадеев",
+    "email": "vikenti1988@example.com",
+    "phone": "+73258867793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-90F7F71182"
+  },
+  "store": {
+    "store_id": "store-022",
+    "store_name": "Большая Пикча — Магазин на наб. Ключевая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Плес",
+      "street": "алл. Тимирязева",
+      "house": "607",
+      "postal_code": "519653",
+      "coordinates": {
+        "latitude": -44.6631935,
+        "longitude": -85.520594
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 298.85,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    },
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 702.3,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    }
+  ],
+  "total_amount": 1001.15,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пр. Балтийский",
+    "house": "8",
+    "apartment": "3",
+    "postal_code": "806111"
+  },
+  "purchase_datetime": "2025-05-06T12:02:44.359845"
+}

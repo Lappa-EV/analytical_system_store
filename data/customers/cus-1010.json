@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1010",
+  "first_name": "Катерина",
+  "last_name": "Лаппа",
+  "email": "foragro@list.ru",
+  "phone": "8 (908) 202-4065",
+  "birth_date": "1998-06-25",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.370845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-13797A92D8",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "п. Токма",
+    "street": "ул. Хуторская",
+    "house": "6/9",
+    "postal_code": "369207",
+    "coordinates": {
+      "latitude": 61.7908005,
+      "longitude": 103.376425
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "п. Ревда (Сверд.)",
+    "street": "пр. 1 Мая",
+    "house": "7",
+    "apartment": "14",
+    "postal_code": "340926"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": false
+  }
+}

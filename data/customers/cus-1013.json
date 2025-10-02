@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1013",
+  "first_name": "Гремислав",
+  "last_name": "Соколов",
+  "email": "haritonovvelimir@example.com",
+  "phone": "8 609 031 8090",
+  "birth_date": "1976-11-24",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.374845",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-270C3D1DFF",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "г. Арзамас",
+    "street": "алл. Зои Космодемьянской",
+    "house": "1",
+    "postal_code": "929619",
+    "coordinates": {
+      "latitude": 36.0108945,
+      "longitude": -178.955462
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Арзамас",
+    "street": "алл. Баумана",
+    "house": "8",
+    "apartment": "53",
+    "postal_code": "629940"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

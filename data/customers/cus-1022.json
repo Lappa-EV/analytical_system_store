@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1022",
+  "first_name": "Лев",
+  "last_name": "Фокин",
+  "email": "sharovustin@example.com",
+  "phone": "+75989431382",
+  "birth_date": "1996-09-14",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.383846",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-08CAEFD6EE",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "алл. Плеханова",
+    "house": "19",
+    "postal_code": "929239",
+    "coordinates": {
+      "latitude": -10.6086,
+      "longitude": 67.263888
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "бул. Кузнецкий",
+    "house": "8/6",
+    "apartment": "53",
+    "postal_code": "833968"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": false
+  }
+}

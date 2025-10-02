@@ -1,0 +1,24 @@
+{
+  "id": "prd-1018",
+  "name": "Киви",
+  "group": "🍏 Фрукты и ягоды",
+  "description": "Киви «Китай»",
+  "kbju": {
+    "calories": 94.5,
+    "protein": 14.2,
+    "fat": 5.9,
+    "carbohydrates": 14.2
+  },
+  "price": 183.41,
+  "unit": "кг",
+  "origin_country": "КНР",
+  "expiry_days": 11,
+  "is_organic": true,
+  "barcode": "6850682270277",
+  "manufacturer": {
+    "name": "Соколов Групп",
+    "country": "Россия",
+    "website": "https://ip.edu",
+    "inn": "0014005839"
+  }
+}

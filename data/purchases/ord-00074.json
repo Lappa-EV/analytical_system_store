@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00074",
+  "customer": {
+    "customer_id": "cus-1029",
+    "first_name": "Агрепина",
+    "last_name": "Моисеева",
+    "email": "martinovizmail@example.com",
+    "phone": "+7 943 063 3433",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5AC31847F5"
+  },
+  "store": {
+    "store_id": "store-041",
+    "store_name": "Маленькая Пикча — Магазин на ш. Карбышева",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Инта",
+      "street": "ул. Краснодарская",
+      "house": "9",
+      "postal_code": "639018",
+      "coordinates": {
+        "latitude": 83.27252,
+        "longitude": -85.424271
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 41.57,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 1447.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 733.64,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 2222.71,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Хоста",
+    "street": "бул. Макарова",
+    "house": "2/8",
+    "apartment": "71",
+    "postal_code": "289232"
+  },
+  "purchase_datetime": "2025-09-04T13:47:58.390845"
+}

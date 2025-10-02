@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00047",
+  "customer": {
+    "customer_id": "cus-1037",
+    "first_name": "Симон",
+    "last_name": "Тетерин",
+    "email": "anisimnosov@example.org",
+    "phone": "87547121331",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-F38CBB44B7"
+  },
+  "store": {
+    "store_id": "store-015",
+    "store_name": "Большая Пикча — Магазин на бул. Березовый",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "клх Калач-на-Дону",
+      "street": "алл. Волгоградская",
+      "house": "1",
+      "postal_code": "674677",
+      "coordinates": {
+        "latitude": -37.3112295,
+        "longitude": 72.383959
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1000",
+      "name": "Бананы",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 151.16,
+      "total_price": 453.48,
+      "kbju": {
+        "calories": 198.8,
+        "protein": 10.3,
+        "fat": 1.4,
+        "carbohydrates": 41.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Карпова»",
+        "country": "Россия",
+        "website": "https://megafon.com",
+        "inn": "7975469759"
+      }
+    },
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 133.72,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    }
+  ],
+  "total_amount": 587.2,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Воскресенск",
+    "street": "пер. Тамбовский",
+    "house": "90",
+    "apartment": "62",
+    "postal_code": "350010"
+  },
+  "purchase_datetime": "2025-09-04T14:32:30.398872"
+}

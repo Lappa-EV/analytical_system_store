@@ -1,0 +1,58 @@
+{
+  "purchase_id": "ord-00051",
+  "customer": {
+    "customer_id": "cus-1043",
+    "first_name": "Антонина",
+    "last_name": "Аксенова",
+    "email": "feoktist2010@example.net",
+    "phone": "8 (093) 870-1354",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-3F0D3EFB10"
+  },
+  "store": {
+    "store_id": "store-022",
+    "store_name": "Большая Пикча — Магазин на наб. Ключевая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Плес",
+      "street": "алл. Тимирязева",
+      "house": "607",
+      "postal_code": "519653",
+      "coordinates": {
+        "latitude": -44.6631935,
+        "longitude": -85.520594
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 59.77,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 59.77,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "ст. Пушкин",
+    "street": "наб. Ягодная",
+    "house": "213",
+    "apartment": "94",
+    "postal_code": "913158"
+  },
+  "purchase_datetime": "2025-09-04T14:40:50.405865"
+}

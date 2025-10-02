@@ -1,0 +1,100 @@
+{
+  "purchase_id": "ord-00101",
+  "customer": {
+    "customer_id": "cus-1000",
+    "first_name": "Нестор",
+    "last_name": "Фадеев",
+    "email": "vikenti1988@example.com",
+    "phone": "+73258867793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-90F7F71182"
+  },
+  "store": {
+    "store_id": "store-037",
+    "store_name": "Маленькая Пикча — Магазин на наб. Цветочная",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Тымовское",
+      "street": "алл. Дальняя",
+      "house": "667",
+      "postal_code": "434590",
+      "coordinates": {
+        "latitude": -50.735813,
+        "longitude": 15.818426
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 647.28,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    },
+    {
+      "product_id": "prd-1017",
+      "name": "Брусника",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 41.57,
+      "total_price": 166.28,
+      "kbju": {
+        "calories": 239.9,
+        "protein": 3.1,
+        "fat": 2.3,
+        "carbohydrates": 48.0
+      },
+      "manufacturer": {
+        "name": "ООО «Журавлев Лимитед»",
+        "country": "Россия",
+        "website": "https://ip.net",
+        "inn": "2427773134"
+      }
+    },
+    {
+      "product_id": "prd-1007",
+      "name": "Хлеб",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 59.77,
+      "total_price": 59.77,
+      "kbju": {
+        "calories": 271.8,
+        "protein": 18.2,
+        "fat": 12.0,
+        "carbohydrates": 39.0
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 873.33,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пр. Балтийский",
+    "house": "8",
+    "apartment": "3",
+    "postal_code": "806111"
+  },
+  "purchase_datetime": "2025-06-24T09:29:23.359845"
+}

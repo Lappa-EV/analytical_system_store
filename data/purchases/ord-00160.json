@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00160",
+  "customer": {
+    "customer_id": "cus-1025",
+    "first_name": "Вацлав",
+    "last_name": "Гордеев",
+    "email": "dementi_27@example.com",
+    "phone": "+7 281 999 8431",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-DBADA7234A"
+  },
+  "store": {
+    "store_id": "store-021",
+    "store_name": "Большая Пикча — Магазин на бул. Восьмого Марта",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Териберка",
+      "street": "алл. Большая",
+      "house": "3",
+      "postal_code": "332213",
+      "coordinates": {
+        "latitude": 52.320875,
+        "longitude": -134.163561
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1015",
+      "name": "Лук свежий",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "упаковка",
+      "price_per_unit": 139.73,
+      "total_price": 558.92,
+      "kbju": {
+        "calories": 142.9,
+        "protein": 12.9,
+        "fat": 1.4,
+        "carbohydrates": 41.6
+      },
+      "manufacturer": {
+        "name": "ИП «Полякова Селиверстов»",
+        "country": "Россия",
+        "website": "https://npo.biz",
+        "inn": "9970293632"
+      }
+    },
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 550.23,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    }
+  ],
+  "total_amount": 1109.15,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Енисейск",
+    "street": "пр. Коммунальный",
+    "house": "4",
+    "apartment": "29",
+    "postal_code": "451714"
+  },
+  "purchase_datetime": "2025-09-04T13:55:25.386846"
+}

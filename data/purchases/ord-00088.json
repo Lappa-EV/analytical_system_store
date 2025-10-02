@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00088",
+  "customer": {
+    "customer_id": "cus-1023",
+    "first_name": "Вышеслав",
+    "last_name": "Борисов",
+    "email": "shubinsavvati@example.net",
+    "phone": "8 425 830 59 54",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-26A063C420"
+  },
+  "store": {
+    "store_id": "store-037",
+    "store_name": "Маленькая Пикча — Магазин на наб. Цветочная",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Тымовское",
+      "street": "алл. Дальняя",
+      "house": "667",
+      "postal_code": "434590",
+      "coordinates": {
+        "latitude": -50.735813,
+        "longitude": 15.818426
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1003",
+      "name": "Говядина",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 133.72,
+      "total_price": 401.16,
+      "kbju": {
+        "calories": 153.6,
+        "protein": 15.7,
+        "fat": 10.5,
+        "carbohydrates": 20.4
+      },
+      "manufacturer": {
+        "name": "ЗАО «Панфилова-Елисеев»",
+        "country": "Россия",
+        "website": "https://kastorama.net",
+        "inn": "5467417735"
+      }
+    }
+  ],
+  "total_amount": 401.16,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Новомосковск",
+    "street": "пер. Линейный",
+    "house": "1",
+    "apartment": "79",
+    "postal_code": "679666"
+  },
+  "purchase_datetime": "2025-09-04T13:43:41.384865"
+}

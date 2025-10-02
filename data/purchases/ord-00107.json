@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00107",
+  "customer": {
+    "customer_id": "cus-1000",
+    "first_name": "Нестор",
+    "last_name": "Фадеев",
+    "email": "vikenti1988@example.com",
+    "phone": "+73258867793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-90F7F71182"
+  },
+  "store": {
+    "store_id": "store-010",
+    "store_name": "Большая Пикча — Магазин на алл. Степная",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Токма",
+      "street": "ул. Хуторская",
+      "house": "6/9",
+      "postal_code": "369207",
+      "coordinates": {
+        "latitude": 61.7908005,
+        "longitude": 103.376425
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 624.76,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 307.15,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 931.91,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пр. Балтийский",
+    "house": "8",
+    "apartment": "3",
+    "postal_code": "806111"
+  },
+  "purchase_datetime": "2025-02-17T04:13:36.359845"
+}

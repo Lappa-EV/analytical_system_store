@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1041",
+  "first_name": "Будимир",
+  "last_name": "Лобанов",
+  "email": "feofan_1978@example.org",
+  "phone": "8 797 335 2091",
+  "birth_date": "1974-01-06",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.403844",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-3882A46FBF",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Усть-Калманка",
+    "street": "пер. Волкова",
+    "house": "526",
+    "postal_code": "493879",
+    "coordinates": {
+      "latitude": 37.984753,
+      "longitude": 110.689625
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Усть-Калманка",
+    "street": "алл. Орловская",
+    "house": "6/6",
+    "apartment": "92",
+    "postal_code": "679796"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "cash",
+    "receive_promotions": true
+  }
+}

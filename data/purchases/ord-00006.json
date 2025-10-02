@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00006",
+  "customer": {
+    "customer_id": "cus-1000",
+    "first_name": "Нестор",
+    "last_name": "Фадеев",
+    "email": "vikenti1988@example.com",
+    "phone": "+73258867793",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-90F7F71182"
+  },
+  "store": {
+    "store_id": "store-030",
+    "store_name": "Большая Пикча — Магазин на бул. Иванова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Хоста",
+      "street": "бул. Серафимовича",
+      "house": "69",
+      "postal_code": "527356",
+      "coordinates": {
+        "latitude": 37.3793025,
+        "longitude": 11.169034
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1018",
+      "name": "Киви",
+      "category": "🍏 Фрукты и ягоды",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 183.41,
+      "total_price": 550.23,
+      "kbju": {
+        "calories": 94.5,
+        "protein": 14.2,
+        "fat": 5.9,
+        "carbohydrates": 14.2
+      },
+      "manufacturer": {
+        "name": "Соколов Групп",
+        "country": "Россия",
+        "website": "https://ip.edu",
+        "inn": "0014005839"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 900.4,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 1450.63,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "г. Витим",
+    "street": "пр. Балтийский",
+    "house": "8",
+    "apartment": "3",
+    "postal_code": "806111"
+  },
+  "purchase_datetime": "2025-01-05T23:19:36.359845"
+}

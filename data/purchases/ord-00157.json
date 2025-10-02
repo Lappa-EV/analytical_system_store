@@ -1,0 +1,63 @@
+{
+  "purchase_id": "ord-00157",
+  "customer": {
+    "customer_id": "cus-1022",
+    "first_name": "Лев",
+    "last_name": "Фокин",
+    "email": "sharovustin@example.com",
+    "phone": "+75989431382",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-08CAEFD6EE"
+  },
+  "store": {
+    "store_id": "store-036",
+    "store_name": "Маленькая Пикча — Магазин на пер. Песочный",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Белореченск",
+      "street": "пр. Химиков",
+      "house": "661",
+      "postal_code": "026539",
+      "coordinates": {
+        "latitude": 57.2373665,
+        "longitude": -57.013401
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1013",
+      "name": "Яйца",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 2,
+      "unit": "упаковка",
+      "price_per_unit": 161.82,
+      "total_price": 323.64,
+      "kbju": {
+        "calories": 65.6,
+        "protein": 13.3,
+        "fat": 9.9,
+        "carbohydrates": 6.4
+      },
+      "manufacturer": {
+        "name": "ООО «Балахтинская птицефабрика»",
+        "country": "Россия",
+        "website": "https://rao.ru",
+        "inn": "0205538273"
+      }
+    }
+  ],
+  "total_amount": 323.64,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Троицко-Печорск",
+    "street": "бул. Кузнецкий",
+    "house": "8/6",
+    "apartment": "53",
+    "postal_code": "833968"
+  },
+  "purchase_datetime": "2025-09-04T14:12:28.383846"
+}

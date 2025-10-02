@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1006",
+  "first_name": "Трифон",
+  "last_name": "Герасимов",
+  "email": "xfomina@example.net",
+  "phone": "+75884365521",
+  "birth_date": "1970-06-20",
+  "gender": "male",
+  "registration_date": "2025-09-04T12:41:38.366847",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-DA374A26C4",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "бул. Микрорайон",
+    "house": "8/6",
+    "postal_code": "315841",
+    "coordinates": {
+      "latitude": -81.2657075,
+      "longitude": 24.90928
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Саратов",
+    "street": "алл. Физкультурная",
+    "house": "67",
+    "apartment": "43",
+    "postal_code": "358439"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

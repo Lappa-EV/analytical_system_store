@@ -1,0 +1,79 @@
+{
+  "purchase_id": "ord-00129",
+  "customer": {
+    "customer_id": "cus-1007",
+    "first_name": "Анастасия",
+    "last_name": "Зимина",
+    "email": "afanasi_18@example.org",
+    "phone": "8 466 457 9485",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5E47A045B4"
+  },
+  "store": {
+    "store_id": "store-041",
+    "store_name": "Маленькая Пикча — Магазин на ш. Карбышева",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "г. Инта",
+      "street": "ул. Краснодарская",
+      "house": "9",
+      "postal_code": "639018",
+      "coordinates": {
+        "latitude": 83.27252,
+        "longitude": -85.424271
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1004",
+      "name": "Укроп",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 4,
+      "unit": "кг",
+      "price_per_unit": 234.1,
+      "total_price": 936.4,
+      "kbju": {
+        "calories": 74.1,
+        "protein": 17.5,
+        "fat": 5.2,
+        "carbohydrates": 23.7
+      },
+      "manufacturer": {
+        "name": "Родионов Лимитед",
+        "country": "Россия",
+        "website": "https://lobanov.info",
+        "inn": "8781674957"
+      }
+    },
+    {
+      "product_id": "prd-1012",
+      "name": "Булочка с корицей",
+      "category": "🥖 Зерновые и хлебобулочные изделия",
+      "quantity": 1,
+      "unit": "шт",
+      "price_per_unit": 180.08,
+      "total_price": 180.08,
+      "kbju": {
+        "calories": 219.3,
+        "protein": 16.2,
+        "fat": 14.5,
+        "carbohydrates": 44.3
+      },
+      "manufacturer": null
+    }
+  ],
+  "total_amount": 1116.48,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Кропоткин (Краснод.)",
+    "street": "ш. Почтовое",
+    "house": "863",
+    "apartment": "96",
+    "postal_code": "323017"
+  },
+  "purchase_datetime": "2025-09-04T13:54:54.367845"
+}

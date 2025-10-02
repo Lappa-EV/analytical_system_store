@@ -1,0 +1,36 @@
+{
+  "customer_id": "cus-1027",
+  "first_name": "Феоктиста",
+  "last_name": "Попова",
+  "email": "gavrilovaevgenija@example.net",
+  "phone": "+7 571 792 5892",
+  "birth_date": "1960-11-05",
+  "gender": "female",
+  "registration_date": "2025-09-04T12:41:38.388847",
+  "is_loyalty_member": true,
+  "loyalty_card_number": "LOYAL-31E4D9E976",
+  "purchase_location": {
+    "country": "Россия",
+    "city": "к. Объячево",
+    "street": "бул. Студенческий",
+    "house": "5/1",
+    "postal_code": "527289",
+    "coordinates": {
+      "latitude": -57.384581,
+      "longitude": -43.623814
+    }
+  },
+  "delivery_address": {
+    "country": "Россия",
+    "city": "к. Объячево",
+    "street": "наб. Октябрьская",
+    "house": "9",
+    "apartment": "8",
+    "postal_code": "805968"
+  },
+  "preferences": {
+    "preferred_language": "ru",
+    "preferred_payment_method": "card",
+    "receive_promotions": true
+  }
+}

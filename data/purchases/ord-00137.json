@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00137",
+  "customer": {
+    "customer_id": "cus-1007",
+    "first_name": "Анастасия",
+    "last_name": "Зимина",
+    "email": "afanasi_18@example.org",
+    "phone": "8 466 457 9485",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5E47A045B4"
+  },
+  "store": {
+    "store_id": "store-037",
+    "store_name": "Маленькая Пикча — Магазин на наб. Цветочная",
+    "store_network": "Маленькая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "п. Тымовское",
+      "street": "алл. Дальняя",
+      "house": "667",
+      "postal_code": "434590",
+      "coordinates": {
+        "latitude": -50.735813,
+        "longitude": 15.818426
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 289.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1011",
+      "name": "Капуста белокачанная",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 5,
+      "unit": "шт",
+      "price_per_unit": 61.43,
+      "total_price": 307.15,
+      "kbju": {
+        "calories": 287.6,
+        "protein": 2.0,
+        "fat": 5.5,
+        "carbohydrates": 46.1
+      },
+      "manufacturer": {
+        "name": "РАО «Одинцов, Гусева и Фадеева»",
+        "country": "Россия",
+        "website": "https://zao.com",
+        "inn": "7418599410"
+      }
+    }
+  ],
+  "total_amount": 596.65,
+  "payment_method": "card",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Кропоткин (Краснод.)",
+    "street": "ш. Почтовое",
+    "house": "863",
+    "apartment": "96",
+    "postal_code": "323017"
+  },
+  "purchase_datetime": "2025-09-04T13:16:47.367845"
+}

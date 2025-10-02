@@ -1,0 +1,24 @@
+{
+  "id": "prd-1004",
+  "name": "Укроп",
+  "group": "🥦 Овощи и зелень",
+  "description": "Укроп свежий",
+  "kbju": {
+    "calories": 74.1,
+    "protein": 17.5,
+    "fat": 5.2,
+    "carbohydrates": 23.7
+  },
+  "price": 234.1,
+  "unit": "кг",
+  "origin_country": "Россия",
+  "expiry_days": 28,
+  "is_organic": true,
+  "barcode": "4665441925778",
+  "manufacturer": {
+    "name": "Родионов Лимитед",
+    "country": "Россия",
+    "website": "https://lobanov.info",
+    "inn": "8781674957"
+  }
+}

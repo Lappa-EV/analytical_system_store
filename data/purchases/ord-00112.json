@@ -1,0 +1,105 @@
+{
+  "purchase_id": "ord-00112",
+  "customer": {
+    "customer_id": "cus-1041",
+    "first_name": "Будимир",
+    "last_name": "Лобанов",
+    "email": "feofan_1978@example.org",
+    "phone": "8 797 335 2091",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-3882A46FBF"
+  },
+  "store": {
+    "store_id": "store-002",
+    "store_name": "Большая Пикча — Магазин на ул. Ульянова",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "с. Хасан",
+      "street": "бул. Подлесный",
+      "house": "87",
+      "postal_code": "964324",
+      "coordinates": {
+        "latitude": 53.0341855,
+        "longitude": 45.543272
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1014",
+      "name": "Кефир 1%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 4,
+      "unit": "шт",
+      "price_per_unit": 156.19,
+      "total_price": 624.76,
+      "kbju": {
+        "calories": 131.8,
+        "protein": 14.8,
+        "fat": 8.9,
+        "carbohydrates": 28.5
+      },
+      "manufacturer": {
+        "name": "ОАО «Юнимилк»",
+        "country": "Россия",
+        "website": "https://npo.edu",
+        "inn": "8394046956"
+      }
+    },
+    {
+      "product_id": "prd-1009",
+      "name": "Перец «Болгарский»",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 289.5,
+      "total_price": 289.5,
+      "kbju": {
+        "calories": 111.1,
+        "protein": 6.9,
+        "fat": 3.3,
+        "carbohydrates": 18.7
+      },
+      "manufacturer": {
+        "name": "ОАО «Кононова, Овчинникова и Мартынов»",
+        "country": "Россия",
+        "website": "https://arhipova.net",
+        "inn": "9477600447"
+      }
+    },
+    {
+      "product_id": "prd-1005",
+      "name": "Огурцы",
+      "category": "🥦 Овощи и зелень",
+      "quantity": 3,
+      "unit": "кг",
+      "price_per_unit": 186.21,
+      "total_price": 558.63,
+      "kbju": {
+        "calories": 291.9,
+        "protein": 13.5,
+        "fat": 6.1,
+        "carbohydrates": 31.1
+      },
+      "manufacturer": {
+        "name": "Промышленно-металлургический холдинг",
+        "country": "Россия",
+        "website": "https://npo.info",
+        "inn": "4831858099"
+      }
+    }
+  ],
+  "total_amount": 1472.89,
+  "payment_method": "cash",
+  "is_delivery": true,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Усть-Калманка",
+    "street": "алл. Орловская",
+    "house": "6/6",
+    "apartment": "92",
+    "postal_code": "679796"
+  },
+  "purchase_datetime": "2025-09-04T14:17:47.403844"
+}

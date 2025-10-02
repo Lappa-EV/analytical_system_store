@@ -1,0 +1,84 @@
+{
+  "purchase_id": "ord-00140",
+  "customer": {
+    "customer_id": "cus-1007",
+    "first_name": "Анастасия",
+    "last_name": "Зимина",
+    "email": "afanasi_18@example.org",
+    "phone": "8 466 457 9485",
+    "is_loyalty_member": true,
+    "loyalty_card_number": "LOYAL-5E47A045B4"
+  },
+  "store": {
+    "store_id": "store-028",
+    "store_name": "Большая Пикча — Магазин на алл. Энергетическая",
+    "store_network": "Большая Пикча",
+    "location": {
+      "country": "Россия",
+      "city": "к. Объячево",
+      "street": "бул. Студенческий",
+      "house": "5/1",
+      "postal_code": "527289",
+      "coordinates": {
+        "latitude": -57.384581,
+        "longitude": -43.623814
+      }
+    }
+  },
+  "items": [
+    {
+      "product_id": "prd-1019",
+      "name": "Молоко 3.5%",
+      "category": "🥛 Молочные продукты",
+      "quantity": 2,
+      "unit": "шт",
+      "price_per_unit": 132.04,
+      "total_price": 264.08,
+      "kbju": {
+        "calories": 150.3,
+        "protein": 5.1,
+        "fat": 2.1,
+        "carbohydrates": 13.1
+      },
+      "manufacturer": {
+        "name": "АО «Калинин Коновалов»",
+        "country": "Россия",
+        "website": "https://oao.net",
+        "inn": "5276900937"
+      }
+    },
+    {
+      "product_id": "prd-1006",
+      "name": "Горбуша",
+      "category": "🥩 Мясо, рыба, яйца и бобовые",
+      "quantity": 1,
+      "unit": "кг",
+      "price_per_unit": 181.99,
+      "total_price": 181.99,
+      "kbju": {
+        "calories": 109.1,
+        "protein": 5.5,
+        "fat": 1.3,
+        "carbohydrates": 11.0
+      },
+      "manufacturer": {
+        "name": "РАО «Русакова Исакова»",
+        "country": "Россия",
+        "website": "https://mihalov.com",
+        "inn": "4674032895"
+      }
+    }
+  ],
+  "total_amount": 446.07,
+  "payment_method": "cash",
+  "is_delivery": false,
+  "delivery_address": {
+    "country": "Россия",
+    "city": "клх Кропоткин (Краснод.)",
+    "street": "ш. Почтовое",
+    "house": "863",
+    "apartment": "96",
+    "postal_code": "323017"
+  },
+  "purchase_datetime": "2025-09-04T14:17:40.367845"
+}
