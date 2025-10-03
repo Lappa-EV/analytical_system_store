@@ -190,7 +190,6 @@
 
 - [docker-compose.yml](/docker-compose.yml)
 - [Dockerfile.jupyter](/Dockerfile.jupyter)
-- [users.xml](/users.xml)
 
 
 ### Генерация и загрузка данных
@@ -296,10 +295,9 @@
 
 #### Построение дашбордов
 
-1. Создан файл [user.xml](/user.xml) с данными для подключения к ClickHouse
-2. Для подключения к Grafana используется URL `localhost:3000`
-3. Настроен источник данных Altinity plugin для ClickHouse (URL: `http://clickhouse:8123`)
-4. Созданы визуализации, отображающие количество покупок, магазинов, покупателей и товаров в таблицах
+1. Для подключения к Grafana используется URL `localhost:3000`
+2. Настроен источник данных Altinity plugin для ClickHouse (URL: `http://clickhouse:8123`)
+3. Созданы визуализации, отображающие количество покупок, магазинов, покупателей и товаров в таблицах
 
 Дашборд в Grafana
 ![Дашборд в Grafana](Photo/2.png)
@@ -368,8 +366,7 @@
 │   └── screenshots...
 ├── docker-compose.yml
 ├── Dockerfile
-├── generate_synthetic_data.py
-└── users.xml
+└── generate_synthetic_data.py
 ```
 Структура проекта включает:
 - **data** - папка с тестовыми данные заказчика
@@ -391,7 +388,6 @@
 - **docker-compose.yml** - конфигурация Docker
 - **Dockerfile**
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
-- **users.xml** - настройки подключения ClickHouse к Grafana
 
 
 ### Автор:
