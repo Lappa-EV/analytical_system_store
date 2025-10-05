@@ -6,6 +6,8 @@
 ![Kafka](https://img.shields.io/badge/Kafka-Streaming-red)
 ![ClickHouse](https://img.shields.io/badge/ClickHouse-OLAP-orange)
 ![Grafana](https://img.shields.io/badge/Grafana-Dashboards-yellow)
+![PySpark](https://img.shields.io/badge/PySpark-3.x-blue)
+![S3](https://img.shields.io/badge/S3-Storage-yellow)
 
 ## Описание проекта
 
@@ -331,7 +333,71 @@
 Пример уведомления в Telegram</br>
 <img src="Photo/10.png" width="40%">
 
+#### Традиционный ETL на PySpark
 
+Для решения бизнес-задач заказчика разработан ETL-процесс, который создает витрину данных на основе клиентских характеристик 
+для проведения кластеризации покупателей. 
+</br>Процесс включает извлечение данных из хранилища ClickHouse, преобразование с расчетом матрицы признаков и загрузку результатов в S3.
+
+### Матрица признаков
+
+Для каждого клиента формируется набор из 30 бинарных признаков (0/1), описывающих его покупательское поведение:
+
+| №  | Признак                  | Описание                                                        |
+|----|--------------------------|-----------------------------------------------------------------|
+| 1  | bought_milk_last_30d     | Покупал молочные продукты за последние 30 дней                |
+| 2  | bought_fruits_last_14d   | Покупал фрукты и ягоды за последние 14 дней                  |
+| 3  | not_bought_veggies_14d   | Не покупал овощи и зелень за последние 14 дней                 |
+| 4  | recurrent_buyer          | Делал более 2 покупок за последние 30 дней                     |
+| 5  | inactive_14_30           | Не покупал 14–30 дней (ушедший клиент?)                        |
+| 6  | new_customer             | Покупатель зарегистрировался менее 30 дней назад              |
+| 7  | delivery_user            | Пользовался доставкой хотя бы раз                             |
+| 8  | organic_preference       | Купил хотя бы 1 органический продукт                            |
+| 9  | bulk_buyer               | Средняя корзина > 1000₽                                   |
+| 10 | low_cost_buyer           | Средняя корзина < 200₽                                    |
+| 11 | buys_bakery              | Покупал хлеб/выпечку хотя бы раз                             |
+| 12 | loyal_customer           | Лояльный клиент (карта и ≥3 покупки)                      |
+| 13 | multicity_buyer          | Делал покупки в разных городах                                |
+| 14 | bought_meat_last_week   | Покупал мясо/рыбу/яйца за последнюю неделю                   |
+| 15 | night_shopper            | Делал покупки после 20:00                                    |
+| 16 | morning_shopper          | Делал покупки до 10:00                                    |
+| 17 | prefers_cash             | Оплачивал наличными ≥ 70% покупок                            |
+| 18 | prefers_card             | Оплачивал картой ≥ 70% покупок                               |
+| 19 | weekend_shopper          | Делал ≥ 60% покупок в выходные                                |
+| 20 | weekday_shopper          | Делал ≥ 60% покупок в будни                                  |
+| 21 | single_item_buyer        | ≥50% покупок — 1 товар в корзине                               |
+| 22 | varied_shopper           | Покупал ≥4 разных категорий продуктов                          |
+| 23 | store_loyal              | Ходит только в один магазин                                  |
+| 24 | switching_store          | Ходит в разные магазины                                      |
+| 25 | family_shopper           | Среднее кол-во позиций в корзине ≥4                           |
+| 26 | early_bird               | Покупка в промежутке между 12 и 15 часами дня                |
+| 27 | no_purchases             | Не совершал ни одной покупки (только регистрация)            |
+| 28 | recent_high_spender      | Купил на сумму >2000₽ за последние 7 дней                    |
+| 29 | fruit_lover              | ≥3 покупок фруктов за 30 дней                                |
+| 30 | vegetarian_profile       | Не купил ни одного мясного продукта за 90 дней              |
+
+### Реализация ETL-процесса на PySpark
+
+Для реализация ETL-процесса на PySpark выполнены следующие действия:
+1. Создан  [Dockerfile.jupyter](notebooks/Dockerfile.jupyter) с параметрами подключения к JupyterLab 
+2. Добавлены компоненты JupyterLab в существующий docker-compose.yaml 
+3. Для работы с S3 выполнена регистрация в сервисе Selectel `https://selectel.ru/services/cloud/storage/`
+4. Создан файл для хранения параметров подключения [config.py](notebooks/config.py)
+5. Для работы с PySpark используем файл [PySpark_ETL.ipynb](notebooks/PySpark_ETL.ipynb)
+
+Для работы с JupyterLab необходимо в браузере перейти на страницу `http://localhost:8888`
+
+Файл `PySpark_ETL.ipynb` выполняет следующие функции:
+* Подключается к БД ClickHouse и S3
+* Создает внешние таблицы
+* Производит расчет матрицы признаков
+* Выводит на экран первые 5 строк итогового df
+* Формирует, именует с указанием даты и записывает единый CSV-файл такого типа: 
+[feature_matrix_2025-10-05_15-20-35.csv](notebooks/feature_matrix_2025-10-05_15-20-35.csv)
+* Загружает CSV-файл в S3
+
+Пример загрузки в S3</br>
+![Пример загрузки](Photo/11.png)</br>
 ## Структура проекта
 
 ```
@@ -360,6 +426,11 @@
 │   ├── .env
 │   ├── consumer.py
 │   └── producer.py
+├── notebooks
+│   ├── config.py
+│   ├── feature_matrix_2025-10-05_15-20-35.csv
+│   ├── feature_matrix_2025-10-05_15-20-39.csv
+│   └── PySpark_ETL.ipynb
 ├── Clickhouse_MART
 │   └── Script_mart.sql
 ├── Photo
@@ -384,9 +455,14 @@
   - **producer.py** - скрипт для считывания данных из MongoDB
 - **Clickhouse_MART** - папка со скриптом для создания MART-слоя таблиц
   - **Script_mart.sql** - SQL-скрипт для обработки данных и загрузки в таблицы
+- **notebooks** - папка для работы с файлами JupyterLab
+  - **config.py** - файл с параметров подключения к ClickHouse и S3
+  - **feature_matrix_2025-10-05_15-20-35.csv** - сформированный файл csv
+  - **feature_matrix_2025-10-05_15-20-39.csv** - сформированный файл csv
+  - **PySpark_ETL.ipynb** - файл JupyterLab для работы c PySpark
 - **Photo** - папка со скриншотами
 - **docker-compose.yml** - конфигурация Docker
-- **Dockerfile**
+- **Dockerfile.jupyter** - Dockerfile c параметрами подключения JupyterLab
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
 
 
