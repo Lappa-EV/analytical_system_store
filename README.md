@@ -185,6 +185,8 @@
 </br>Полный текст задания [здесь](/Задание.pdf)
 
 ## Реализация решения
+### Требования:
+Установлен Docker (Docker Desktop).
 
 ### Запуск проекта
 
@@ -192,6 +194,9 @@
 
 - [docker-compose.yml](/docker-compose.yml)
 - [Dockerfile.jupyter](/Dockerfile.jupyter)
+
+#### Сборка локальных сервисов из Dockerfile-ов (jupyter) и подтягивание остальных образов:
+`docker compose up -d --build`
 
 
 ### Генерация и загрузка данных
