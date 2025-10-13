@@ -1,3 +1,10 @@
+# Dockerfile для создания образа Jupyter Notebook с поддержкой Spark и ClickHouse.
+# Этот Dockerfile:
+#    - Устанавливает необходимые системные утилиты (wget).
+#    - Загружает и устанавливает JDBC драйвер ClickHouse для работы со Spark.
+#    - Устанавливает Python библиотеки для анализа данных.
+#    - Настраивает рабочую директорию и пользователя.
+
 FROM jupyter/pyspark-notebook:latest
 
 USER root

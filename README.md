@@ -195,7 +195,7 @@
 - [docker-compose.yml](/docker-compose.yml)
 - [Dockerfile.jupyter](/Dockerfile.jupyter)
 
-#### Сборка локальных сервисов из Dockerfile-ов (jupyter) и подтягивание остальных образов:
+#### Сборка локальных сервисов из Dockerfile-ов (jupyter, airflow) и подтягивание остальных образов:
 `docker compose up -d --build`
 
 
@@ -403,6 +403,9 @@
 
 Пример загрузки в S3</br>
 ![Пример загрузки](Photo/11.png)</br>
+
+## Cоздание обертки для ETL-процесса в Airflow
+
 ## Структура проекта
 
 ```
@@ -423,6 +426,9 @@
 │       ├── store_001.json
 │       ├── ...
 │       └── store_045.json
+├── dags
+│   ├── kafka_producer_consumer_DAG.py
+│   └── tables_mart_DAG.py
 ├── load_data_mongodb
 │   ├── .env
 │   ├── check_mongo_data.py
@@ -441,7 +447,9 @@
 ├── Photo
 │   └── screenshots...
 ├── docker-compose.yml
-├── Dockerfile
+├── Dockerfile.airflow
+├── Dockerfile.jupyter
+├── requirements.txt
 └── generate_synthetic_data.py
 ```
 Структура проекта включает:
@@ -450,6 +458,9 @@
   - **products** - 20 JSON-файлов таблицы products
   - **purchases** - 200 JSON-файлов таблицы purchases
   - **stores** - 45 JSON-файлов таблицы stores
+- **dags** - папка с DAG-файлами для запуска задач в Airflow
+  - **kafka_producer_consumer_DAG.py** - DAG-файл для запуска файлов producer.py и consumer.py по расписанию
+  - **tables_mart_DAG.py** - DAG-файл для заполнения таблиц в MART-слое
 - **load_data_mongodb** - папка со скриптами для загрузки тестовых данных в MongoDB
   - **.env** - конфигурация подключения
   - **check_mongo_data.py** - скрипт для проверки данных в MongoDB
@@ -459,7 +470,7 @@
   - **consumer.py** - скрипт для загрузки данных в ClickHouse
   - **producer.py** - скрипт для считывания данных из MongoDB
 - **Clickhouse_MART** - папка со скриптом для создания MART-слоя таблиц
-  - **Script_mart.sql** - SQL-скрипт для обработки данных и загрузки в таблицы
+  - **Script_mart.sql** - SQL-скрипт для обработки данных и загрузки в MART-таблицы
 - **notebooks** - папка для работы с файлами JupyterLab
   - **config.py** - файл с параметров подключения к ClickHouse и S3
   - **feature_matrix_2025-10-05_15-20-35.csv** - сформированный файл csv
@@ -467,7 +478,9 @@
   - **PySpark_ETL.ipynb** - файл JupyterLab для работы c PySpark
 - **Photo** - папка со скриншотами
 - **docker-compose.yml** - конфигурация Docker
+- **Dockerfile.airflow** - Dockerfile c параметрами подключения Airflow
 - **Dockerfile.jupyter** - Dockerfile c параметрами подключения JupyterLab
+- **requirements.txt** - файл c библиотеками для работы внутри Airflow
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
 
 

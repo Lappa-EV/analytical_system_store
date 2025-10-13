@@ -11,7 +11,6 @@ import json
 import logging
 import os
 from datetime import datetime
-import time
 import traceback
 from kafka import KafkaConsumer
 from clickhouse_driver import Client
