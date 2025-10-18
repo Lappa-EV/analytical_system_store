@@ -1,12 +1,13 @@
+python-dotenv
 # requirements.txt
 # Файл для установки необходимых библиотек
 
-clickhouse-connect==0.8.0
 airflow-providers-clickhouse==0.0.1
+apache-airflow-providers-apache-kafka==1.1.1
+clickhouse-connect==0.8.0
 clickhouse-driver>=0.2.7,<0.3.0
 pymongo>=4.8.0,<5.0.0
 airflow-clickhouse-plugin
 boto3
 psycopg2-binary>=2.9.9,<3.0.0
-apache-airflow-providers-apache-kafka==8.0.0
-
+confluent-kafka==2.3.0

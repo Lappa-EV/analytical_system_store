@@ -1,4 +1,4 @@
-# dags/clickhouse_mart_tasks.py
+# dags/tasks/clickhouse_mart_tasks.py
 # скрипт с задачами для обработки данных и загрузки в MART-таблицы
 
 import logging
@@ -49,7 +49,7 @@ def execute_clickhouse_query(sql, description):
         return False
 
 
-def addresses():
+def addresses(**kwargs):
     """
     1. Создает и заполняет таблицу addresses из таблицы customers и stores
     """
@@ -134,7 +134,7 @@ def addresses():
     return True
 
 
-def categories():
+def categories(**kwargs):
     """
     2. Создает и заполняет таблицу categories из таблицы products.
     """
@@ -168,7 +168,7 @@ def categories():
     return True
 
 
-def manufacturers():
+def manufacturers(**kwargs):
     """
     3. Создает и заполняет таблицу manufacturers из таблицы products.
     """
@@ -205,7 +205,7 @@ def manufacturers():
     return True
 
 
-def store_networks():
+def store_networks(**kwargs):
     """
     4. Создает и заполняет таблицу store_networks из таблицы stores.
     """
@@ -243,7 +243,7 @@ def store_networks():
     return True
 
 
-def store_managers():
+def store_managers(**kwargs):
     """
     5. Создает и заполняет таблицу store_managers из таблицы stores.
     """
@@ -289,7 +289,7 @@ def store_managers():
     return True
 
 
-def dim_customers():
+def dim_customers(**kwargs):
     """
     6. Создает и заполняет таблицу dim_customers из таблиц customers и addresses.
     """
@@ -362,7 +362,7 @@ def dim_customers():
     return True
 
 
-def dim_products():
+def dim_products(**kwargs):
     """
     7. Создает и заполняет таблицу dim_products из таблиц products, manufacturers и categories.
     """
@@ -428,7 +428,7 @@ def dim_products():
     return True
 
 
-def dim_stores():
+def dim_stores(**kwargs):
     """
     8. Создает и заполняет таблицу dim_stores из таблиц stores, store_networks, store_managers и addresses.
     """
@@ -500,7 +500,7 @@ def dim_stores():
     return True
 
 
-def store_categories():
+def store_categories(**kwargs):
     """
     9. Создает и заполняет таблицу связи store_categories между магазинами и категориями
     """
@@ -552,7 +552,7 @@ def store_categories():
     return True
 
 
-def fact_purchases():
+def fact_purchases(**kwargs):
     """
     10. Создает и заполняет таблицу fact_purchases из таблиц purchases и addresses.
     """
@@ -615,7 +615,7 @@ def fact_purchases():
     return True
 
 
-def fact_purchase_items():
+def fact_purchase_items(**kwargs):
     """
     11. Создает и заполняет таблицу fact_purchase_items из таблицы purchases
     """
@@ -662,7 +662,7 @@ def fact_purchase_items():
     return True
 
 
-def duplicate_analysis_results():
+def duplicate_analysis_results(**kwargs):
     """
     12. Создает и заполняет таблицу duplicate_analysis_results для хранения результатов количества дубликатов новых поступивших (последних) данных.
     """

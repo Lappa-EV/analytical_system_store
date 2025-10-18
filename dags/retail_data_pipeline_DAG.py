@@ -95,87 +95,75 @@ clickhouse_conn_id = 'clickhouse_conn'
 task_addresses = PythonOperator(
     task_id='create_addresses',
     python_callable=addresses,
-    op_args=[clickhouse_conn_id],
     dag=dag,
 )
 
 task_categories = PythonOperator(
     task_id='create_categories',
-    python_callable=categories,
-    op_args=[clickhouse_conn_id],
+    python_callable=categories,    
     dag=dag,
 )
 
 task_manufacturers = PythonOperator(
     task_id='create_manufacturers',
-    python_callable=manufacturers,
-    op_args=[clickhouse_conn_id],
+    python_callable=manufacturers,    
     dag=dag,
 )
 
 task_store_networks = PythonOperator(
     task_id='create_store_networks',
-    python_callable=store_networks,
-    op_args=[clickhouse_conn_id],
+    python_callable=store_networks,    
     dag=dag,
 )
 
 task_store_managers = PythonOperator(
     task_id='create_store_managers',
-    python_callable=store_managers,
-    op_args=[clickhouse_conn_id],
+    python_callable=store_managers,    
     dag=dag,
 )
 
 # Создание таблиц dim_
 task_dim_customers = PythonOperator(
     task_id='create_dim_customers',
-    python_callable=dim_customers,
-    op_args=[clickhouse_conn_id],
+    python_callable=dim_customers,    
     dag=dag,
 )
 
 task_dim_products = PythonOperator(
     task_id='create_dim_products',
-    python_callable=dim_products,
-    op_args=[clickhouse_conn_id],
+    python_callable=dim_products,    
     dag=dag,
 )
 
 task_dim_stores = PythonOperator(
     task_id='create_dim_stores',
-    python_callable=dim_stores,
-    op_args=[clickhouse_conn_id],
+    python_callable=dim_stores,    
     dag=dag,
 )
 
 task_store_categories = PythonOperator(
     task_id='create_store_categories',
-    python_callable=store_categories,
-    op_args=[clickhouse_conn_id],
+    python_callable=store_categories,    
     dag=dag,
 )
 
 # Создание таблиц fact_
 task_fact_purchases = PythonOperator(
     task_id='create_fact_purchases',
-    python_callable=fact_purchases,
-    op_args=[clickhouse_conn_id],
+    python_callable=fact_purchases,    
     dag=dag,
 )
 
 task_fact_purchase_items = PythonOperator(
     task_id='create_fact_purchase_items',
-    python_callable=fact_purchase_items,
-    op_args=[clickhouse_conn_id],
+    python_callable=fact_purchase_items,    
     dag=dag,
 )
 
 # Анализ дубликатов
 task_duplicate_analysis = PythonOperator(
     task_id='duplicate_analysis',
-    python_callable=duplicate_analysis_results,
-    op_args=[clickhouse_conn_id],
+    python_callable=duplicate_analysis_results,    
     dag=dag,
 )
 

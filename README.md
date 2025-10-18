@@ -1,13 +1,16 @@
 # Проект аналитической системы для сети магазинов "Пикча"
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![SQL](https://img.shields.io/badge/SQL-Database-blue)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green)
-![Kafka](https://img.shields.io/badge/Kafka-Streaming-red)
+![Kafka](https://img.shields.io/badge/Kafka-MessageBroker-red)
 ![ClickHouse](https://img.shields.io/badge/ClickHouse-OLAP-orange)
 ![Grafana](https://img.shields.io/badge/Grafana-Dashboards-yellow)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange)
 ![PySpark](https://img.shields.io/badge/PySpark-3.x-blue)
 ![S3](https://img.shields.io/badge/S3-Storage-yellow)
+![Airflow](https://img.shields.io/badge/Airflow-Orchestration-brightgreen)
 
 ## Описание проекта
 
@@ -343,7 +346,7 @@
 
 Для решения бизнес-задач заказчика разработан ETL-процесс, который создает витрину данных на основе клиентских характеристик 
 для проведения кластеризации покупателей. 
-</br>Процесс включает извлечение данных из хранилища ClickHouse, преобразование с расчетом матрицы признаков и загрузку результатов в S3.
+сссссссссссссссссссссссссссссссПроцесс включает извлечение данных из хранилища ClickHouse, преобразование с расчетом матрицы признаков и загрузку результатов в S3.
 
 #### Матрица признаков
 
@@ -406,6 +409,75 @@
 
 ## Cоздание обертки для ETL-процесса в Airflow
 
+После сборки Docker-образа в корневой папке проекта будут созданы следующие директории: `dags`, `logs`, `config` и `plugins`. 
+</br>Каждая из этих директорий играет важную роль в функционировании Airflow.
+
+### 1. Доступ к веб-интерфейсу Airflow
+
+После успешного запуска Docker-контейнеров, Airflow будет доступен через веб-интерфейс по адресу:
+
+http://localhost:8080
+
+Перейдем по этой ссылке в браузере для начала работы с Airflow.
+
+### 2. Настройка переменных Airflow
+
+Для корректной работы DAG необходимо задать несколько переменных, которые будут использоваться в процессе ETL.
+</br>Настройки производятся через веб-интерфейс Airflow:
+
+1.  В верхнем меню выбераем "**Admin**" -> "**Variables**".
+2.  Нажимаем кнопку "**+ Create**" для добавления новой переменной.
+3.  Вносим значения для каждой переменной, следуя таблице ниже.
+
+| Ключ                | Значение                    | Описание                                                        |
+| ------------------- | --------------------------- | --------------------------------------------------------------- |
+| `KAFKA_BROKER`      | `kafka:9092`                | Адрес брокера Kafka (сервис `kafka`, порт `9092`)                   |
+| `KAFKA_GROUP`       | `clickhouse_group`          | Группа консюмеров Kafka                                         |
+| `KAFKA_TOPICS`      | `products,stores,customers,purchases` | Перечень топиков Kafka, разделённых запятыми                       |
+| `CLICKHOUSE_HOST`   | `clickhouse`                | Хост ClickHouse (сервис `clickhouse`)                             |
+| `CLICKHOUSE_PORT`   | `9000`                      | Порт ClickHouse                                                 |
+| `CLICKHOUSE_USER`   | `clickhouse`                | Пользователь ClickHouse                                         |
+| `CLICKHOUSE_PASSWORD` | `clickhouse`                | Пароль ClickHouse (для production использовать Secrets!)       |
+| `CLICKHOUSE_DB`     | `clickhouse`                | База данных ClickHouse                                          |
+| `MONGO_URI`         | `mongodb://mongo:27017/`    | URI подключения к MongoDB (сервис `mongo`, порт `27017`)           |
+| `MONGO_DATABASE`    | `mongo_db`                | Имя базы данных MongoDB                                       |
+
+**ВАЖНО:** В производственной среде для хранения конфиденциальных данных, таких как пароли, рекомендуется использовать Airflow Connections или Secrets Backend. Это обеспечит более безопасное хранение и управление sensitive-информацией.
+
+#### Проверка добавленных переменных
+
+После добавления всех переменных убедимся, что они корректно отображаются в списке.  Для этого перейдем в "**Admin**" -> "**Variables**" и проверим, что все внесённые переменные присутствуют в списке ("**List Variables**").
+![List Variables](Photo/12.png)
+
+### 3. Размещение DAG и файлов задач
+
+1.  Создадим Python-файл с именем [retail_data_pipeline_DAG.py](dags/retail_data_pipeline_DAG.py) в директории проекта `dags/`.
+2.  В директории `dags/` создадим поддиректорию `tasks/`.  Эта директория будет содержать файлы с кодом отдельных задач, выполняемых в рамках DAG.
+3.  Разместим следующие файлы с кодом задач в директорию `dags/tasks/`:
+
+    *   **Файлы для работы с Kafka:**
+        *   `producer_task.py`:  Содержит логику Python для продюсера Kafka (отправку данных в топики Kafka).
+        *   `consumer_task.py`:  Содержит логику Python для консюмера Kafka (получение данных из топиков Kafka).
+    *   **Файл для создания и наполнения таблиц условного "MART-слоя" в ClickHouse:**
+        *   `clickhouse_mart_tasks.py`: Содержит Python-код для создания таблиц и заполнения их данными из Kafka в ClickHouse.
+
+Эти файлы-задачи будут последовательно вызываться и запускаться в рамках DAG, определённого в файле `retail_data_pipeline_DAG.py`.  
+
+### 4. Проверка и запуск DAG
+
+После размещения файлов DAG и задач можно приступать к проверке и запуску DAG в веб-интерфейсе Airflow.
+
+1.  Перейдем на вкладку "**DAGs**".
+2.  Находим DAG с именем "`retail_data_pipeline_DAG`".
+3.  **Включение DAG:** Убедимся, что DAG активен. Переключатель (toggle) слева от имени DAG должен быть в активном положении (включен). Если он выключен, включаем его.
+4.  **Запуск DAG вручную:** Для немедленного запуска DAG нажмаем на кнопку "**▶**" ("**Trigger DAG**").
+5.  **Мониторинг выполнения:** Процесс выполнения DAG можно отслеживать в разделах "**Grid**" или "**Graph**".
+
+При возникновении ошибок изучаем логи задач и вносим исправления в код.
+
+
+
+
 ## Структура проекта
 
 ```
@@ -427,16 +499,19 @@
 │       ├── ...
 │       └── store_045.json
 ├── dags
-│   ├── kafka_producer_consumer_DAG.py
-│   └── tables_mart_DAG.py
+│   └── tasks
+│   │   ├── producer_task.py
+│   │   ├── consumer_task.py
+│   │   └── clickhouse_mart_tasks.py
+│   └── retail_data_pipeline_DAG.py
 ├── load_data_mongodb
 │   ├── .env
 │   ├── check_mongo_data.py
 │   └── load_data_mongo.py
 ├── mongodb_kafka_clickhouse
 │   ├── .env
-│   ├── consumer.py
-│   └── producer.py
+│   ├── producer.py
+│   └── consumer.py
 ├── notebooks
 │   ├── config.py
 │   ├── feature_matrix_2025-10-05_15-20-35.csv
@@ -459,7 +534,11 @@
   - **purchases** - 200 JSON-файлов таблицы purchases
   - **stores** - 45 JSON-файлов таблицы stores
 - **dags** - папка с DAG-файлами для запуска задач в Airflow
-  - **kafka_producer_consumer_DAG.py** - DAG-файл для запуска файлов producer.py и consumer.py по расписанию
+  - **tasks** - папка с файлами задач DAGов
+    - **clickhouse_mart_tasks.py** - код с задачами для создания и заполнения таблиц в ClickHouse
+    - **producer_task.py** - код задачи для запуска producer 
+    - **consumer_task.py** - код задачи для запуска consumer 
+  - **retail_data_pipeline_DAG.py** - DAG-файл для запуска файлов producer.py и consumer.py по расписанию
   - **tables_mart_DAG.py** - DAG-файл для заполнения таблиц в MART-слое
 - **load_data_mongodb** - папка со скриптами для загрузки тестовых данных в MongoDB
   - **.env** - конфигурация подключения

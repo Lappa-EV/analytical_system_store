@@ -41,6 +41,8 @@ services:
     volumes:
       - mongodb_data:/data/db
     restart: always
+    networks:
+      - app-network
 
   clickhouse:
     image: clickhouse/clickhouse-server:25.7
@@ -60,42 +62,61 @@ services:
         soft: 262144
         hard: 262144
     healthcheck:
-      test: [ "CMD-SHELL", "clickhouse-client --host localhost --user clickhouse --password clickhouse --query 'SELECT 1'" ]
-      interval: 10s
-      timeout: 5s
-      retries: 20
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8123/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
     restart: always
+    networks:
+      - app-network
 
   zookeeper:
-    image: confluentinc/cp-zookeeper:7.5.0
+    image: confluentinc/cp-zookeeper:7.3.3
+    container_name: zookeeper
     ports:
-      - "2181:2181"
+      - "${ZOOKEEPER_PORT:-2181}:2181"
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
+    volumes:
+      - zookeeper-data:/var/lib/zookeeper/data
+      - zookeeper-log:/var/lib/zookeeper/log
+    healthcheck:
+      test: ["CMD-SHELL", "echo ruok | nc localhost 2181 | grep imok"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     restart: always
+    networks:
+      - app-network
 
   kafka:
     image: confluentinc/cp-kafka:7.5.0
+    container_name: kafka
     ports:
-      - "9092:9092"
+      - "${KAFKA_PORT:-9092}:9092"
       - "29092:29092"
     depends_on:
       - zookeeper
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092,INTERNAL://kafka:9092
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:29092,INTERNAL://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:${KAFKA_PORT:-9092},INTERNAL://kafka:9092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,INTERNAL:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - kafka-data:/var/lib/kafka/data
     healthcheck:
-      test: [ "CMD", "/bin/bash", "-c", "kafkacat -b localhost:9092 -L 2>/dev/null" ]
+      test: ["CMD-SHELL", "kafka-broker-api-versions --bootstrap-server localhost:9092"]
       interval: 30s
       timeout: 10s
       retries: 5
       start_period: 60s
     restart: always
+    networks:
+      - app-network
 
   grafana:
     image: grafana/grafana:latest
@@ -110,6 +131,8 @@ services:
       - grafana_data:/var/lib/grafana
     depends_on:
       - clickhouse
+    networks:
+      - app-network
 
   jupyter:
     build:
@@ -130,6 +153,8 @@ services:
     restart: unless-stopped
     depends_on:
       - clickhouse
+    networks:
+      - app-network
 
   postgres:
     image: postgres:13
@@ -145,6 +170,8 @@ services:
       retries: 5
       start_period: 5s
     restart: always
+    networks:
+      - app-network
 
   redis:
     image: redis:7.2-bookworm
@@ -157,12 +184,15 @@ services:
       retries: 50
       start_period: 30s
     restart: always
+    networks:
+      - app-network
 
   airflow-webserver:
     <<: *airflow-common
     command: webserver
     ports:
       - "8080:8080"
+    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -174,10 +204,13 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - app-network
 
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
+    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -189,10 +222,13 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - app-network
 
   airflow-worker:
     <<: *airflow-common
     command: celery worker
+    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test:
         - "CMD-SHELL"
@@ -209,6 +245,8 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - app-network
 
   airflow-init:
     <<: *airflow-common
@@ -236,13 +274,37 @@ services:
     user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
+    networks:
+      - app-network
 
 networks:
-  default:
+  app-network:
+    driver: bridge
 
 volumes:
   postgres-db-volume:
-  grafana_data:
+    labels:
+      description: "Volume for Airflow PostgreSQL metadata"
   mongodb_data:
+    labels:
+      description: "Volume for MongoDB data"
   clickhouse-data:
+    labels:
+      description: "Volume for ClickHouse data files"
   clickhouse-logs:
+    labels:
+      description: "Volume for ClickHouse logs"
+  zookeeper-data:
+    labels:
+      description: "Volume for Zookeeper data"
+  zookeeper-log:
+    labels:
+      description: "Volume for Zookeeper transaction log"
+  kafka-data:
+    labels:
+      description: "Volume for Kafka data"
+  grafana_data:
+    labels:
+      description: "Volume for Grafana data"
+
+

@@ -109,6 +109,7 @@ CREATE TABLE clickhouse.manufacturers (
 ORDER BY (inn);
 
 -- MV для таблицы manufacturers
+-- Материализованное представление для manufacturers из таблицы products
 CREATE MATERIALIZED VIEW clickhouse.mv_manufacturers_from_products
 TO clickhouse.manufacturers
 AS
@@ -134,6 +135,7 @@ CREATE TABLE clickhouse.store_networks (
 ORDER BY (store_network_name);
 
 -- MV для таблицы store_networks
+-- Материализованное представление для store_networks  из таблицы stores
 CREATE MATERIALIZED VIEW clickhouse.mv_store_networks_from_stores
 TO clickhouse.store_networks
 AS
@@ -212,7 +214,7 @@ CREATE TABLE clickhouse.dim_customers (
 ORDER BY (customer_id, loyalty_card_number);
 
 -- MV для таблицы dim_customers
--- Материализованное представление для dim_customers из таблицы customers
+-- Материализованное представление для dim_customers из таблиц customers и addresses
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_customers_from_customers
 TO clickhouse.dim_customers
 AS
@@ -247,7 +249,9 @@ LEFT JOIN clickhouse.addresses daddr ON
     lowerUTF8(trim(ifNull(daddr.house, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_house, ''))) AND
     lowerUTF8(trim(ifNull(daddr.apartment, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_apartment, ''))) AND
     lowerUTF8(trim(ifNull(daddr.postal_code, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_postal_code, '')))
-WHERE trim(c.customer_id) != '' AND trim(c.loyalty_card_number) != '';
+WHERE trim(c.customer_id) != ''
+    AND trim(c.loyalty_card_number) != ''
+    AND  toDate(parseDateTime64BestEffort(c.registration_date)) > toDate(c.birth_date);
 
 
 --7. Таблица измерений товаров
@@ -273,7 +277,7 @@ CREATE TABLE clickhouse.dim_products (
 ORDER BY (product_id);
 
 -- MV для таблицы dim_product
--- Материализованное представление для dim_products из таблицы products
+-- Материализованное представление для dim_products из таблиц products, manufacturers и categories
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_products_from_products
 TO clickhouse.dim_products
 AS
@@ -325,10 +329,10 @@ CREATE TABLE clickhouse.dim_stores (
     last_inventory_date Date,
     event_time DateTime
 )  ENGINE = ReplacingMergeTree(event_time)
-ORDER BY (store_id)
+ORDER BY (store_id);
 
 -- MV для таблицы dim_stores
--- Материализованное представление для dim_stores из таблицы stores
+-- Материализованное представление для dim_stores из таблиц stores, store_networks, store_managers и addresses
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_stores_from_stores
 TO clickhouse.dim_stores
 AS
@@ -377,7 +381,7 @@ CREATE TABLE clickhouse.store_categories (
 ORDER BY (store_id, category_id);
 
 -- MV для таблицы store_categories
--- Материализованное представление для таблицы связи многие-ко-многим между
+-- Материализованное представление для таблицы связи многие-ко-многим store_categories между таблицами stores и categories
 CREATE MATERIALIZED VIEW clickhouse.mv_store_categories_from_stores
 TO clickhouse.store_categories
 AS
@@ -426,7 +430,7 @@ ORDER BY (purchase_id, purchase_datetime)
 TTL event_time + INTERVAL 360 DAY;
 
 -- MV для таблицы fact_purchases
--- Материализованное представление для fact_purchases из таблицы purchases
+-- Материализованное представление для fact_purchases из таблиц purchases и addresses
 CREATE MATERIALIZED VIEW clickhouse.mv_fact_purchases
 TO clickhouse.fact_purchases
 AS
@@ -475,7 +479,7 @@ CREATE TABLE clickhouse.fact_purchase_items (
 ) ENGINE = ReplacingMergeTree(event_time)
 PARTITION BY toYYYYMM(purchase_datetime)
 ORDER BY (purchase_id, product_id)
-TTL event_time + INTERVAL 360 DAY
+TTL event_time + INTERVAL 360 DAY;
 
 -- MV для таблицы fact_purchase_items
 -- Материализованное представление для fact_purchase_items из таблицы purchases

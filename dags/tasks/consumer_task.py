@@ -29,14 +29,14 @@ def run_consumer(**kwargs):
             - kafka_group: группа потребителя Kafka
             - kafka_topics: строка с топиками Kafka, разделенными запятыми
     """
-    # Получаем параметры из kwargs
-    clickhouse_host = kwargs.get('clickhouse_host')
-    clickhouse_port = kwargs.get('clickhouse_port')
-    clickhouse_user = kwargs.get('clickhouse_user')
-    clickhouse_password = kwargs.get('clickhouse_password')
-    clickhouse_db = kwargs.get('clickhouse_db')
-    kafka_broker = kwargs.get('kafka_broker')
-    kafka_group = kwargs.get('kafka_group')
+    # Инициализация переменных с безопасными значениями по умолчанию
+    clickhouse_host = kwargs.get('clickhouse_host', 'clickhouse')
+    clickhouse_port = kwargs.get('clickhouse_port', '9000')
+    clickhouse_user = kwargs.get('clickhouse_user', 'clickhouse')
+    clickhouse_password = kwargs.get('clickhouse_password', 'clickhouse')
+    clickhouse_db = kwargs.get('clickhouse_db', 'clickhouse')
+    kafka_broker = kwargs.get('kafka_broker', 'kafka:9092')
+    kafka_group = kwargs.get('kafka_group', 'clickhouse_group')
     kafka_topics_str = kwargs.get('kafka_topics', "products,stores,customers,purchases")
 
     # Настройка логирования, если оно еще не настроено
@@ -44,6 +44,16 @@ def run_consumer(**kwargs):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     logging.info("Начало выполнения задачи run_consumer")
+
+    # Логирование параметров
+    logging.info(
+        f"Параметры подключения: kafka_broker={kafka_broker}, group={kafka_group}, clickhouse={clickhouse_host}:{clickhouse_port}")
+
+    # Проверка обязательных параметров
+    if not all([kafka_broker, kafka_group, clickhouse_host, clickhouse_port, clickhouse_user, clickhouse_db]):
+        error_msg = "Отсутствуют обязательные параметры подключения"
+        logging.error(error_msg)
+        raise ValueError(error_msg)
 
     try:
         # Топики для обработки
@@ -278,6 +288,19 @@ def run_consumer(**kwargs):
             """Создает таблицу в ClickHouse, если она не существует."""
             table_name = topic
 
+            try:
+                # Проверка соединения
+                client.execute("SELECT 1")
+                logging.info(f"Соединение с ClickHouse установлено успешно")
+
+                # [остальной код функции]
+
+            except Exception as e:
+                error_msg = f"Ошибка создания таблицы {table_name}: {e}"
+                logging.error(error_msg)
+                logging.error(traceback.format_exc())
+                raise Exception(error_msg)
+
             # Формируем определения полей
             field_definitions = []
 
@@ -443,6 +466,14 @@ def run_consumer(**kwargs):
         }
 
         consumer = Consumer(consumer_conf)
+
+        try:
+            metadata = consumer.list_topics(timeout=10.0)
+            logging.info(f"Успешное подключение к Kafka. Доступные топики: {metadata.topics}")
+        except KafkaException as e:
+            logging.error(f"Ошибка подключения к Kafka: {e}")
+            raise
+
         consumer.subscribe(TOPICS)
 
         # Установка таймаута

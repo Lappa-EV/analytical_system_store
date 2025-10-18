@@ -1,0 +1,42 @@
+[
+  {
+    "key": "KAFKA_BROKER",
+    "val": "kafka:9092"
+  },
+  {
+    "key": "KAFKA_GROUP",
+    "val": "clickhouse_group"
+  },
+  {
+    "key": "KAFKA_TOPICS",
+    "val": "topic1,topic2,topic3"
+  },
+  {
+    "key": "CLICKHOUSE_HOST",
+    "val": "localhost"
+  },
+  {
+    "key": "CLICKHOUSE_PORT",
+    "val": "9000"
+  },
+  {
+    "key": "CLICKHOUSE_USER",
+    "val": "clickhouse"
+  },
+  {
+    "key": "CLICKHOUSE_PASSWORD",
+    "val": "clickhouse"
+  },
+  {
+    "key": "CLICKHOUSE_DB",
+    "val": "clickhouse"
+  },
+  {
+    "key": "MONGO_URI",
+    "val": "mongodb://localhost:27017/"
+  },
+  {
+    "key": "MONGO_DATABASE",
+    "val": "mydatabase"
+  }
+]
