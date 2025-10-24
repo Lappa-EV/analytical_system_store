@@ -1,7 +1,5 @@
-/*SQL-скрипт для обработки данных и загрузки в MART-таблицы*/
-
---Создание таблиц DWH и их MV
---1. Справочник адресов
+-----------------------------------------------Создание таблиц DWH и их MV --------------------------------------------
+-------------------------------------------------1. Справочник адресов---------------------------------------------------------------
 -- Таблица addresses
 CREATE TABLE clickhouse.addresses (
     address_id UInt64,
@@ -73,7 +71,7 @@ FROM stores s
 WHERE s.location_country IS NOT NULL;
 
 
---2. Справочник категорий товаров
+-------------------------------------------------------2. Справочник категорий товаров ----------------------------------------------------------------------
 -- Дедупликация данных по category_name
 CREATE TABLE clickhouse.categories (
     category_id UInt64,
@@ -97,7 +95,7 @@ FROM clickhouse.products p
 WHERE nullIf(trim(lowerUTF8(p.group)), '') IS NOT NULL;
 
 
---3. Справочник производителей
+-----------------------------------------------------------3. Справочник производителей-----------------------------------------------------------------------
 -- Дедупликация данных по inn
 CREATE TABLE clickhouse.manufacturers (
     inn String,
@@ -109,7 +107,6 @@ CREATE TABLE clickhouse.manufacturers (
 ORDER BY (inn);
 
 -- MV для таблицы manufacturers
--- Материализованное представление для manufacturers из таблицы products
 CREATE MATERIALIZED VIEW clickhouse.mv_manufacturers_from_products
 TO clickhouse.manufacturers
 AS
@@ -125,7 +122,7 @@ WHERE
     AND nullIf(trim(coalesce(p.manufacturer_name, '')), '') IS NOT NULL;
 
 
---4. Справочник торговых сетей
+---------------------------------------------------------4. Справочник торговых сетей--------------------------------------------------------------------------
 -- Таблица store_networks
 CREATE TABLE clickhouse.store_networks (
     store_network_id UInt64,
@@ -135,7 +132,6 @@ CREATE TABLE clickhouse.store_networks (
 ORDER BY (store_network_name);
 
 -- MV для таблицы store_networks
--- Материализованное представление для store_networks  из таблицы stores
 CREATE MATERIALIZED VIEW clickhouse.mv_store_networks_from_stores
 TO clickhouse.store_networks
 AS
@@ -154,7 +150,7 @@ FROM (
 WHERE rn = 1 AND normalized_name IS NOT NULL;
 
 
---5. Справочник менеджеров магазинов
+--------------------------------------------------------5. Справочник менеджеров магазинов----------------------------------------------------------------------
 -- Дедупликация данных по manager_name и manager_phone
 CREATE TABLE clickhouse.store_managers (
     manager_id UInt64,
@@ -191,7 +187,7 @@ FROM (
 WHERE normalized_manager_name IS NOT NULL OR normalized_manager_phone IS NOT NULL;
 
 
---6. Таблица измерений покупателей
+---------------------------------------------------------6. Таблица измерений покупателей--------------------------------------------------------------------
 -- Дедупликация данных по customer_id и loyalty_card_number
 CREATE TABLE clickhouse.dim_customers (
     customer_id String,
@@ -214,7 +210,7 @@ CREATE TABLE clickhouse.dim_customers (
 ORDER BY (customer_id, loyalty_card_number);
 
 -- MV для таблицы dim_customers
--- Материализованное представление для dim_customers из таблиц customers и addresses
+-- Материализованное представление для dim_customers из таблицы customers
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_customers_from_customers
 TO clickhouse.dim_customers
 AS
@@ -249,12 +245,10 @@ LEFT JOIN clickhouse.addresses daddr ON
     lowerUTF8(trim(ifNull(daddr.house, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_house, ''))) AND
     lowerUTF8(trim(ifNull(daddr.apartment, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_apartment, ''))) AND
     lowerUTF8(trim(ifNull(daddr.postal_code, ''))) = lowerUTF8(trim(ifNull(c.delivery_address_postal_code, '')))
-WHERE trim(c.customer_id) != ''
-    AND trim(c.loyalty_card_number) != ''
-    AND  toDate(parseDateTime64BestEffort(c.registration_date)) > toDate(c.birth_date);
+WHERE trim(c.customer_id) != '' AND trim(c.loyalty_card_number) != '';
 
 
---7. Таблица измерений товаров
+------------------------------------------------------------------7. Таблица измерений товаров-----------------------------------------------------------------------
 -- Дедупликация данных по product_id
 CREATE TABLE clickhouse.dim_products (
     product_id String,
@@ -277,7 +271,7 @@ CREATE TABLE clickhouse.dim_products (
 ORDER BY (product_id);
 
 -- MV для таблицы dim_product
--- Материализованное представление для dim_products из таблиц products, manufacturers и categories
+-- Материализованное представление для dim_products из таблицы products
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_products_from_products
 TO clickhouse.dim_products
 AS
@@ -310,7 +304,7 @@ ON trim(lowerUTF8(normalizeUTF8NFC(replaceRegexpAll(replaceRegexpAll(p.group, CA
 WHERE nullIf(lowerUTF8(trim(p.id)), '') IS NOT NULL;
 
 
---8. Таблица измерений магазинов dim_stores
+---------------------------------------------------------------8. Таблица измерений магазинов dim_stores-----------------------------------------------------------------
 -- Дедупликация данных по store_id
 CREATE TABLE clickhouse.dim_stores (
     store_id String,
@@ -329,10 +323,10 @@ CREATE TABLE clickhouse.dim_stores (
     last_inventory_date Date,
     event_time DateTime
 )  ENGINE = ReplacingMergeTree(event_time)
-ORDER BY (store_id);
+ORDER BY (store_id)
 
 -- MV для таблицы dim_stores
--- Материализованное представление для dim_stores из таблиц stores, store_networks, store_managers и addresses
+-- Материализованное представление для dim_stores из таблицы stores
 CREATE MATERIALIZED VIEW clickhouse.mv_dim_stores_from_stores
 TO clickhouse.dim_stores
 AS
@@ -371,7 +365,7 @@ WHERE
     nullIf(trim(s.store_id), '') IS NOT NULL;
 
 
---9. Таблица связи многие-ко-многим между магазинами и категориями store_categories
+-----------------------------------------9. Таблица связи многие-ко-многим между магазинами и категориями store_categories---------------------------------------------
 -- Дедупликация данных по store_id и category_id
 CREATE TABLE clickhouse.store_categories (
     store_id String,
@@ -381,7 +375,7 @@ CREATE TABLE clickhouse.store_categories (
 ORDER BY (store_id, category_id);
 
 -- MV для таблицы store_categories
--- Материализованное представление для таблицы связи многие-ко-многим store_categories между таблицами stores и categories
+-- Материализованное представление для таблицы связи многие-ко-многим между
 CREATE MATERIALIZED VIEW clickhouse.mv_store_categories_from_stores
 TO clickhouse.store_categories
 AS
@@ -412,7 +406,7 @@ WHERE
     s.store_id IS NOT NULL;
 
 
---10. Таблица фактов покупок fact_purchases
+----------------------------------------------------------10. Таблица фактов покупок fact_purchases-------------------------------------------------------------
 -- Дедупликация данных по purchase_id
 CREATE TABLE clickhouse.fact_purchases (
     purchase_id String,
@@ -430,7 +424,7 @@ ORDER BY (purchase_id, purchase_datetime)
 TTL event_time + INTERVAL 360 DAY;
 
 -- MV для таблицы fact_purchases
--- Материализованное представление для fact_purchases из таблиц purchases и addresses
+-- Материализованное представление для fact_purchases из таблицы purchases
 CREATE MATERIALIZED VIEW clickhouse.mv_fact_purchases
 TO clickhouse.fact_purchases
 AS
@@ -465,7 +459,7 @@ WHERE
     parseDateTimeBestEffortOrNull(nullIf(trim(p.purchase_datetime), '')) IS NOT NULL; -- Отбрасываем строки с невалидной датой
 
 
---11. Таблица фактов деталей покупок fact_purchase_items
+----------------------------------------------------11. Таблица фактов деталей покупок fact_purchase_items ----------------------------------------------------
 -- Дедупликация данных по purchase_id и product_id
 CREATE TABLE clickhouse.fact_purchase_items (
     purchase_id String,
@@ -479,7 +473,7 @@ CREATE TABLE clickhouse.fact_purchase_items (
 ) ENGINE = ReplacingMergeTree(event_time)
 PARTITION BY toYYYYMM(purchase_datetime)
 ORDER BY (purchase_id, product_id)
-TTL event_time + INTERVAL 360 DAY;
+TTL event_time + INTERVAL 360 DAY
 
 -- MV для таблицы fact_purchase_items
 -- Материализованное представление для fact_purchase_items из таблицы purchases
@@ -502,7 +496,7 @@ WHERE
     parseDateTimeBestEffortOrNull(nullIf(trim(p.purchase_datetime), '')) IS NOT NULL; -- purchase_datetime не может быть NULL
 
 
--- 12. Таблица для хранения результатов количества дубликатов новых поступивших (последних) данных
+------------------------------------ 12. Таблица для хранения результатов количества дубликатов новых поступивших (последних) данных------------------------------------
 -- Должна заполняться либо вручную либо планировщиком
 CREATE TABLE clickhouse.duplicate_analysis_results (
     event_time DateTime,
@@ -514,7 +508,7 @@ CREATE TABLE clickhouse.duplicate_analysis_results (
 ORDER BY toDate(event_time)
 TTL event_time + INTERVAL 360 DAY;
 
--- Заполнение таблицы duplicate_analysis_results
+-- 12. Заполнение таблицы duplicate_analysis_results
 INSERT INTO clickhouse.duplicate_analysis_results (event_time, duplicate_products, duplicate_stores, duplicate_customers, duplicate_purchases)
 SELECT
     toStartOfDay(now()) AS event_time,(
@@ -533,4 +527,3 @@ SELECT
      FROM clickhouse.purchases
 	 WHERE toDate(event_time) = today()
 	) AS duplicate_purchases;
-

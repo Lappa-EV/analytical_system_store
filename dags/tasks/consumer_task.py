@@ -10,8 +10,9 @@ import json
 import logging
 import traceback
 from datetime import datetime
-from confluent_kafka import Consumer, KafkaException  # Используем confluent-kafka
+from confluent_kafka import Consumer, KafkaException, KafkaError
 from clickhouse_driver import Client
+
 
 
 def run_consumer(**kwargs):
@@ -284,8 +285,9 @@ def run_consumer(**kwargs):
             }
         }
 
+
         def create_table(client, topic):
-            """Создает таблицу в ClickHouse, если она не существует."""
+            """ Создает таблицу в ClickHouse, если она не существует """
             table_name = topic
 
             try:
@@ -313,7 +315,7 @@ def run_consumer(**kwargs):
                 for field_name, field_type in TABLE_FIELDS[topic].items():
                     field_definitions.append(f"{field_name} {field_type}")
 
-            # Собираем SQL-запрос с новым движком MergeTree
+            # Собираем SQL-запрос
             query = f"""
                 CREATE TABLE IF NOT EXISTS {table_name} ({", ".join(field_definitions)}) 
                 ENGINE = MergeTree()
@@ -329,8 +331,9 @@ def run_consumer(**kwargs):
             except Exception as e:
                 logging.error(f"Ошибка создания таблицы {table_name}: {e}")
 
+
         def get_safe_value(json_obj, path, default=""):
-            """Безопасно извлекает значение из JSON по пути."""
+            """ Безопасно извлекает значение из JSON по пути """
             if not json_obj:
                 return default
 
@@ -390,6 +393,7 @@ def run_consumer(**kwargs):
                         return str(current)
                 except Exception:
                     return default
+
 
         def process_message(client, topic, message_value):
             """Обрабатывает сообщение из Kafka и вставляет данные в ClickHouse."""
@@ -455,7 +459,7 @@ def run_consumer(**kwargs):
         for topic in TOPICS:
             create_table(client, topic)
 
-        # Конфигурация Kafka Consumer с использованием confluent-kafka
+        # Конфигурация Kafka Consumer
         consumer_conf = {
             'bootstrap.servers': kafka_broker,
             'group.id': kafka_group,
@@ -495,11 +499,18 @@ def run_consumer(**kwargs):
                     continue
 
                 if msg.error():
-                    if msg.error().code() == KafkaException._PARTITION_EOF:
-                        # Достигнут конец раздела
-                        logging.debug(f"Достигнут конец раздела {msg.topic()} [{msg.partition()}]")
-                    else:
-                        logging.error(f"Ошибка сообщения: {msg.error()}")
+                    error_code = msg.error().code()
+                    error_str = msg.error().str()
+                    logging.error(f"Ошибка сообщения: {msg.error()} (код {error_code})")
+
+                    # Если топик не найден и это первая ошибка такого рода, выбрасываем исключение
+                    if error_code == 3 and "Unknown topic or partition" in error_str:
+                        # Собираем статистику по ошибкам топиков
+                        missing_topics.add(re.search(r'topic not available: (\w+)', error_str).group(1))
+                        if len(missing_topics) == len(TOPICS):
+                            # Если все топики недоступны, выбрасываем исключение
+                            raise Exception(
+                                f"Ни один из топиков {TOPICS} не доступен в Kafka. Продюсер не создал топики?")
                 else:
                     # Обработка сообщения
                     try:

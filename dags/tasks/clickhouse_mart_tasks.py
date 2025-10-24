@@ -4,6 +4,8 @@
 import logging
 from airflow.models import Variable
 import clickhouse_driver
+from airflow.exceptions import AirflowFailException
+
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -12,14 +14,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def execute_clickhouse_query(sql, description):
     """
     Выполняет запрос к ClickHouse и логирует информацию о процессе.
-
-    Args:
-        sql (str): SQL-запрос для выполнения.
-        description (str): Описание запроса для логирования.
-
-    Returns:
-        bool: True в случае успешного выполнения, False в случае ошибки.
     """
+
     try:
         logging.info(f"Выполнение запроса: {description}")
 
@@ -44,9 +40,10 @@ def execute_clickhouse_query(sql, description):
 
         logging.info(f"Запрос успешно выполнен: {description}")
         return True
+
     except Exception as e:
         logging.error(f"Ошибка при выполнении запроса {description}: {e}")
-        return False
+        raise AirflowFailException(f"Ошибка при выполнении запроса {description}: {e}")
 
 
 def addresses(**kwargs):
@@ -104,7 +101,7 @@ def addresses(**kwargs):
             coalesce(nullIf(lowerUTF8(trim(coalesce(s.location_city, ''))), ''), ''),
             coalesce(nullIf(lowerUTF8(trim(coalesce(s.location_street, ''))), ''), ''),
             coalesce(nullIf(lowerUTF8(trim(coalesce(s.location_house, ''))), ''), ''),
-            '',  -- apartment is always NULL for stores
+            '', 
             coalesce(trim(s.location_postal_code), ''),
             coalesce(toString(toFloat64OrNull(trim(s.location_coordinates_latitude))), ''),
             coalesce(toString(toFloat64OrNull(trim(s.location_coordinates_longitude))), '')
@@ -122,14 +119,9 @@ def addresses(**kwargs):
     WHERE s.location_country IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы addresses"):
-        return False
-
-    if not execute_clickhouse_query(insert_customers_sql, "Заполнение таблицы addresses из customers"):
-        return False
-
-    if not execute_clickhouse_query(insert_stores_sql, "Заполнение таблицы addresses из stores"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы addresses")
+    execute_clickhouse_query(insert_customers_sql, "Заполнение таблицы addresses из customers")
+    execute_clickhouse_query(insert_stores_sql, "Заполнение таблицы addresses из stores")
 
     return True
 
@@ -151,19 +143,16 @@ def categories(**kwargs):
     INSERT INTO clickhouse.categories
     SELECT
         cityHash64(
-            trim(replaceRegexpAll(nullIf(trim(lowerUTF8(p.group)), ''), CAST('^[\\x{1F300}-\\x{1F5FF}\\x{1F900}-\\x{1F9FF}\\x{2600}-\\x{26FF}\\x{2700}-\\x{27BF}\\x{FE00}-\\x{FE0F}]+' AS String), ''))
+            trim(replaceRegexpAll(nullIf(trim(lowerUTF8(p.group)), ''), '[🍏🥦🥩🥖🥛]+', ''))
         ) AS category_id,
-        trim(replaceRegexpAll(nullIf(trim(lowerUTF8(p.group)), ''), CAST('^[\\x{1F300}-\\x{1F5FF}\\x{1F900}-\\x{1F9FF}\\x{2600}-\\x{26FF}\\x{2700}-\\x{27BF}\\x{FE00}-\\x{FE0F}]+' AS String), '')) AS category_name,
+        trim(replaceRegexpAll(nullIf(trim(lowerUTF8(p.group)), ''), '[🍏🥦🥩🥖🥛]+', '')) AS category_name,
         p.event_time
     FROM clickhouse.products p
     WHERE nullIf(trim(lowerUTF8(p.group)), '') IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы categories"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы categories"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы categories")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы categories")
 
     return True
 
@@ -197,11 +186,9 @@ def manufacturers(**kwargs):
         AND nullIf(trim(coalesce(p.manufacturer_name, '')), '') IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы manufacturers"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы manufacturers")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы manufacturers")
 
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы manufacturers"):
-        return False
     return True
 
 
@@ -235,11 +222,9 @@ def store_networks(**kwargs):
     WHERE rn = 1 AND normalized_name IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы store_networks"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы store_networks")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы store_networks")
 
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы store_networks"):
-        return False
     return True
 
 
@@ -281,11 +266,9 @@ def store_managers(**kwargs):
     WHERE normalized_manager_name IS NOT NULL OR normalized_manager_phone IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы store_managers"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы store_managers")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы store_managers")
 
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы store_managers"):
-        return False
     return True
 
 
@@ -353,11 +336,8 @@ def dim_customers(**kwargs):
         AND  toDate(parseDateTime64BestEffort(c.registration_date)) > toDate(c.birth_date);
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы dim_customers"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_customers"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы dim_customers")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_customers")
 
     return True
 
@@ -391,39 +371,35 @@ def dim_products(**kwargs):
     insert_sql = """
     INSERT INTO clickhouse.dim_products
     SELECT
-       nullIf(lowerUTF8(trim(p.id)), '') AS product_id,
-       lowerUTF8(trim(p.name)) AS name,
-       c.category_id AS category_id,
-       nullIf(lowerUTF8(trim(p.description)), '') AS description,
-       toFloat32OrNull(nullIf(trim(p.kbju_calories), '')) AS calories,
-       toFloat32OrNull(nullIf(trim(p.kbju_protein), '')) AS protein,
-       toFloat32OrNull(nullIf(trim(p.kbju_fat), '')) AS fat,
-       toFloat32OrNull(nullIf(trim(p.kbju_carbohydrates), '')) AS carbohydrates,
-       toDecimal128(trim(p.price), 2) AS price,
-       lowerUTF8(trim(p.unit)) AS unit,
-       lowerUTF8(trim(p.origin_country)) AS origin_country,
-       coalesce(toInt16OrNull(nullIf(trim(p.expiry_days), '')), 0) AS expiry_days,
-       toUInt8(lowerUTF8(trim(p.is_organic)) = 'true') AS is_organic,
-       lowerUTF8(trim(p.barcode)) AS barcode,
-       -- Просто копируем значение String из m.inn в manufacturer_id
-       trim(m.inn) AS manufacturer_id,
-       p.event_time AS event_time
-    FROM clickhouse.products p
-    LEFT JOIN clickhouse.manufacturers m
-    ON lowerUTF8(trim(ifNull(p.manufacturer_name, ''))) = lowerUTF8(trim(ifNull(m.manufacturer_name, '')))
-       AND lowerUTF8(trim(ifNull(p.manufacturer_country, ''))) = lowerUTF8(trim(ifNull(m.manufacturer_country, '')))
-       AND lowerUTF8(trim(ifNull(p.manufacturer_website, ''))) = lowerUTF8(trim(ifNull(m.manufacturer_website, '')))
-       AND trim(ifNull(p.manufacturer_inn, '')) = trim(ifNull(m.inn, ''))
-    LEFT JOIN clickhouse.categories c
-    ON trim(lowerUTF8(normalizeUTF8NFC(replaceRegexpAll(replaceRegexpAll(p.group, CAST('[\\x{1F300}-\\x{1F5FF}\\x{1F900}-\\x{1F9FF}\\x{2600}-\\x{26FF}\\x{2700}-\\x{27BF}\\x{FE00}-\\x{FE0F}]+' AS String), ''), '[^\\p{L}\\p{N}\\s,]+', '')))) = trim(lowerUTF8(c.category_name))
-    WHERE nullIf(lowerUTF8(trim(p.id)), '') IS NOT NULL;
+           nullIf(lowerUTF8(trim(p.id)), '') AS product_id,
+           lowerUTF8(trim(replaceRegexpAll(p.name, '[🍏🥦🥩🥖🥛]+', ''))) AS name,
+           c.category_id AS category_id,
+           nullIf(lowerUTF8(trim(replaceRegexpAll(p.description, '[🍏🥦🥩🥖🥛]+', ''))), '') AS description,
+           toFloat32OrNull(nullIf(trim(p.kbju_calories), '')) AS calories,
+           toFloat32OrNull(nullIf(trim(p.kbju_protein), '')) AS protein,
+           toFloat32OrNull(nullIf(trim(p.kbju_fat), '')) AS fat,
+           toFloat32OrNull(nullIf(trim(p.kbju_carbohydrates), '')) AS carbohydrates,
+           toDecimal128(trim(p.price), 2) AS price,
+           lowerUTF8(trim(replaceRegexpAll(p.unit, '[🍏🥦🥩🥖🥛]+', ''))) AS unit,
+           lowerUTF8(trim(replaceRegexpAll(p.origin_country, '[🍏🥦🥩🥖🥛]+', ''))) AS origin_country,
+           coalesce(toInt16OrNull(nullIf(trim(p.expiry_days), '')), 0) AS expiry_days,
+           toUInt8(lowerUTF8(trim(p.is_organic)) = 'true') AS is_organic,
+           lowerUTF8(trim(p.barcode)) AS barcode,
+           trim(m.inn) AS manufacturer_id,
+           p.event_time AS event_time
+        FROM clickhouse.products p
+        LEFT JOIN clickhouse.manufacturers m
+        ON lowerUTF8(trim(replaceRegexpAll(ifNull(p.manufacturer_name, ''), '[🍏🥦🥩🥖🥛]+', ''))) = lowerUTF8(trim(replaceRegexpAll(ifNull(m.manufacturer_name, ''), '[🍏🥦🥩🥖🥛]+', '')))
+           AND lowerUTF8(trim(replaceRegexpAll(ifNull(p.manufacturer_country, ''), '[🍏🥦🥩🥖🥛]+', ''))) = lowerUTF8(trim(replaceRegexpAll(ifNull(m.manufacturer_country, ''), '[🍏🥦🥩🥖🥛]+', '')))
+           AND lowerUTF8(trim(replaceRegexpAll(ifNull(p.manufacturer_website, ''), '[🍏🥦🥩🥖🥛]+', ''))) = lowerUTF8(trim(replaceRegexpAll(ifNull(m.manufacturer_website, ''), '[🍏🥦🥩🥖🥛]+', '')))
+           AND trim(ifNull(p.manufacturer_inn, '')) = trim(ifNull(m.inn, ''))
+        LEFT JOIN clickhouse.categories c
+        ON trim(lowerUTF8(replaceRegexpAll(p.group, '[🍏🥦🥩🥖🥛]+', ''))) = trim(lowerUTF8(c.category_name))
+        WHERE nullIf(lowerUTF8(trim(p.id)), '') IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы dim_products"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_products"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы dim_products")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_products")
 
     return True
 
@@ -487,15 +463,11 @@ def dim_stores(**kwargs):
         (a.apartment IS NULL) AND
         (toFloat64OrNull(trim(s.location_coordinates_latitude)) = a.latitude OR (s.location_coordinates_latitude IS NULL AND a.latitude IS NULL)) AND
         (toFloat64OrNull(trim(s.location_coordinates_longitude)) = a.longitude OR (s.location_coordinates_longitude IS NULL AND a.longitude IS NULL))
-    WHERE
-        nullIf(trim(s.store_id), '') IS NOT NULL;
+    WHERE nullIf(trim(s.store_id), '') IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы dim_stores"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_stores"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы dim_stores")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы dim_stores")
 
     return True
 
@@ -514,7 +486,7 @@ def store_categories(**kwargs):
     """
 
     insert_sql = """
-    INSERT INTO clickhouse.store_categories
+    INSERT INTO clickhouse.store_categories 
     SELECT
         s.store_id,
         if(c.category_id IS NULL, 0, c.category_id) AS category_id,
@@ -527,27 +499,23 @@ def store_categories(**kwargs):
             arrayFilter(
                 x -> notEmpty(x),
                 arrayMap(
-                    x -> replaceRegexpAll(trim(x), ',+$', ''),
+                    x -> replaceRegexpAll(trim(x), ',+$', ''), -- Удаляем запятые в конце строки
                     extractAll(
-                        replaceRegexpAll(categories, CAST('[\\x{1F300}-\\x{1F5FF}\\x{1F900}-\\x{1F9FF}\\x{2600}-\\x{26FF}\\x{2700}-\\x{27BF}\\x{FE00}-\\x{FE0F}]+' AS String), ''),
-                        '([А-ЯЁA-Z][а-яё0-9\\s&,]*|[A-Z][a-z0-9\\s&,]*)'
+                        replaceRegexpAll(categories, '[🍏🥦🥩🥖🥛]+', ''),
+                        '([А-ЯЁA-Z][а-яё0-9\\s&,]*|[A-Z][a-z0-9\\s&,]*)' -- Разрешаем запятые внутри категории
                     )
                 )
             ) AS category_names
         FROM clickhouse.stores
     ) AS s
     ARRAY JOIN s.category_names AS category_name
-    LEFT JOIN clickhouse.categories AS c ON
-        trim(lowerUTF8(category_name)) = trim(c.category_name)
+    LEFT JOIN clickhouse.categories AS c ON trim(lowerUTF8(category_name)) = trim(c.category_name)
     WHERE
         s.store_id IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы store_categories"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы store_categories"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы store_categories")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы store_categories")
 
     return True
 
@@ -606,11 +574,8 @@ def fact_purchases(**kwargs):
         parseDateTimeBestEffortOrNull(nullIf(trim(p.purchase_datetime), '')) IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы fact_purchases"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы fact_purchases"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы fact_purchases")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы fact_purchases")
 
     return True
 
@@ -653,11 +618,8 @@ def fact_purchase_items(**kwargs):
         parseDateTimeBestEffortOrNull(nullIf(trim(p.purchase_datetime), '')) IS NOT NULL;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы fact_purchase_items"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы fact_purchase_items"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы fact_purchase_items")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы fact_purchase_items")
 
     return True
 
@@ -699,10 +661,7 @@ def duplicate_analysis_results(**kwargs):
         ) AS duplicate_purchases;
     """
 
-    if not execute_clickhouse_query(create_table_sql, "Создание таблицы duplicate_analysis_results"):
-        return False
-
-    if not execute_clickhouse_query(insert_sql, "Заполнение таблицы duplicate_analysis_results"):
-        return False
+    execute_clickhouse_query(create_table_sql, "Создание таблицы duplicate_analysis_results")
+    execute_clickhouse_query(insert_sql, "Заполнение таблицы duplicate_analysis_results")
 
     return True

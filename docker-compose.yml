@@ -18,18 +18,15 @@ x-airflow-common:
   volumes:
     - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
     - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
-    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config
     - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+    - ${AIRFLOW_PROJ_DIR:-.}/airflow_config/webserver_config.py:/opt/airflow/webserver_config.py
+    - /var/run/docker.sock:/var/run/docker.sock
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on:
     &airflow-common-depends-on
     redis:
       condition: service_healthy
     postgres:
-      condition: service_healthy
-    clickhouse:
-      condition: service_healthy
-    kafka:
       condition: service_healthy
 
 services:
@@ -56,7 +53,6 @@ services:
       - "9000:9000"    # Native
     volumes:
       - clickhouse-data:/var/lib/clickhouse
-      - clickhouse-logs:/var/log/clickhouse-server
     ulimits:
       nofile:
         soft: 262144
@@ -150,6 +146,7 @@ services:
     command: start.sh jupyter lab --LabApp.token='' --LabApp.password=''
     volumes:
       - ./notebooks:/home/jovyan/work
+      - ./data/spark:/opt/spark/logs
     restart: unless-stopped
     depends_on:
       - clickhouse
@@ -192,7 +189,6 @@ services:
     command: webserver
     ports:
       - "8080:8080"
-    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 30s
@@ -210,7 +206,6 @@ services:
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
-    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8974/health"]
       interval: 30s
@@ -228,11 +223,10 @@ services:
   airflow-worker:
     <<: *airflow-common
     command: celery worker
-    entrypoint: /usr/local/bin/debug-entrypoint
     healthcheck:
       test:
         - "CMD-SHELL"
-        - 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}" || celery --app airflow.executors.celery_executor.app inspect ping -d "celery@$${HOSTNAME}"'
+        - 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d "celery@${HOSTNAME}" || celery --app airflow.executors.celery_executor.app inspect ping -d "celery@${HOSTNAME}"'
       interval: 30s
       timeout: 10s
       retries: 5
@@ -240,6 +234,12 @@ services:
     environment:
       <<: *airflow-common-env
       DUMB_INIT_SETSID: "0"
+    volumes:
+      - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags
+      - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs
+      - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins
+      - ${AIRFLOW_PROJ_DIR:-.}/airflow_config/webserver_config.py:/opt/airflow/webserver_config.py
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: always
     depends_on:
       <<: *airflow-common-depends-on
@@ -251,6 +251,7 @@ services:
   airflow-init:
     <<: *airflow-common
     entrypoint: /bin/bash
+    user: "0:0"
     command:
       - -c
       - |
@@ -263,7 +264,28 @@ services:
         fi
         mkdir -p /sources/logs /sources/dags /sources/plugins
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins}
-        exec /entrypoint airflow version
+        /entrypoint airflow version
+        # Create Airflow connections
+        airflow connections add 'spark_default' \
+          --conn-type 'spark' \
+          --conn-host 'spark://spark' \
+          --conn-port '7077' || true
+        airflow connections add 'clickhouse_default' \
+          --conn-type 'clickhouse' \
+          --conn-host 'clickhouse' \
+          --conn-port '9000' \
+          --conn-schema 'clickhouse' \
+          --conn-login 'clickhouse' \
+          --conn-password 'clickhouse' || true
+        airflow connections add 'mongodb_default' \
+          --conn-type 'mongo' \
+          --conn-host 'mongo' \
+          --conn-port '27017' \
+        airflow connections add 'kafka_default' \
+          --conn-type 'generic' \
+          --conn-host 'kafka' \
+          --conn-port '29092' \
+          --conn-extra '{"bootstrap.servers":"kafka:29092"}' || true
     environment:
       <<: *airflow-common-env
       _AIRFLOW_DB_MIGRATE: 'true'
@@ -271,7 +293,6 @@ services:
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
       _PIP_ADDITIONAL_REQUIREMENTS: ''
-    user: "0:0"
     volumes:
       - ${AIRFLOW_PROJ_DIR:-.}:/sources
     networks:
@@ -291,9 +312,6 @@ volumes:
   clickhouse-data:
     labels:
       description: "Volume for ClickHouse data files"
-  clickhouse-logs:
-    labels:
-      description: "Volume for ClickHouse logs"
   zookeeper-data:
     labels:
       description: "Volume for Zookeeper data"
@@ -306,5 +324,3 @@ volumes:
   grafana_data:
     labels:
       description: "Volume for Grafana data"
-
-

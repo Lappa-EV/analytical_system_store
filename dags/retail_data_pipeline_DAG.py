@@ -6,6 +6,7 @@ DAG для обработки данных ритейла:
 3. Чтение данных из Kafka
 4. Загрузка данных в ClickHouse
 5. Создание и заполнение MART-таблиц в ClickHouse
+6. Создание витрины признаков клиентов с помощью Spark
 """
 
 from datetime import datetime, timedelta
@@ -14,9 +15,12 @@ from airflow.models import Variable
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 
+
+
 # Импортируем задачи
 from tasks.producer_task import run_producer
 from tasks.consumer_task import run_consumer
+from tasks.feature_matrix_creator_task import create_feature_matrix
 from tasks.clickhouse_mart_tasks import (
     addresses,
     categories,
@@ -100,76 +104,95 @@ task_addresses = PythonOperator(
 
 task_categories = PythonOperator(
     task_id='create_categories',
-    python_callable=categories,    
+    python_callable=categories,
     dag=dag,
 )
 
 task_manufacturers = PythonOperator(
     task_id='create_manufacturers',
-    python_callable=manufacturers,    
+    python_callable=manufacturers,
     dag=dag,
 )
 
 task_store_networks = PythonOperator(
     task_id='create_store_networks',
-    python_callable=store_networks,    
+    python_callable=store_networks,
     dag=dag,
 )
 
 task_store_managers = PythonOperator(
     task_id='create_store_managers',
-    python_callable=store_managers,    
+    python_callable=store_managers,
     dag=dag,
 )
 
 # Создание таблиц dim_
 task_dim_customers = PythonOperator(
     task_id='create_dim_customers',
-    python_callable=dim_customers,    
+    python_callable=dim_customers,
     dag=dag,
 )
 
 task_dim_products = PythonOperator(
     task_id='create_dim_products',
-    python_callable=dim_products,    
+    python_callable=dim_products,
     dag=dag,
 )
 
 task_dim_stores = PythonOperator(
     task_id='create_dim_stores',
-    python_callable=dim_stores,    
+    python_callable=dim_stores,
     dag=dag,
 )
 
 task_store_categories = PythonOperator(
     task_id='create_store_categories',
-    python_callable=store_categories,    
+    python_callable=store_categories,
     dag=dag,
 )
 
 # Создание таблиц fact_
 task_fact_purchases = PythonOperator(
     task_id='create_fact_purchases',
-    python_callable=fact_purchases,    
+    python_callable=fact_purchases,
     dag=dag,
 )
 
 task_fact_purchase_items = PythonOperator(
     task_id='create_fact_purchase_items',
-    python_callable=fact_purchase_items,    
+    python_callable=fact_purchase_items,
     dag=dag,
 )
 
 # Анализ дубликатов
 task_duplicate_analysis = PythonOperator(
     task_id='duplicate_analysis',
-    python_callable=duplicate_analysis_results,    
+    python_callable=duplicate_analysis_results,
     dag=dag,
 )
 
 # 5. Завершение MART задач с Dummy оператором
 end_mart_tasks = DummyOperator(
     task_id='end_mart_tasks',
+    dag=dag,
+)
+
+# 6. Создание витрины признаков с помощью Spark
+task_feature_matrix_creator = PythonOperator(
+    task_id='create_feature_matrix',
+    python_callable=create_feature_matrix,
+    op_kwargs={
+        'clickhouse_host': Variable.get('CLICKHOUSE_HOST'),
+        'clickhouse_port_jdbc': Variable.get('CLICKHOUSE_PORT_JDBC'),
+        'clickhouse_user': Variable.get('CLICKHOUSE_USER'),
+        'clickhouse_password': Variable.get('CLICKHOUSE_PASSWORD'),
+        'clickhouse_db': Variable.get('CLICKHOUSE_DB'),
+        'clickhouse_jar_path': Variable.get("CLICKHOUSE_JAR_PATH"),
+        's3_endpoint': Variable.get('S3_ENDPOINT'),
+        's3_access_key': Variable.get('S3_KEY_ID'),
+        's3_secret_key': Variable.get('S3_SECRET'),
+        's3_container': Variable.get('S3_BUCKET')
+    },
     dag=dag,
 )
 
@@ -209,3 +232,6 @@ task_dim_products >> task_fact_purchase_items
     task_fact_purchases,
     task_fact_purchase_items
 ] >> task_duplicate_analysis >> end_mart_tasks
+
+# Запускаем создание витрины после завершения всех задач с маркетами
+end_mart_tasks >> task_feature_matrix_creator

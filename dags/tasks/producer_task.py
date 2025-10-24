@@ -16,7 +16,7 @@ from datetime import datetime
 
 
 def delivery_report(err, msg):
-    """Callback-функция для отчетов о доставке сообщений"""
+    """ Callback-функция для отчетов о доставке сообщений """
     if err is not None:
         logging.error(f"Ошибка доставки сообщения: {err}")
     else:
@@ -50,7 +50,7 @@ def run_producer(**kwargs):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     def normalize_phone(phone):
-        """Нормализует номер телефона в формат +7..."""
+        """ Нормализует номер телефона в формат +7... """
         if not phone:
             return phone
 
@@ -65,16 +65,19 @@ def run_producer(**kwargs):
 
         return phone
 
+
     def normalize_email(email):
-        """Нормализует email"""
+        """ Нормализует email """
         return str(email).strip().lower() if email else email
 
+
     def hash_value(value):
-        """Хэширует значение"""
+        """ Хэширует значение """
         return hashlib.md5(str(value).encode('utf-8')).hexdigest() if value else value
 
+
     def process_data(data, topic):
-        """Обрабатывает данные, хэшируя чувствительные поля при необходимости"""
+        """ Обрабатывает данные, хэшируя чувствительные поля при необходимости """
         if not isinstance(data, dict):
             return data
 

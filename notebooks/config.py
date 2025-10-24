@@ -1,7 +1,8 @@
 # config.py
-# --- Конфигурация ClickHouse ---
-JDBC_DRIVER_PATH = "/usr/local/spark-3.5.0-bin-hadoop3/examples/jars/clickhouse-jdbc-0.4.6-shaded.jar"
-CLICKHOUSE_JDBC_URL = "jdbc:clickhouse://clickhouse:8123/default"
+# Конфигурация ClickHouse
+
+JDBC_DRIVER_PATH = "/opt/spark/jars/clickhouse-spark-runtime-3.4_2.12-0.8.0.jar"
+CLICKHOUSE_JDBC_URL = "jdbc:clickhouse://clickhouse:8123/clickhouse"
 ACTUAL_CLICKHOUSE_DB_NAME = "clickhouse"
 CLICKHOUSE_PROPERTIES = {
     "user": "clickhouse",
