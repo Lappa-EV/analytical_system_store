@@ -1,13 +1,16 @@
 # Проект аналитической системы для сети магазинов "Пикча"
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![SQL](https://img.shields.io/badge/SQL-Database-blue)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green)
-![Kafka](https://img.shields.io/badge/Kafka-Streaming-red)
+![Kafka](https://img.shields.io/badge/Kafka-MessageBroker-red)
 ![ClickHouse](https://img.shields.io/badge/ClickHouse-OLAP-orange)
 ![Grafana](https://img.shields.io/badge/Grafana-Dashboards-yellow)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange)
 ![PySpark](https://img.shields.io/badge/PySpark-3.x-blue)
 ![S3](https://img.shields.io/badge/S3-Storage-yellow)
+![Airflow](https://img.shields.io/badge/Airflow-Orchestration-brightgreen)
 
 ## Описание проекта
 
@@ -195,7 +198,7 @@
 - [docker-compose.yml](/docker-compose.yml)
 - [Dockerfile.jupyter](/Dockerfile.jupyter)
 
-#### Сборка локальных сервисов из Dockerfile-ов (jupyter) и подтягивание остальных образов:
+#### Сборка локальных сервисов из Dockerfile-ов (jupyter, airflow) и подтягивание остальных образов:
 `docker compose up -d --build`
 
 
@@ -343,7 +346,7 @@
 
 Для решения бизнес-задач заказчика разработан ETL-процесс, который создает витрину данных на основе клиентских характеристик 
 для проведения кластеризации покупателей. 
-</br>Процесс включает извлечение данных из хранилища ClickHouse, преобразование с расчетом матрицы признаков и загрузку результатов в S3.
+Процесс включает извлечение данных из хранилища ClickHouse, преобразование с расчетом матрицы признаков и загрузку результатов в S3.
 
 #### Матрица признаков
 
@@ -383,8 +386,8 @@
 | 30 | vegetarian_profile       | Не купил ни одного мясного продукта за 90 дней              |
 
 ### Реализация ETL-процесса на PySpark
-Для реализация ETL-процесса на PySpark выполнены следующие действия:
-1. Создан  [Dockerfile.jupyter](notebooks/Dockerfile.jupyter) с параметрами подключения к JupyterLab 
+Для реализации ETL-процесса на PySpark выполнены следующие действия:
+1. Создан [Dockerfile.jupyter](notebooks/Dockerfile.jupyter) с параметрами подключения к JupyterLab 
 2. Добавлены компоненты JupyterLab в существующий docker-compose.yaml 
 3. Для работы с S3 выполнена регистрация в сервисе Selectel `https://selectel.ru/services/cloud/storage/`
 4. Создан файл для хранения параметров подключения [config.py](notebooks/config.py)
@@ -403,6 +406,90 @@
 
 Пример загрузки в S3</br>
 ![Пример загрузки](Photo/11.png)</br>
+
+## Cоздание обертки для ETL-процесса в Airflow
+
+После сборки Docker-образа в корневой папке проекта будут созданы следующие директории: `dags`, `logs`, `airflow_config` и `plugins`. 
+</br>Каждая из этих директорий играет важную роль в функционировании Airflow.
+
+### 1. Доступ к веб-интерфейсу Airflow
+
+После успешного запуска Docker-контейнеров, Airflow будет доступен через веб-интерфейс по адресу:
+
+http://localhost:8080
+
+Перейдем по этой ссылке в браузере для начала работы с Airflow.
+
+### 2. Настройка переменных Airflow
+
+Для корректной работы DAG необходимо задать несколько переменных, которые будут использоваться в процессе ETL.
+</br>Настройки производятся через веб-интерфейс Airflow:
+
+1.  В верхнем меню выбераем "**Admin**" -> "**Variables**".
+2.  Нажимаем кнопку "**+ Create**" для добавления новой переменной.
+3.  Вносим значения для каждой переменной, следуя таблице ниже.
+
+| Ключ                   | Значение                                                      | Описание                                                 |
+|------------------------|---------------------------------------------------------------|----------------------------------------------------------|
+| `KAFKA_BROKER`         | `kafka:9092`                                                  | Адрес брокера Kafka (сервис `kafka`, порт `9092`)        |
+| `KAFKA_GROUP`          | `clickhouse_group`                                            | Группа консюмеров Kafka                                  |
+| `KAFKA_TOPICS`         | `products,stores,customers,purchases`                         | Перечень топиков Kafka, разделённых запятыми             |
+| `CLICKHOUSE_HOST`      | `clickhouse`                                                  | Хост ClickHouse (сервис `clickhouse`)                    |
+| `CLICKHOUSE_PORT`      | `9000`                                                        | Порт ClickHouse для Kafka-консьюмера                                         |
+| `CLICKHOUSE_PORT_JDBC` | `8123`                                                        | Порт ClickHouse для jdbc-соединения                     |`     | `9000`                                                        | Порт ClickHouse                                                 |
+| `CLICKHOUSE_USER`      | `clickhouse`                                                  | Пользователь ClickHouse                                  |
+| `CLICKHOUSE_PASSWORD`  | `clickhouse`                                                  | Пароль ClickHouse (для production использовать Secrets!) |
+| `CLICKHOUSE_DB`        | `clickhouse`                                                  | База данных ClickHouse                                   |
+| `MONGO_URI`            | `mongodb://mongo:27017/`                                      | URI подключения к MongoDB (сервис `mongo`, порт `27017`) |
+| `MONGO_DATABASE`       | `mongo_db`                                                    | Имя базы данных MongoDB                                  |
+| `S3_ENDPOINT`          | `https://s3.ru-7.storage.selcloud.ru`                         | URL-адрес S3-совместимого хранилища                      |
+| `S3_KEY_ID`            | `Ваши значения при регистрации`                               | Ключ доступа к S3                                        |
+| `S3_SECRET`            | `Ваши значения при регистрации`                               | Секретный ключ доступа к S3                              |
+| `S3_BUCKET`            | `data-engineer-practice-2025`                                 | Название бакета/контейнера в S3                          |
+| `CLICKHOUSE_JAR_PATH`  | `/opt/spark-3.4.2-bin-hadoop3/jars/clickhouse-jdbc-0.6.3.jar` | Путь к JAR-файлу JDBC-драйвера для ClickHouse            |
+
+**ВАЖНО:** В производственной среде для хранения конфиденциальных данных, таких как пароли, рекомендуется использовать Airflow Connections или Secrets Backend. Это обеспечит более безопасное хранение и управление sensitive-информацией.
+
+#### Проверка добавленных переменных
+
+После добавления всех переменных убедимся, что они корректно отображаются в списке.  Для этого перейдем в "**Admin**" -> "**Variables**" и проверим, что все внесённые переменные присутствуют в списке ("**List Variables**").
+![List Variables](Photo/12.png)
+
+### 3. Размещение DAG и файлов задач
+
+1.  Создадим Python-файл с именем [retail_data_pipeline_DAG.py](dags/retail_data_pipeline_DAG.py) в директории проекта `dags/`.
+2.  В директории `dags/` создадим поддиректорию `tasks/`.  Эта директория будет содержать файлы с кодом отдельных задач, выполняемых в рамках DAG.
+3.  Разместим следующие файлы с кодом задач в директорию `dags/tasks/`:
+
+    *   **Файлы для работы с Kafka:**
+        *   [producer_task.py](dags/tasks/producer_task.py):  Содержит логику Python для продюсера Kafka (отправку данных в топики Kafka).
+        *   [consumer_task.py](dags/tasks/consumer_task.py):  Содержит логику Python для консюмера Kafka (получение данных из топиков Kafka).
+    *   **Файл для создания и наполнения таблиц условного "MART-слоя" в ClickHouse:**
+        *   [clickhouse_mart_tasks.py](dags/tasks/clickhouse_mart_tasks.py): Содержит Python-код для создания таблиц и заполнения их данными из Kafka в ClickHouse.
+    *   **Файл для создания витрины с признаками пользователей:**
+        *   [feature_matrix_creator_task.py](dags/tasks/feature_matrix_creator_task.py): Содержит код для создания витрины с признаками пользователей, используя Apache Spark. Скрипт извлекает данные из ClickHouse, формирует признаки и загружает результат в S3.     
+
+    Эти файлы-задачи будут последовательно вызываться и запускаться в рамках DAG, определённого в файле `retail_data_pipeline_DAG.py`.  
+
+### 4. Проверка и запуск DAG
+
+После размещения файлов DAG и задач можно приступать к проверке и запуску DAG в веб-интерфейсе Airflow.
+
+1.  Перейдем на вкладку "**DAGs**".
+2.  Находим DAG с именем "`retail_data_pipeline_DAG`".
+3.  **Включение DAG:** Убедимся, что DAG активен. Переключатель (toggle) слева от имени DAG должен быть в активном положении (включен). Если он выключен, включаем его.
+4.  **Запуск DAG вручную:** Для немедленного запуска DAG нажмаем на кнопку "**▶**" ("**Trigger DAG**").
+5.  **Мониторинг выполнения:** Процесс выполнения DAG можно отслеживать в разделах "**Grid**" или "**Graph**".
+
+При возникновении ошибок изучаем логи задач и вносим исправления в код.
+</br>Процесс отладки DAG-файла:
+![Процесс отладки](Photo/13.png)
+![Процесс отладки](Photo/14.png)
+</br>Раздел "Graph":
+![Процесс отладки](Photo/15.png)
+</br>Демонстрация загрузки файла в хранилище S3:
+![Процесс отладки](Photo/16.png)
+
 ## Структура проекта
 
 ```
@@ -423,14 +510,21 @@
 │       ├── store_001.json
 │       ├── ...
 │       └── store_045.json
+├── dags
+│   └── tasks
+│   │   ├── producer_task.py
+│   │   ├── consumer_task.py
+│   │   ├── clickhouse_mart_tasks.py
+│   │   └── feature_matrix_creator_task.py
+│   └── retail_data_pipeline_DAG.py
 ├── load_data_mongodb
 │   ├── .env
 │   ├── check_mongo_data.py
 │   └── load_data_mongo.py
 ├── mongodb_kafka_clickhouse
 │   ├── .env
-│   ├── consumer.py
-│   └── producer.py
+│   ├── producer.py
+│   └── consumer.py
 ├── notebooks
 │   ├── config.py
 │   ├── feature_matrix_2025-10-05_15-20-35.csv
@@ -441,7 +535,10 @@
 ├── Photo
 │   └── screenshots...
 ├── docker-compose.yml
-├── Dockerfile
+├── Dockerfile.airflow
+├── Dockerfile.jupyter
+├── requirements.txt
+├── clickhouse-jdbc-0.4.6-shaded.jar
 └── generate_synthetic_data.py
 ```
 Структура проекта включает:
@@ -450,6 +547,14 @@
   - **products** - 20 JSON-файлов таблицы products
   - **purchases** - 200 JSON-файлов таблицы purchases
   - **stores** - 45 JSON-файлов таблицы stores
+- **dags** - папка с DAG-файлами для запуска задач в Airflow
+  - **tasks** - папка с файлами задач DAGов
+    - **producer_task.py** - код задачи для запуска producer 
+    - **consumer_task.py** - код задачи для запуска consumer 
+    - **clickhouse_mart_tasks.py** - код с задачами для создания и заполнения таблиц в ClickHouse
+    - **feature_matrix_creator_task.py** - код задачи для создания витрины с признаками пользователей
+  - **retail_data_pipeline_DAG.py** - DAG-файл для запуска файлов producer.py и consumer.py по расписанию
+  - **tables_mart_DAG.py** - DAG-файл для заполнения таблиц в MART-слое
 - **load_data_mongodb** - папка со скриптами для загрузки тестовых данных в MongoDB
   - **.env** - конфигурация подключения
   - **check_mongo_data.py** - скрипт для проверки данных в MongoDB
@@ -459,7 +564,7 @@
   - **consumer.py** - скрипт для загрузки данных в ClickHouse
   - **producer.py** - скрипт для считывания данных из MongoDB
 - **Clickhouse_MART** - папка со скриптом для создания MART-слоя таблиц
-  - **Script_mart.sql** - SQL-скрипт для обработки данных и загрузки в таблицы
+  - **Script_mart.sql** - SQL-скрипт для обработки данных и загрузки в MART-таблицы
 - **notebooks** - папка для работы с файлами JupyterLab
   - **config.py** - файл с параметров подключения к ClickHouse и S3
   - **feature_matrix_2025-10-05_15-20-35.csv** - сформированный файл csv
@@ -467,10 +572,12 @@
   - **PySpark_ETL.ipynb** - файл JupyterLab для работы c PySpark
 - **Photo** - папка со скриншотами
 - **docker-compose.yml** - конфигурация Docker
+- **Dockerfile.airflow** - Dockerfile c параметрами подключения Airflow
 - **Dockerfile.jupyter** - Dockerfile c параметрами подключения JupyterLab
+- **requirements.txt** - файл c библиотеками для работы внутри Airflow
+- **clickhouse-jdbc-0.4.6-shaded.jar** - файл для взаимодействия Spark с ClickHouse
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
 
 
 ### Автор:
-
 Катерина Лаппа

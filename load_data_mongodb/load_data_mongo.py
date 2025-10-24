@@ -31,9 +31,7 @@ COLLECTION_MAP = {
 
 # Функция для загрузки JSON-файлов из директории в коллекцию MongoDB
 def load_insert_json(directory, collection):
-    """
-    Загружает JSON-файлы из указанной директории в  коллекцию MongoDB.
-    """
+    """ Загружает JSON-файлы из указанной директории в коллекцию MongoDB """
     inserted_count = 0
     # Если директория не существует, возвращаем 0 загруженных файлов
     if not path.exists(directory):

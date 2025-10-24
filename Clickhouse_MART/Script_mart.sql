@@ -527,4 +527,3 @@ SELECT
      FROM clickhouse.purchases
 	 WHERE toDate(event_time) = today()
 	) AS duplicate_purchases;
-
