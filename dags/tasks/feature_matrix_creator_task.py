@@ -409,7 +409,7 @@ def create_feature_matrix(**kwargs):
         weekend_shopper = """
         SELECT
             c.customer_id AS customer_id,
-            CAST(SUM(CASE WHEN DAYOFWEEK(fp.purchase_datetime) IN (1, 7) THEN 1 ELSE 0 END) / NULLIF(COUNT(fp.purchase_id), 0) >= 0.6 AS INT) AS weekend_shopper
+            CAST(SUM(CASE WHEN DAYOFWEEK(fp.purchase_datetime) IN (6, 7) THEN 1 ELSE 0 END) / NULLIF(COUNT(fp.purchase_id), 0) >= 0.6 AS INT) AS weekend_shopper
         FROM dim_customers c
         LEFT JOIN fact_purchases fp ON c.customer_id = fp.customer_id
         GROUP BY c.customer_id
@@ -421,7 +421,7 @@ def create_feature_matrix(**kwargs):
         weekday_shopper = """
         SELECT
             c.customer_id AS customer_id,
-            CAST(SUM(CASE WHEN DAYOFWEEK(fp.purchase_datetime) BETWEEN 2 AND 6 THEN 1 ELSE 0 END) / NULLIF(COUNT(fp.purchase_id), 0) >= 0.6 AS INT) AS weekday_shopper
+            CAST(SUM(CASE WHEN DAYOFWEEK(fp.purchase_datetime) BETWEEN 1 AND 5 THEN 1 ELSE 0 END) / NULLIF(COUNT(fp.purchase_id), 0) >= 0.6 AS INT) AS weekday_shopper
         FROM dim_customers c
         LEFT JOIN fact_purchases fp ON c.customer_id = fp.customer_id
         GROUP BY c.customer_id
