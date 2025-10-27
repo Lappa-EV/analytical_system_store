@@ -194,10 +194,14 @@
 ### Запуск проекта
 
 Для запуска проекта используется Docker Compose:
+
 - [docker-compose.yml](/docker-compose.yml)
 - [Dockerfile.jupyter](/Dockerfile.jupyter)
+
 </br>
+
 Для использования с Airflow:
+
 - [Dockerfile.airflow](/Dockerfile.airflow)
 - [requirements.txt](/requirements.txt)
 
