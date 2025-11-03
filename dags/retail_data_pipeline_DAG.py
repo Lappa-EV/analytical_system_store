@@ -52,7 +52,7 @@ dag = DAG(
     'retail_data_pipeline_DAG',
     default_args=default_args,
     description='Конвейер данных для ритейла',
-    schedule_interval='0 10 * * *',
+    schedule_interval='0 7 * * *',
     catchup=False,
 )
 
