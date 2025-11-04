@@ -583,7 +583,6 @@ http://localhost:8080
 - **Dockerfile.airflow** - Dockerfile c параметрами подключения Airflow
 - **Dockerfile.jupyter** - Dockerfile c параметрами подключения JupyterLab
 - **requirements.txt** - файл c библиотеками для работы внутри Airflow
-- **clickhouse-jdbc-0.4.6-shaded.jar** - файл для взаимодействия Spark с ClickHouse
 - **generate_synthetic_data.py** - скрипт для генерации тестовых данных
 
 
